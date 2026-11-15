@@ -2,6 +2,8 @@
 
 Dropwise makes AI's water footprint measurable, sourced and controllable: a sidecar for the Bifrost gateway that estimates the water behind every AI request, cuts avoidable waste through routing, caching and budgets, and uses Tavily to keep every number it shows sourced and current.
 
+**Demo video:** [Watch Dropwise on YouTube](https://youtu.be/qcdsdRbtRNA)
+
 ## Repo layout
 
 | Path | Owner | What it is |
