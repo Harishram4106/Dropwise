@@ -1,0 +1,3710 @@
+{
+ "note": "Demo-mode fixture: real Dropwise gateway, real classifier and signed registry; the model was a stand-in, so token counts are synthetic.",
+ "health": {
+  "small_model": "anthropic/claude-haiku-5-5",
+  "large_model": "anthropic/claude-opus-5-5",
+  "routing": true,
+  "cache": true,
+  "scope": "direct_plus_indirect"
+ },
+ "receipts": [
+  {
+   "request_id": "req_4a676f73964d40e7",
+   "created_at": "2026-11-13T08:04:59.710Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 41,
+   "tokens_out": 362,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.1582,
+    "high": 1.6408
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0653,
+     "high": 0.0925
+    },
+    "direct_plus_indirect": {
+     "low": 1.1582,
+     "high": 1.6408
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "relative_time",
+     "outage"
+    ],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model.",
+     "Time-sensitive: refers to a time relative to now, so the cache is bypassed.",
+     "Time-sensitive: asks about a service's live status, so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 15,
+    "gateway": 8.2
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 1.1582,
+     "high": 1.6408
+    },
+    "used_pct": 6.6,
+    "status": "ok"
+   },
+   "prompt_preview": "Is Slack having an outage right now?"
+  },
+  {
+   "request_id": "req_a8d112800480474a",
+   "created_at": "2026-11-13T08:04:59.720Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 56,
+   "tokens_out": 1003,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 3.0436,
+    "high": 4.3117
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1716,
+     "high": 0.243
+    },
+    "direct_plus_indirect": {
+     "low": 3.0436,
+     "high": 4.3117
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 9,
+    "gateway": 2
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 3.0436,
+     "high": 4.3117
+    },
+    "used_pct": 4.3,
+    "status": "ok"
+   },
+   "prompt_preview": "Review this code for security problems: `query = \"SELECT * FROM users WHERE name"
+  },
+  {
+   "request_id": "req_6985824a2126454f",
+   "created_at": "2026-11-13T08:04:59.728Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 54,
+   "tokens_out": 444,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.4313,
+    "high": 2.0276
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0807,
+     "high": 0.1143
+    },
+    "direct_plus_indirect": {
+     "low": 1.4313,
+     "high": 2.0276
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "high_stakes"
+    ],
+    "reasons": [
+     "Large model: touches on legal, medical or financial advice."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.9
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 1.4313,
+     "high": 2.0276
+    },
+    "used_pct": 4.1,
+    "status": "ok"
+   },
+   "prompt_preview": "Is it safe to take paracetamol and ibuprofen together? Explain the dosing consid"
+  },
+  {
+   "request_id": "req_fdf002b1a20d45c7",
+   "created_at": "2026-11-13T08:04:59.736Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 71,
+   "tokens_out": 352,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.2157,
+    "high": 1.7222
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0685,
+     "high": 0.0971
+    },
+    "direct_plus_indirect": {
+     "low": 1.2157,
+     "high": 1.7222
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 1.1
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 2.3739,
+     "high": 3.363
+    },
+    "used_pct": 13.5,
+    "status": "ok"
+   },
+   "prompt_preview": "With 4% monthly churn and 500 new customers a month, starting from 10,000 custom"
+  },
+  {
+   "request_id": "req_ababa3a43d724643",
+   "created_at": "2026-11-13T08:04:59.743Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 40,
+   "tokens_out": 270,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.8909,
+    "high": 1.2622
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0502,
+     "high": 0.0711
+    },
+    "direct_plus_indirect": {
+     "low": 0.8909,
+     "high": 1.2622
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 3.9345,
+     "high": 5.5739
+    },
+    "used_pct": 5.6,
+    "status": "ok"
+   },
+   "prompt_preview": "What is the largest ocean on Earth?"
+  },
+  {
+   "request_id": "req_643ca5687e884cf8",
+   "created_at": "2026-11-13T08:04:59.744Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 1059,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1716,
+     "high": 0.243
+    },
+    "direct_plus_indirect": {
+     "low": 3.0436,
+     "high": 4.3117
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 3.9345,
+     "high": 5.5739
+    },
+    "used_pct": 5.6,
+    "status": "ok"
+   },
+   "prompt_preview": "Review this code for security problems: `query = \"SELECT * FROM users WHERE name"
+  },
+  {
+   "request_id": "req_bf516fbc466a407b",
+   "created_at": "2026-11-13T08:04:59.751Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 44,
+   "tokens_out": 194,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.684,
+    "high": 0.969
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0386,
+     "high": 0.0546
+    },
+    "direct_plus_indirect": {
+     "low": 0.684,
+     "high": 0.969
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 2.1153,
+     "high": 2.9966
+    },
+    "used_pct": 6,
+    "status": "ok"
+   },
+   "prompt_preview": "What is the freezing point of water in Fahrenheit?"
+  },
+  {
+   "request_id": "req_b8cfccff78b449b6",
+   "created_at": "2026-11-13T08:04:59.759Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 40,
+   "tokens_out": 241,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.8076,
+    "high": 1.1441
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0455,
+     "high": 0.0645
+    },
+    "direct_plus_indirect": {
+     "low": 0.8076,
+     "high": 1.1441
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "conversion"
+    ],
+    "reasons": [
+     "Small model: is a unit conversion or simple arithmetic."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 3.1815,
+     "high": 4.5071
+    },
+    "used_pct": 18,
+    "status": "ok"
+   },
+   "prompt_preview": "Convert 750 millilitres to litres."
+  },
+  {
+   "request_id": "req_d2d37db1ddb54523",
+   "created_at": "2026-11-13T08:04:59.766Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 43,
+   "tokens_out": 572,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.7675,
+    "high": 2.504
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0996,
+     "high": 0.1411
+    },
+    "direct_plus_indirect": {
+     "low": 1.7675,
+     "high": 2.504
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "math"
+    ],
+    "reasons": [
+     "Large model: asks for mathematical reasoning."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 5.702,
+     "high": 8.0779
+    },
+    "used_pct": 8.1,
+    "status": "ok"
+   },
+   "prompt_preview": "Is 1001 a prime number? Explain your reasoning."
+  },
+  {
+   "request_id": "req_5eb6bbf543d34dba",
+   "created_at": "2026-11-13T08:04:59.773Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 60,
+   "tokens_out": 1215,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 3.6643,
+    "high": 5.1912
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.2066,
+     "high": 0.2926
+    },
+    "direct_plus_indirect": {
+     "low": 3.6643,
+     "high": 5.1912
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 5.7796,
+     "high": 8.1878
+    },
+    "used_pct": 16.4,
+    "status": "ok"
+   },
+   "prompt_preview": "Write a Python function that merges two sorted lists into one sorted list in O(n"
+  },
+  {
+   "request_id": "req_4a041abfd43e49c0",
+   "created_at": "2026-11-13T08:04:59.780Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 42,
+   "tokens_out": 127,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.4857,
+    "high": 0.6881
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0274,
+     "high": 0.0388
+    },
+    "direct_plus_indirect": {
+     "low": 0.4857,
+     "high": 0.6881
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "recency"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: asks for the latest information, so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 3.6672,
+     "high": 5.1952
+    },
+    "used_pct": 20.8,
+    "status": "ok"
+   },
+   "prompt_preview": "What's the newest iPhone model on sale now?"
+  },
+  {
+   "request_id": "req_eba61c4538654368",
+   "created_at": "2026-11-13T08:04:59.788Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 36,
+   "tokens_out": 133,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.4857,
+    "high": 0.6881
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0274,
+     "high": 0.0388
+    },
+    "direct_plus_indirect": {
+     "low": 0.4857,
+     "high": 0.6881
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.9,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup",
+     "conversion"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Small model: is a unit conversion or simple arithmetic."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.8
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 6.1877,
+     "high": 8.766
+    },
+    "used_pct": 8.8,
+    "status": "ok"
+   },
+   "prompt_preview": "What is 25% of 360?"
+  },
+  {
+   "request_id": "req_2db2048558984083",
+   "created_at": "2026-11-13T08:04:59.789Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 1059,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1716,
+     "high": 0.243
+    },
+    "direct_plus_indirect": {
+     "low": 3.0436,
+     "high": 4.3117
+    }
+   },
+   "latency_ms": {
+    "total": 0,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 6.1877,
+     "high": 8.766
+    },
+    "used_pct": 8.8,
+    "status": "ok"
+   },
+   "prompt_preview": "Review this code for security problems: `query = \"SELECT * FROM users WHERE name"
+  },
+  {
+   "request_id": "req_300d127159ed48b1",
+   "created_at": "2026-11-13T08:04:59.796Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 46,
+   "tokens_out": 100,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.4196,
+    "high": 0.5944
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0237,
+     "high": 0.0335
+    },
+    "direct_plus_indirect": {
+     "low": 0.4196,
+     "high": 0.5944
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "recency"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: asks for the latest information, so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 1
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 6.1992,
+     "high": 8.7822
+    },
+    "used_pct": 17.6,
+    "status": "ok"
+   },
+   "prompt_preview": "What are the latest updates on the Chennai metro expansion?"
+  },
+  {
+   "request_id": "req_fb55e1316adc4a9b",
+   "created_at": "2026-11-13T08:04:59.804Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 39,
+   "tokens_out": 224,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.7559,
+    "high": 1.0708
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0426,
+     "high": 0.0604
+    },
+    "direct_plus_indirect": {
+     "low": 0.7559,
+     "high": 1.0708
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 4.4231,
+     "high": 6.266
+    },
+    "used_pct": 25.1,
+    "status": "ok"
+   },
+   "prompt_preview": "What is the capital of Canada?"
+  },
+  {
+   "request_id": "req_7b90f8b201c8443f",
+   "created_at": "2026-11-13T08:04:59.804Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 1275,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.2066,
+     "high": 0.2926
+    },
+    "direct_plus_indirect": {
+     "low": 3.6643,
+     "high": 5.1912
+    }
+   },
+   "latency_ms": {
+    "total": 0,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 6.1992,
+     "high": 8.7822
+    },
+    "used_pct": 17.6,
+    "status": "ok"
+   },
+   "prompt_preview": "Write a Python function that merges two sorted lists into one sorted list in O(n"
+  },
+  {
+   "request_id": "req_3d9b8aefa98440d1",
+   "created_at": "2026-11-13T08:04:59.811Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 42,
+   "tokens_out": 162,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.5863,
+    "high": 0.8306
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.033,
+     "high": 0.0468
+    },
+    "direct_plus_indirect": {
+     "low": 0.5863,
+     "high": 0.8306
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 6.774,
+     "high": 9.5966
+    },
+    "used_pct": 9.6,
+    "status": "ok"
+   },
+   "prompt_preview": "Translate \"Good morning, team\" into French."
+  },
+  {
+   "request_id": "req_82ef0bbc9c8c4c25",
+   "created_at": "2026-11-13T08:04:59.819Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 38,
+   "tokens_out": 174,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.6093,
+    "high": 0.8632
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0343,
+     "high": 0.0487
+    },
+    "direct_plus_indirect": {
+     "low": 0.6093,
+     "high": 0.8632
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 1
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 6.8085,
+     "high": 9.6454
+    },
+    "used_pct": 19.3,
+    "status": "ok"
+   },
+   "prompt_preview": "What does HTTP stand for?"
+  },
+  {
+   "request_id": "req_6a548c9b4c294053",
+   "created_at": "2026-11-13T08:04:59.826Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 62,
+   "tokens_out": 979,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 2.9918,
+    "high": 4.2384
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1686,
+     "high": 0.2389
+    },
+    "direct_plus_indirect": {
+     "low": 2.9918,
+     "high": 4.2384
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 7.4149,
+     "high": 10.5044
+    },
+    "used_pct": 42,
+    "status": "ok"
+   },
+   "prompt_preview": "A price is cut by 20% and then raised by 20%. Is the final price higher or lower"
+  },
+  {
+   "request_id": "req_7caa903b4c5d410e",
+   "created_at": "2026-11-13T08:04:59.833Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 40,
+   "tokens_out": 223,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.7559,
+    "high": 1.0708
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0426,
+     "high": 0.0604
+    },
+    "direct_plus_indirect": {
+     "low": 0.7559,
+     "high": 1.0708
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 7.5299,
+     "high": 10.6674
+    },
+    "used_pct": 10.7,
+    "status": "ok"
+   },
+   "prompt_preview": "How many bytes are in a kilobyte?"
+  },
+  {
+   "request_id": "req_dc351d73b0d24b6c",
+   "created_at": "2026-11-13T08:04:59.840Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 46,
+   "tokens_out": 143,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.5432,
+    "high": 0.7695
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0306,
+     "high": 0.0434
+    },
+    "direct_plus_indirect": {
+     "low": 0.5432,
+     "high": 0.7695
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "recency"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: asks for the latest information, so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.4
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 7.3517,
+     "high": 10.4149
+    },
+    "used_pct": 20.8,
+    "status": "ok"
+   },
+   "prompt_preview": "What are the latest updates on the Chennai metro expansion?"
+  },
+  {
+   "request_id": "req_ccb3428f9edc474a",
+   "created_at": "2026-11-13T08:04:59.847Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 46,
+   "tokens_out": 231,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.7961,
+    "high": 1.1278
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0449,
+     "high": 0.0636
+    },
+    "direct_plus_indirect": {
+     "low": 0.7961,
+     "high": 1.1278
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 8.1478,
+     "high": 11.5427
+    },
+    "used_pct": 23.1,
+    "status": "ok"
+   },
+   "prompt_preview": "Correct the spelling: \"Plese recieve the pakage tommorow.\""
+  },
+  {
+   "request_id": "req_b67611bbcdd4420f",
+   "created_at": "2026-11-13T08:04:59.854Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 46,
+   "tokens_out": 496,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.5577,
+    "high": 2.2068
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0878,
+     "high": 0.1244
+    },
+    "direct_plus_indirect": {
+     "low": 1.5577,
+     "high": 2.2068
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 8.9726,
+     "high": 12.7112
+    },
+    "used_pct": 50.8,
+    "status": "ok"
+   },
+   "prompt_preview": "Turn this into a bulleted list: milk, eggs, bread, coffee."
+  },
+  {
+   "request_id": "req_4b201f4b37fa496f",
+   "created_at": "2026-11-13T08:04:59.855Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 212,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0343,
+     "high": 0.0487
+    },
+    "direct_plus_indirect": {
+     "low": 0.6093,
+     "high": 0.8632
+    }
+   },
+   "latency_ms": {
+    "total": 0,
+    "gateway": 0.4
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 8.1478,
+     "high": 11.5427
+    },
+    "used_pct": 23.1,
+    "status": "ok"
+   },
+   "prompt_preview": "What does HTTP stand for?"
+  },
+  {
+   "request_id": "req_8b5ffb2e25bc4586",
+   "created_at": "2026-11-13T08:04:59.856Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 277,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0449,
+     "high": 0.0636
+    },
+    "direct_plus_indirect": {
+     "low": 0.7961,
+     "high": 1.1278
+    }
+   },
+   "latency_ms": {
+    "total": 0,
+    "gateway": 0.4
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 8.1478,
+     "high": 11.5427
+    },
+    "used_pct": 23.1,
+    "status": "ok"
+   },
+   "prompt_preview": "Correct the spelling: \"Plese recieve the pakage tommorow.\""
+  },
+  {
+   "request_id": "req_5eb16e3b43b240c9",
+   "created_at": "2026-11-13T08:04:59.863Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 61,
+   "tokens_out": 877,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 2.6958,
+    "high": 3.8191
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.152,
+     "high": 0.2153
+    },
+    "direct_plus_indirect": {
+     "low": 2.6958,
+     "high": 3.8191
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 10.2257,
+     "high": 14.4865
+    },
+    "used_pct": 14.5,
+    "status": "ok"
+   },
+   "prompt_preview": "We run three data centres and need disaster recovery with a 5-minute RPO. Outlin"
+  },
+  {
+   "request_id": "req_c69b148e5e9f4b86",
+   "created_at": "2026-11-13T08:04:59.870Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 42,
+   "tokens_out": 190,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.6668,
+    "high": 0.9446
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0376,
+     "high": 0.0532
+    },
+    "direct_plus_indirect": {
+     "low": 0.6668,
+     "high": 0.9446
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "relative_time",
+     "volatile_topic"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: refers to a time relative to now, so the cache is bypassed.",
+     "Time-sensitive: asks about something that changes often (prices, weather, news, scores), so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 8.8146,
+     "high": 12.4873
+    },
+    "used_pct": 25,
+    "status": "ok"
+   },
+   "prompt_preview": "What's the weather like in Bengaluru today?"
+  },
+  {
+   "request_id": "req_964b669749e44c15",
+   "created_at": "2026-11-13T08:04:59.877Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 45,
+   "tokens_out": 129,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.5001,
+    "high": 0.7084
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0282,
+     "high": 0.0399
+    },
+    "direct_plus_indirect": {
+     "low": 0.5001,
+     "high": 0.7084
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 9.4727,
+     "high": 13.4196
+    },
+    "used_pct": 53.7,
+    "status": "ok"
+   },
+   "prompt_preview": "Make this friendlier: \"Your request has been denied.\""
+  },
+  {
+   "request_id": "req_fa560271b42e4bf5",
+   "created_at": "2026-11-13T08:04:59.884Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 50,
+   "tokens_out": 108,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.4541,
+    "high": 0.6433
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0256,
+     "high": 0.0363
+    },
+    "direct_plus_indirect": {
+     "low": 0.4541,
+     "high": 0.6433
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 10.6798,
+     "high": 15.1298
+    },
+    "used_pct": 15.1,
+    "status": "ok"
+   },
+   "prompt_preview": "Extract the order number from: \"Hi, my order #48213 hasn't arrived yet.\""
+  },
+  {
+   "request_id": "req_ddabd455fbe546ba",
+   "created_at": "2026-11-13T08:04:59.891Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 53,
+   "tokens_out": 272,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.934,
+    "high": 1.3232
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0527,
+     "high": 0.0746
+    },
+    "direct_plus_indirect": {
+     "low": 0.934,
+     "high": 1.3232
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 9.7486,
+     "high": 13.8105
+    },
+    "used_pct": 27.6,
+    "status": "ok"
+   },
+   "prompt_preview": "Extract the phone number from: \"Call the front desk on 044-2345-6789 to book a r"
+  },
+  {
+   "request_id": "req_08dd21a9672c4929",
+   "created_at": "2026-11-13T08:04:59.892Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 938,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.152,
+     "high": 0.2153
+    },
+    "direct_plus_indirect": {
+     "low": 2.6958,
+     "high": 3.8191
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 10.6798,
+     "high": 15.1298
+    },
+    "used_pct": 15.1,
+    "status": "ok"
+   },
+   "prompt_preview": "We run three data centres and need disaster recovery with a 5-minute RPO. Outlin"
+  },
+  {
+   "request_id": "req_4dfdfa0d1d984730",
+   "created_at": "2026-11-13T08:04:59.899Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 43,
+   "tokens_out": 345,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.1151,
+    "high": 1.5797
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0629,
+     "high": 0.089
+    },
+    "direct_plus_indirect": {
+     "low": 1.1151,
+     "high": 1.5797
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 10.5878,
+     "high": 14.9993
+    },
+    "used_pct": 60,
+    "status": "ok"
+   },
+   "prompt_preview": "Paraphrase: \"The deadline cannot be extended.\""
+  },
+  {
+   "request_id": "req_0025aeeb29764571",
+   "created_at": "2026-11-13T08:04:59.906Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 55,
+   "tokens_out": 344,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.1467,
+    "high": 1.6245
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0646,
+     "high": 0.0916
+    },
+    "direct_plus_indirect": {
+     "low": 1.1467,
+     "high": 1.6245
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 11.8265,
+     "high": 16.7543
+    },
+    "used_pct": 16.8,
+    "status": "ok"
+   },
+   "prompt_preview": "Our support tickets rose 40% after a pricing change. Suggest an analysis plan to"
+  },
+  {
+   "request_id": "req_bfcd4d3c99e942c4",
+   "created_at": "2026-11-13T08:04:59.913Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 50,
+   "tokens_out": 551,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.7273,
+    "high": 2.447
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0974,
+     "high": 0.1379
+    },
+    "direct_plus_indirect": {
+     "low": 1.7273,
+     "high": 2.447
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 11.4759,
+     "high": 16.2575
+    },
+    "used_pct": 32.5,
+    "status": "ok"
+   },
+   "prompt_preview": "Remove the jargon: \"Let's circle back offline and leverage our synergies.\""
+  },
+  {
+   "request_id": "req_dc1e8fe35ee145f9",
+   "created_at": "2026-11-13T08:04:59.915Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 325,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0527,
+     "high": 0.0746
+    },
+    "direct_plus_indirect": {
+     "low": 0.934,
+     "high": 1.3232
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 11.4759,
+     "high": 16.2575
+    },
+    "used_pct": 32.5,
+    "status": "ok"
+   },
+   "prompt_preview": "Extract the phone number from: \"Call the front desk on 044-2345-6789 to book a r"
+  },
+  {
+   "request_id": "req_78b747aea8484eae",
+   "created_at": "2026-11-13T08:04:59.922Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 46,
+   "tokens_out": 651,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 2.0032,
+    "high": 2.8378
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1129,
+     "high": 0.16
+    },
+    "direct_plus_indirect": {
+     "low": 2.0032,
+     "high": 2.8378
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 6,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 12.591,
+     "high": 17.8371
+    },
+    "used_pct": 71.3,
+    "status": "ok"
+   },
+   "prompt_preview": "Is this a question or a request: \"Please close the door.\""
+  },
+  {
+   "request_id": "req_44c52494d49249b8",
+   "created_at": "2026-11-13T08:04:59.929Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 39,
+   "tokens_out": 297,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.9657,
+    "high": 1.368
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0544,
+     "high": 0.0771
+    },
+    "direct_plus_indirect": {
+     "low": 0.9657,
+     "high": 1.368
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 12.7922,
+     "high": 18.1223
+    },
+    "used_pct": 18.1,
+    "status": "ok"
+   },
+   "prompt_preview": "What is the square root of 144?"
+  },
+  {
+   "request_id": "req_a385f927e9cf4556",
+   "created_at": "2026-11-13T08:04:59.936Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 41,
+   "tokens_out": 179,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.6323,
+    "high": 0.8957
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0356,
+     "high": 0.0505
+    },
+    "direct_plus_indirect": {
+     "low": 0.6323,
+     "high": 0.8957
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.9
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 12.1082,
+     "high": 17.1532
+    },
+    "used_pct": 34.3,
+    "status": "ok"
+   },
+   "prompt_preview": "How many grams are in 3.5 kilograms?"
+  },
+  {
+   "request_id": "req_3628f30e8d3f4fe4",
+   "created_at": "2026-11-13T08:04:59.938Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 601,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0974,
+     "high": 0.1379
+    },
+    "direct_plus_indirect": {
+     "low": 1.7273,
+     "high": 2.447
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.8
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 12.1082,
+     "high": 17.1532
+    },
+    "used_pct": 34.3,
+    "status": "ok"
+   },
+   "prompt_preview": "Remove the jargon: \"Let's circle back offline and leverage our synergies.\""
+  },
+  {
+   "request_id": "req_e6744aa1ed5c4ae6",
+   "created_at": "2026-11-13T08:04:59.945Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 57,
+   "tokens_out": 607,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.9083,
+    "high": 2.7035
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1076,
+     "high": 0.1524
+    },
+    "direct_plus_indirect": {
+     "low": 1.9083,
+     "high": 2.7035
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.5,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [],
+    "reasons": [
+     "Large model: no clear easy-task signal, so it stays on the default model."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 1.1
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 14.4993,
+     "high": 20.5406
+    },
+    "used_pct": 82.2,
+    "status": "alert"
+   },
+   "prompt_preview": "Write a persuasive email to leadership asking for budget to cut cloud costs, wit"
+  },
+  {
+   "request_id": "req_ba2f20497fc84c77",
+   "created_at": "2026-11-13T08:04:59.953Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 58,
+   "tokens_out": 1198,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 3.6097,
+    "high": 5.1138
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.2035,
+     "high": 0.2883
+    },
+    "direct_plus_indirect": {
+     "low": 3.6097,
+     "high": 5.1138
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 16.4019,
+     "high": 23.2361
+    },
+    "used_pct": 23.2,
+    "status": "ok"
+   },
+   "prompt_preview": "Refactor this callback code to async/await: `getUser(id, (u) => { getOrders(u, ("
+  },
+  {
+   "request_id": "req_a7c0f6bea98c4227",
+   "created_at": "2026-11-13T08:04:59.960Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 56,
+   "tokens_out": 816,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 2.5061,
+    "high": 3.5503
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1413,
+     "high": 0.2001
+    },
+    "direct_plus_indirect": {
+     "low": 2.5061,
+     "high": 3.5503
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.9,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code",
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code.",
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 14.6143,
+     "high": 20.7035
+    },
+    "used_pct": 41.4,
+    "status": "ok"
+   },
+   "prompt_preview": "Design a REST API for a library with books, members and loans: endpoints, method"
+  },
+  {
+   "request_id": "req_9cfc981f5f0f4f1b",
+   "created_at": "2026-11-13T08:04:59.961Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 220,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0356,
+     "high": 0.0505
+    },
+    "direct_plus_indirect": {
+     "low": 0.6323,
+     "high": 0.8957
+    }
+   },
+   "latency_ms": {
+    "total": 0,
+    "gateway": 0.5
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 14.6143,
+     "high": 20.7035
+    },
+    "used_pct": 41.4,
+    "status": "ok"
+   },
+   "prompt_preview": "How many grams are in 3.5 kilograms?"
+  },
+  {
+   "request_id": "req_639eca7aa1f24c29",
+   "created_at": "2026-11-13T08:04:59.968Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 43,
+   "tokens_out": 273,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.9082,
+    "high": 1.2866
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0512,
+     "high": 0.0725
+    },
+    "direct_plus_indirect": {
+     "low": 0.9082,
+     "high": 1.2866
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "relative_time",
+     "volatile_topic"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: refers to a time relative to now, so the cache is bypassed.",
+     "Time-sensitive: asks about something that changes often (prices, weather, news, scores), so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 15.4075,
+     "high": 21.8272
+    },
+    "used_pct": 87.3,
+    "status": "alert"
+   },
+   "prompt_preview": "What's the price of gold per gram right now?"
+  },
+  {
+   "request_id": "req_eeba91770b814e74",
+   "created_at": "2026-11-13T08:04:59.975Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 46,
+   "tokens_out": 309,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.0203,
+    "high": 1.4454
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0575,
+     "high": 0.0815
+    },
+    "direct_plus_indirect": {
+     "low": 1.0203,
+     "high": 1.4454
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 17.4222,
+     "high": 24.6815
+    },
+    "used_pct": 24.7,
+    "status": "ok"
+   },
+   "prompt_preview": "Fix the grammar: \"Me and him goes to the office every day.\""
+  },
+  {
+   "request_id": "req_d7a7679a0c9347fe",
+   "created_at": "2026-11-13T08:04:59.976Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.9,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code",
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code.",
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 872,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1413,
+     "high": 0.2001
+    },
+    "direct_plus_indirect": {
+     "low": 2.5061,
+     "high": 3.5503
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 14.6143,
+     "high": 20.7035
+    },
+    "used_pct": 41.4,
+    "status": "ok"
+   },
+   "prompt_preview": "Design a REST API for a library with books, members and loans: endpoints, method"
+  },
+  {
+   "request_id": "req_a8919f4332974144",
+   "created_at": "2026-11-13T08:04:59.984Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 56,
+   "tokens_out": 350,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.1668,
+    "high": 1.653
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0658,
+     "high": 0.0932
+    },
+    "direct_plus_indirect": {
+     "low": 1.1668,
+     "high": 1.653
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "long_form"
+    ],
+    "reasons": [
+     "Large model: asks for long-form writing."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 15.7811,
+     "high": 22.3565
+    },
+    "used_pct": 44.7,
+    "status": "ok"
+   },
+   "prompt_preview": "Write a short story of about 400 words about a lighthouse keeper who finds a mes"
+  },
+  {
+   "request_id": "req_a2796b9803984637",
+   "created_at": "2026-11-13T08:04:59.991Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 39,
+   "tokens_out": 258,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.8536,
+    "high": 1.2092
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0481,
+     "high": 0.0682
+    },
+    "direct_plus_indirect": {
+     "low": 0.8536,
+     "high": 1.2092
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 16.2611,
+     "high": 23.0364
+    },
+    "used_pct": 92.1,
+    "status": "alert"
+   },
+   "prompt_preview": "What is the currency of Japan?"
+  },
+  {
+   "request_id": "req_40170f558d74498d",
+   "created_at": "2026-11-13T08:04:59.998Z",
+   "virtual_key": "team-support",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 44,
+   "tokens_out": 189,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0.6696,
+    "high": 0.9487
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0377,
+     "high": 0.0535
+    },
+    "direct_plus_indirect": {
+     "low": 0.6696,
+     "high": 0.9487
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "bypass",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "relative_time"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: refers to a time relative to now, so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.6
+   },
+   "budget": {
+    "virtual_key": "team-support",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 100,
+    "used_ml": {
+     "low": 18.0918,
+     "high": 25.6302
+    },
+    "used_pct": 25.6,
+    "status": "ok"
+   },
+   "prompt_preview": "Which films are releasing in cinemas this weekend?"
+  },
+  {
+   "request_id": "req_b68e058748fc42e3",
+   "created_at": "2026-11-13T08:05:00.006Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 55,
+   "tokens_out": 467,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.5002,
+    "high": 2.1253
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0846,
+     "high": 0.1198
+    },
+    "direct_plus_indirect": {
+     "low": 1.5002,
+     "high": 2.1253
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 17.2813,
+     "high": 24.4818
+    },
+    "used_pct": 49,
+    "status": "ok"
+   },
+   "prompt_preview": "Compare Redis and Memcached for session storage in a high-traffic web app and re"
+  },
+  {
+   "request_id": "req_f7e101aedf0541b0",
+   "created_at": "2026-11-13T08:05:00.013Z",
+   "virtual_key": "team-search",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-opus-5-5",
+   "region": "unknown",
+   "tokens_in": 52,
+   "tokens_out": 668,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 2.0693,
+    "high": 2.9315
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1166,
+     "high": 0.1652
+    },
+    "direct_plus_indirect": {
+     "low": 2.0693,
+     "high": 2.9315
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "high_stakes"
+    ],
+    "reasons": [
+     "Large model: touches on legal, medical or financial advice."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "budget": {
+    "virtual_key": "team-search",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 25,
+    "used_ml": {
+     "low": 18.3304,
+     "high": 25.9679
+    },
+    "used_pct": 103.9,
+    "status": "soft_limit"
+   },
+   "prompt_preview": "What are the common side effects of metformin, and when should someone avoid it?"
+  },
+  {
+   "request_id": "req_827efb51a5484a85",
+   "created_at": "2026-11-13T08:05:00.015Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.9,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code",
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code.",
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 872,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.1413,
+     "high": 0.2001
+    },
+    "direct_plus_indirect": {
+     "low": 2.5061,
+     "high": 3.5503
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.8
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 17.2813,
+     "high": 24.4818
+    },
+    "used_pct": 49,
+    "status": "ok"
+   },
+   "prompt_preview": "Design a REST API for a library with books, members and loans: endpoints, method"
+  },
+  {
+   "request_id": "req_06466bfa8dd34104",
+   "created_at": "2026-11-13T08:05:00.016Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "cache",
+   "region": "unknown",
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 0,
+    "high": 0
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0,
+     "high": 0
+    },
+    "direct_plus_indirect": {
+     "low": 0,
+     "high": 0
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "Served from cache: no model call, so no inference water.",
+   "factor_versions": [],
+   "cache_hit": true,
+   "cache": "hit",
+   "route": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "analysis"
+    ],
+    "reasons": [
+     "Large model: asks for analysis, comparison or design."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 522,
+   "avoided_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0846,
+     "high": 0.1198
+    },
+    "direct_plus_indirect": {
+     "low": 1.5002,
+     "high": 2.1253
+    }
+   },
+   "latency_ms": {
+    "total": 1,
+    "gateway": 0.8
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 17.2813,
+     "high": 24.4818
+    },
+    "used_pct": 49,
+    "status": "ok"
+   },
+   "prompt_preview": "Compare Redis and Memcached for session storage in a high-traffic web app and re"
+  },
+  {
+   "request_id": "req_2b8e4f09e6fe42ed",
+   "created_at": "2026-11-13T08:05:00.031Z",
+   "virtual_key": "team-research",
+   "model": "anthropic/claude-opus-5-5",
+   "routed_to": "anthropic/claude-haiku-5-5",
+   "region": "unknown",
+   "tokens_in": 40,
+   "tokens_out": 323,
+   "tokens_estimated": false,
+   "water_ml": {
+    "low": 1.0433,
+    "high": 1.478
+   },
+   "water_ml_by_scope": {
+    "direct_only": {
+     "low": 0.0588,
+     "high": 0.0833
+    },
+    "direct_plus_indirect": {
+     "low": 1.0433,
+     "high": 1.478
+    }
+   },
+   "scope": "direct_plus_indirect",
+   "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+   "factor_versions": [
+    "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+    "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+    "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+    "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+   ],
+   "cache_hit": false,
+   "cache": "miss",
+   "route": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   },
+   "tokens_saved": 0,
+   "avoided_ml_by_scope": null,
+   "latency_ms": {
+    "total": 7,
+    "gateway": 0.7
+   },
+   "deferred": {
+    "job_id": "job_0d384bf4364940e3",
+    "requested_at": "2026-11-13T18:30:00.000Z",
+    "deadline": "2026-11-13T21:30:00.000Z",
+    "scheduled_for": "2026-11-13T18:30:00.000Z",
+    "ran_at": "2026-11-13T18:30:04.000Z",
+    "run_early": false,
+    "profile": {
+     "name": "Illustrative daytime-peak profile",
+     "source": "Illustrative shape for the demo (cooler nights, hotter afternoons). NOT measured data. Replace it with hourly figures for your provider's data-center region before relying on any scheduling decision.",
+     "illustrative": true,
+     "timezone": "America/Chicago"
+    },
+    "relative_index": {
+     "at_request": 1.2,
+     "at_run": 1.2
+    },
+    "reason": "The current hour is already the lowest-impact one before the deadline (illustrative profile, not measured): it runs now."
+   },
+   "budget": {
+    "virtual_key": "team-research",
+    "period": "2026-11-13",
+    "scope": "direct_plus_indirect",
+    "limit_ml": 50,
+    "used_ml": {
+     "low": 18.3246,
+     "high": 25.9598
+    },
+    "used_pct": 51.9,
+    "status": "ok"
+   },
+   "prompt_preview": "Which planet is closest to the Sun?"
+  }
+ ]
+}

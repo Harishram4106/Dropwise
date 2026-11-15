@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dropwise/benchmark-report",
+  "title": "Benchmark report",
+  "description": "Before/after benchmark (demo step 2), produced by gateway/bench and served at GET /benchmark/latest. The same workload is sent straight to Bifrost (without_dropwise), then through the Dropwise gateway (with_dropwise). Counts, tokens and latency are measured; water and cost are estimated and sit under `estimated`.",
+  "type": "object",
+  "required": ["created_at", "run_id", "clean", "workload", "setup", "runs", "measured", "estimated", "by_category", "notes"],
+  "$defs": {
+    "range": {
+      "type": "object",
+      "required": ["low", "high"],
+      "properties": { "low": { "type": "number" }, "high": { "type": "number" } },
+      "additionalProperties": false
+    },
+    "stats": {
+      "type": "object",
+      "required": ["p50", "p95", "mean"],
+      "properties": { "p50": { "type": "number" }, "p95": { "type": "number" }, "mean": { "type": "number" } },
+      "additionalProperties": false
+    },
+    "side": {
+      "type": "object",
+      "required": ["requests", "ok", "errors", "retries", "truncated", "model_calls", "tokens_in", "tokens_out", "tokens_total", "tokens_estimated_requests", "by_model", "latency_ms", "wall_ms", "error_samples"],
+      "properties": {
+        "requests": { "type": "integer" },
+        "ok": { "type": "integer" },
+        "errors": { "type": "integer" },
+        "retries": { "type": "integer" },
+        "truncated": { "type": "integer", "description": "Answers that stopped at max_tokens." },
+        "model_calls": { "type": "integer" },
+        "tokens_in": { "type": "integer" },
+        "tokens_out": { "type": "integer" },
+        "tokens_total": { "type": "integer" },
+        "tokens_estimated_requests": { "type": "integer", "description": "Requests whose provider sent no usage (approximated as characters / 4)." },
+        "by_model": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["calls", "tokens_in", "tokens_out"],
+            "properties": { "calls": { "type": "integer" }, "tokens_in": { "type": "integer" }, "tokens_out": { "type": "integer" } },
+            "additionalProperties": false
+          }
+        },
+        "latency_ms": { "$ref": "#/$defs/stats" },
+        "wall_ms": { "type": "integer" },
+        "error_samples": { "type": "array", "items": { "type": "string" } },
+        "cache_hits": { "type": "integer" },
+        "cache_misses": { "type": "integer" },
+        "cache_bypassed": { "type": "integer", "description": "Time-sensitive requests that skipped the cache on purpose." },
+        "cache_skipped": { "type": "integer" },
+        "routed_small": { "type": "integer" },
+        "routed_small_share": { "type": "number", "description": "Share of model calls (not of all requests) routed to the small model." },
+        "gateway_overhead_ms": { "$ref": "#/$defs/stats", "description": "Time spent inside Dropwise per model call, excluding the model." },
+        "cache_hit_latency_ms": { "$ref": "#/$defs/stats" },
+        "receipts_missing": { "type": "integer" }
+      },
+      "additionalProperties": false
+    },
+    "water": {
+      "type": "object",
+      "required": ["without_dropwise", "with_dropwise", "avoided"],
+      "properties": {
+        "without_dropwise": { "$ref": "#/$defs/range" },
+        "with_dropwise": { "$ref": "#/$defs/range" },
+        "avoided": { "$ref": "#/$defs/range" }
+      },
+      "additionalProperties": false
+    },
+    "category": {
+      "type": "object",
+      "required": ["requests", "model_calls_without_dropwise", "model_calls_with_dropwise", "routed_small", "cache_hits", "cache_bypassed"],
+      "properties": {
+        "requests": { "type": "integer" },
+        "model_calls_without_dropwise": { "type": "integer" },
+        "model_calls_with_dropwise": { "type": "integer" },
+        "routed_small": { "type": "integer" },
+        "cache_hits": { "type": "integer" },
+        "cache_bypassed": { "type": "integer" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "created_at": { "type": "string", "format": "date-time" },
+    "run_id": { "type": "string" },
+    "clean": { "type": "boolean", "description": "True when no request failed in either run and every Dropwise request has a receipt. Show results from an unclean run with a warning." },
+    "workload": {
+      "type": "object",
+      "required": ["file", "seed", "hash", "system_prompt", "requests", "unique_prompts", "repeats", "repeat_share", "by_category"],
+      "properties": {
+        "file": { "type": "string" },
+        "seed": { "type": "integer" },
+        "hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+        "system_prompt": { "type": "string" },
+        "requests": { "type": "integer" },
+        "unique_prompts": { "type": "integer" },
+        "repeats": { "type": "integer" },
+        "repeat_share": { "type": "number", "description": "An assumption about traffic, not a measurement: cache savings scale with it." },
+        "by_category": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "setup": {
+      "type": "object",
+      "required": ["bifrost_url", "gateway_url", "model", "max_tokens", "concurrency", "small_model", "large_model", "routing", "cache", "registry_version", "registry_hash", "classifier_version"],
+      "additionalProperties": true
+    },
+    "runs": {
+      "type": "object",
+      "required": ["without_dropwise", "with_dropwise"],
+      "properties": {
+        "without_dropwise": { "$ref": "#/$defs/side" },
+        "with_dropwise": { "$ref": "#/$defs/side" }
+      },
+      "additionalProperties": false
+    },
+    "measured": {
+      "type": "object",
+      "required": ["calls_avoided", "calls_avoided_share", "tokens_saved", "tokens_saved_share", "tokens_served_from_cache", "cache_hit_share", "cache_bypassed", "routed_small_share", "gateway_overhead_ms"],
+      "properties": {
+        "calls_avoided": { "type": "integer" },
+        "calls_avoided_share": { "type": "number" },
+        "tokens_saved": { "type": "integer", "description": "Without minus with; can be negative, since answers vary between runs." },
+        "tokens_saved_share": { "type": "number" },
+        "tokens_served_from_cache": { "type": "integer" },
+        "cache_hit_share": { "type": "number" },
+        "cache_bypassed": { "type": "integer" },
+        "routed_small_share": { "type": "number" },
+        "gateway_overhead_ms": { "$ref": "#/$defs/stats" }
+      },
+      "additionalProperties": false
+    },
+    "estimated": {
+      "type": "object",
+      "required": ["water_ml", "method", "factor_versions", "cost_usd"],
+      "properties": {
+        "water_ml": {
+          "type": "object",
+          "required": ["direct_only", "direct_plus_indirect"],
+          "properties": {
+            "direct_only": { "$ref": "#/$defs/water" },
+            "direct_plus_indirect": { "$ref": "#/$defs/water" }
+          },
+          "additionalProperties": false
+        },
+        "method": { "type": "string" },
+        "factor_versions": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+@sha256:[0-9a-f]{64}$" } },
+        "cost_usd": {
+          "type": "object",
+          "required": ["without_dropwise", "with_dropwise", "saved", "prices_per_mtok", "prices_as_of"],
+          "properties": {
+            "without_dropwise": { "type": ["number", "null"] },
+            "with_dropwise": { "type": ["number", "null"] },
+            "saved": { "type": ["number", "null"] },
+            "prices_per_mtok": { "type": "object" },
+            "prices_as_of": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "by_category": {
+      "type": "object",
+      "description": "Breakdown by the team's own prompt labels (easy, hard, time_sensitive); the gateway never sees them.",
+      "required": ["easy", "hard", "time_sensitive"],
+      "properties": {
+        "easy": { "$ref": "#/$defs/category" },
+        "hard": { "$ref": "#/$defs/category" },
+        "time_sensitive": { "$ref": "#/$defs/category" }
+      },
+      "additionalProperties": false
+    },
+    "notes": { "type": "array", "items": { "type": "string" }, "description": "The run's assumptions, in plain words. Show them next to the numbers." }
+  },
+  "additionalProperties": false
+}

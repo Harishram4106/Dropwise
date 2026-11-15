@@ -1,0 +1,47 @@
+[
+  {
+    "label": "easy",
+    "status": 200,
+    "routed_to": "anthropic/claude-haiku-5-5",
+    "cache": "miss",
+    "water": "0.7415-1.0504; scope=direct_plus_indirect; estimated",
+    "job_id": null,
+    "answered": true
+  },
+  {
+    "label": "easy again",
+    "status": 200,
+    "routed_to": "cache",
+    "cache": "hit",
+    "water": "0-0; scope=direct_plus_indirect; estimated",
+    "job_id": null,
+    "answered": true
+  },
+  {
+    "label": "weather",
+    "status": 200,
+    "routed_to": "anthropic/claude-haiku-5-5",
+    "cache": "bypass",
+    "water": "0.845-1.197; scope=direct_plus_indirect; estimated",
+    "job_id": null,
+    "answered": true
+  },
+  {
+    "label": "hard",
+    "status": 200,
+    "routed_to": "anthropic/claude-opus-5-5",
+    "cache": "miss",
+    "water": "3.5408-5.0161; scope=direct_plus_indirect; estimated",
+    "job_id": null,
+    "answered": true
+  },
+  {
+    "label": "deferred",
+    "status": 202,
+    "routed_to": null,
+    "cache": null,
+    "water": null,
+    "job_id": "job_3fb9ed7455d1473b",
+    "answered": false
+  }
+]

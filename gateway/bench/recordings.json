@@ -1,0 +1,1208 @@
+{
+ "recorded_at": "2026-11-13T07:23:40.834Z",
+ "model": "anthropic/claude-haiku-5-5",
+ "max_tokens": 1024,
+ "cost_usd": 0.029,
+ "answers": {
+  "bc494ccd046048e26d20475298b5ea40dde66b5d6402321ded043197898dc787": {
+   "id": "e01",
+   "content": "The capital of Canada is **Ottawa**, Ontario.",
+   "tokens_in": 49,
+   "tokens_out": 23,
+   "finish_reason": "stop",
+   "latency_ms": 989
+  },
+  "35fbd8da761892b48540dbb7138dba3617033bafa0b0a5922082cbeadb9c9867": {
+   "id": "e03",
+   "content": "*Pride and Prejudice* was written by Jane Austen. It was first published in 1813.",
+   "tokens_in": 54,
+   "tokens_out": 32,
+   "finish_reason": "stop",
+   "latency_ms": 1064
+  },
+  "48ea66a6e72ef1c0ad67ed48d17863bd20b8a9fd028739d0593363e68ca1d697": {
+   "id": "e02",
+   "content": "A leap year has **366 days**. It has an extra day, February 29, compared to a common year's 365 days.",
+   "tokens_in": 50,
+   "tokens_out": 36,
+   "finish_reason": "stop",
+   "latency_ms": 1240
+  },
+  "3383ac1617a06958dc1544d1e40fe1bb7d50e87f40a9be19e5ca5440a26858db": {
+   "id": "e05",
+   "content": "Mercury is the planet closest to the Sun, orbiting at an average distance of about 58 million kilometers (36 million miles).",
+   "tokens_in": 52,
+   "tokens_out": 44,
+   "finish_reason": "stop",
+   "latency_ms": 952
+  },
+  "fcfa6f0217bb9540c6989ca5fa49c2db3b8c859b2bb74c39cd6a27520c7be0af": {
+   "id": "e04",
+   "content": "HTTP stands for **HyperText Transfer Protocol**. It's the protocol used for transferring data over the web, such as loading web pages between a browser and a server.",
+   "tokens_in": 49,
+   "tokens_out": 55,
+   "finish_reason": "stop",
+   "latency_ms": 1137
+  },
+  "e14462b84d4c760053e04ffda3891830374ecf855ee21d9262ca3b0e952a7787": {
+   "id": "e06",
+   "content": "The official language of Brazil is **Portuguese**. It's the only major Portuguese-speaking country in South America, and Brazilian Portuguese has its own distinct accent, vocabulary, and grammar compared to European Portuguese. Brazil also has many indigenous languages spoken by smaller communities, along with immigrant languages such as German, Italian, and Japanese in certain regions.",
+   "tokens_in": 51,
+   "tokens_out": 128,
+   "finish_reason": "stop",
+   "latency_ms": 1279
+  },
+  "1f88e6738e6cbc875f40f023bd89ad62c02eb991accab2a789460c0e03d3d12b": {
+   "id": "e07",
+   "content": "A kilobyte is 1,000 bytes in the decimal (SI) definition, which is the standard used for storage marketing and networking. In the binary definition used by many operating systems and computing contexts, a kibibyte (KiB) is 1,024 bytes, and that is often still called a \"kilobyte\" informally.",
+   "tokens_in": 53,
+   "tokens_out": 103,
+   "finish_reason": "stop",
+   "latency_ms": 1064
+  },
+  "7717b4e4c28a6919449e3f375ec1f4182c0232189e7f7ddd791f25251a508b3c": {
+   "id": "e08",
+   "content": "The chemical symbol for sodium is **Na** (from its Latin name, *natrium*).",
+   "tokens_in": 53,
+   "tokens_out": 32,
+   "finish_reason": "stop",
+   "latency_ms": 1141
+  },
+  "da867fc11d9488610b5475c4d9249ee5c79f9f8829bd06627d5dbf4ab7f06a0f": {
+   "id": "e09",
+   "content": "The Mona Lisa was painted by Leonardo da Vinci, the Italian Renaissance artist. He began it around 1503 and continued working on it until about 1517.",
+   "tokens_in": 52,
+   "tokens_out": 57,
+   "finish_reason": "stop",
+   "latency_ms": 839
+  },
+  "0138c166459a1483ce915967f20c1d9cb6532f59a3509700fc7b982504283f0d": {
+   "id": "e10",
+   "content": "The largest ocean on Earth is the **Pacific Ocean**. It covers about 165 million square kilometers (63.8 million square miles), which is more than all of Earth's land area combined.",
+   "tokens_in": 52,
+   "tokens_out": 63,
+   "finish_reason": "stop",
+   "latency_ms": 968
+  },
+  "93a9cfe8c8cdc4a5e283d3a555c9844a50e4a0d99e0073a3cf04042e0b3b31b3": {
+   "id": "e12",
+   "content": "The Taj Mahal is in India, in the city of Agra in Uttar Pradesh.",
+   "tokens_in": 52,
+   "tokens_out": 32,
+   "finish_reason": "stop",
+   "latency_ms": 988
+  },
+  "13a66ccc524dd10eab44db20fa2e5e8ce9dc9cfd81f5e9b44695a3420a54187a": {
+   "id": "e11",
+   "content": "There are **seven continents** by the most common convention: Africa, Antarctica, Asia, Australia (Oceania), Europe, North America, and South America.\n\nSome countries and regions use different conventions. For example, some models combine Europe and Asia into Eurasia, which gives six continents, and some count the Americas as one landmass, also giving six.",
+   "tokens_in": 46,
+   "tokens_out": 111,
+   "finish_reason": "stop",
+   "latency_ms": 1142
+  },
+  "b938ce489d633d5ed4b1843a4c5c449ef06c3abe6d7f23a3821e6951199c2535": {
+   "id": "e13",
+   "content": "The square root of 144 is **12**, since 12 × 12 = 144. (The negative root, −12, also squares to 144.)",
+   "tokens_in": 48,
+   "tokens_out": 43,
+   "finish_reason": "stop",
+   "latency_ms": 856
+  },
+  "4f79f63f71c0ca785624aa8bd9d3ebfa6a6abc1440e7dd18726c502dff87dc7f": {
+   "id": "e14",
+   "content": "There are **1,440 minutes** in a day (24 hours × 60 minutes per hour).",
+   "tokens_in": 50,
+   "tokens_out": 32,
+   "finish_reason": "stop",
+   "latency_ms": 839
+  },
+  "2fc40909d75b013bc32afab3fa2187407bcbf461197383dec914795328098a80": {
+   "id": "e15",
+   "content": "The Berlin Wall fell in **1989**, on November 9, when East Germany announced that its borders were open and crowds began crossing into West Berlin.",
+   "tokens_in": 54,
+   "tokens_out": 51,
+   "finish_reason": "stop",
+   "latency_ms": 1277
+  },
+  "9aec1dfe6160030ab6ebf9f464634fcfc5a44f0c5ce7b88b9f235c27012a53dc": {
+   "id": "e16",
+   "content": "The currency of Japan is the **Japanese yen** (symbol: ¥, currency code: JPY).",
+   "tokens_in": 49,
+   "tokens_out": 36,
+   "finish_reason": "stop",
+   "latency_ms": 943
+  },
+  "a9e800d3b6d4054ef5439c8d36f2b8f0996e8ab4c93fae328247c9f49986870f": {
+   "id": "e17",
+   "content": "The plural of \"cactus\" is **cacti** (pronounced \"KAK-tie\"). Also accepted are **cactuses** and, less commonly, **cactus**. Cacti is the traditional Latin-derived form and is the most common in general usage.",
+   "tokens_in": 51,
+   "tokens_out": 82,
+   "finish_reason": "stop",
+   "latency_ms": 991
+  },
+  "4a048838bb69630a5ede71831a4b55eb6108515636c7725c6086aa6f26f10159": {
+   "id": "e18",
+   "content": "PDF stands for **Portable Document Format**. It's a file format created by Adobe that preserves a document's layout, fonts, and images so it looks the same across different devices and software.",
+   "tokens_in": 52,
+   "tokens_out": 58,
+   "finish_reason": "stop",
+   "latency_ms": 806
+  },
+  "dc86ebe32f65fe692431c49b2bd43559121fe9d86fea652518722d2f515fd260": {
+   "id": "e19",
+   "content": "The freezing point of water is **32°F** (which equals 0°C).",
+   "tokens_in": 57,
+   "tokens_out": 24,
+   "finish_reason": "stop",
+   "latency_ms": 915
+  },
+  "f87f8cb71c13a9cd73863a1056d1890a818c498639578591a9fb0c699c4698d9": {
+   "id": "e20",
+   "content": "Plants absorb **carbon dioxide (CO₂)** from the air. They use it during photosynthesis, combining it with water and sunlight to produce glucose and release oxygen.",
+   "tokens_in": 53,
+   "tokens_out": 61,
+   "finish_reason": "stop",
+   "latency_ms": 876
+  },
+  "c6ab04bfbc16b1bd7f4cfece19ec9a758b58aa044addf1fb6f9457011f1b2efd": {
+   "id": "e21",
+   "content": "5 miles is approximately **8.05 kilometres** (1 mile = 1.609344 km, so 5 × 1.609344 = 8.04672 km, which rounds to 8.05 km).",
+   "tokens_in": 53,
+   "tokens_out": 66,
+   "finish_reason": "stop",
+   "latency_ms": 1060
+  },
+  "1a4bb0796ce854e4431cf9b06d26f9acff8ad8ab67156dcc7d3ddd1529c641c0": {
+   "id": "e22",
+   "content": "3.5 kilograms is **3,500 grams**, since 1 kilogram equals 1,000 grams.",
+   "tokens_in": 55,
+   "tokens_out": 38,
+   "finish_reason": "stop",
+   "latency_ms": 1020
+  },
+  "02fd08e8091068e6715e8cdf3609f73753f58e5627494a4a30accff62835742a": {
+   "id": "e23",
+   "content": "100°F is **37.78°C**.\n\nFormula: C = (F − 32) × 5/9 = (100 − 32) × 5/9 = 68 × 5/9 ≈ 37.78°C",
+   "tokens_in": 61,
+   "tokens_out": 67,
+   "finish_reason": "stop",
+   "latency_ms": 1422
+  },
+  "df5f5760ebd697d56eb8999461315483c3c4e1e3401d98d69932bcd8e823403f": {
+   "id": "e24",
+   "content": "2 hours × 60 = 120 minutes, plus 30 minutes = **150 minutes**.",
+   "tokens_in": 59,
+   "tokens_out": 35,
+   "finish_reason": "stop",
+   "latency_ms": 1004
+  },
+  "11e8434625dfbd51bb2631ef3934e1b65a351633fef030f63a2d96eb08d3f037": {
+   "id": "e25",
+   "content": "750 millilitres is **0.75 litres**, since 1 litre = 1000 millilitres (750 ÷ 1000 = 0.75).",
+   "tokens_in": 53,
+   "tokens_out": 50,
+   "finish_reason": "stop",
+   "latency_ms": 985
+  },
+  "0044d745df1befa82cb3246cbefe65e940602207cd98de1dec2a57c48145d5d8": {
+   "id": "e26",
+   "content": "There are **36 inches** in 3 feet, since each foot has 12 inches (3 × 12 = 36).",
+   "tokens_in": 51,
+   "tokens_out": 38,
+   "finish_reason": "stop",
+   "latency_ms": 658
+  },
+  "4380fc21eb6f94ed7f9af4f0f3ec1144551c5f3156c505f933ab5a0ac7af0fc8": {
+   "id": "e27",
+   "content": "15:45",
+   "tokens_in": 57,
+   "tokens_out": 5,
+   "finish_reason": "stop",
+   "latency_ms": 1080
+  },
+  "e5756af6cc7610131bc8fa2a497c60bfb0bb74be4e9a85025701910b8e455bdb": {
+   "id": "e28",
+   "content": "25% of 360 is **90**.",
+   "tokens_in": 48,
+   "tokens_out": 13,
+   "finish_reason": "stop",
+   "latency_ms": 881
+  },
+  "5b331698fd3dbdf793cc4d6402e9df494952673bcfb36b583e8d43d964e95016": {
+   "id": "e29",
+   "content": "2 terabytes equals **2,000 gigabytes** (using the decimal definition, where 1 TB = 1,000 GB).\n\nIf you're working in binary units (where 1 TB = 1,024 GB), 2 TB would be **2,048 GB**. Storage manufacturers usually use the decimal figure, while operating systems often display binary values.",
+   "tokens_in": 56,
+   "tokens_out": 115,
+   "finish_reason": "stop",
+   "latency_ms": 1216
+  },
+  "33be3c6a49a0847c846e290402892eb597bd5e1464246f937249f90ced1b0e00": {
+   "id": "e30",
+   "content": "3 hours × 60 minutes × 60 seconds = **10,800 seconds**",
+   "tokens_in": 52,
+   "tokens_out": 30,
+   "finish_reason": "stop",
+   "latency_ms": 975
+  },
+  "2bf6ec59f85575a28118bd45a5269dd1e1b92bfbad58a9ba6958db5ada1fecb2": {
+   "id": "e31",
+   "content": "Corrected: **\"He and I go to the office every day.\"**\n\nTwo fixes were needed:\n- **\"He and I\"** instead of \"Me and him.\" Use subject pronouns (I, he, she, we, they) when they're the subject of the sentence.\n- **\"go\"** instead of \"goes.\" \"He and I\" is plural, so the verb takes the plural form.",
+   "tokens_in": 60,
+   "tokens_out": 113,
+   "finish_reason": "stop",
+   "latency_ms": 1170
+  },
+  "93cf4a609ca90adffcc35a82832b076805b68ae14842cb8f906b4790b3d53a0d": {
+   "id": "e33",
+   "content": "\"The meeting has been moved to a later date.\"",
+   "tokens_in": 72,
+   "tokens_out": 16,
+   "finish_reason": "stop",
+   "latency_ms": 1004
+  },
+  "8cf198964f55e1bc5c6f9355a3984531db8e4bacd562bb1dd0351ac8ed56a90f": {
+   "id": "e34",
+   "content": "Bonjour, l'équipe.",
+   "tokens_in": 53,
+   "tokens_out": 14,
+   "finish_reason": "stop",
+   "latency_ms": 841
+  },
+  "4e2b3f0a60bce611dc73a0b9d34f359b3b7299608344d7c86146bce8a209f1bf": {
+   "id": "e32",
+   "content": "Here are a few more polite options:\n\n- \"Could you please send me the report when you get a chance?\"\n- \"Would you mind sending me the report at your earliest convenience?\"\n- \"Could you send over the report when you have a moment? Thank you!\"",
+   "tokens_in": 57,
+   "tokens_out": 77,
+   "finish_reason": "stop",
+   "latency_ms": 1545
+  },
+  "14023e830d6b3d5067b36b83db9a14d0e8cbed2cca8b0520a50c4be1fd2dc0c5": {
+   "id": "e35",
+   "content": "\"Thank you for your patience\" in German is:\n\n**\"Danke für Ihre Geduld\"** (formal, using \"Ihre\")\n\nor\n\n**\"Danke für deine Geduld\"** (informal, using \"deine\")",
+   "tokens_in": 55,
+   "tokens_out": 70,
+   "finish_reason": "stop",
+   "latency_ms": 947
+  },
+  "22cf4d1c57452e3d2ac822917f06ebc815b0a2fe5f6e9db5bb7ba2384171ffca": {
+   "id": "e36",
+   "content": "The quarterly sync is moved from Tuesday to Thursday because the conference room is under renovation.",
+   "tokens_in": 79,
+   "tokens_out": 34,
+   "finish_reason": "stop",
+   "latency_ms": 961
+  },
+  "8aa50ad5a726410bbcb73852f77b9f8b01a4a195e6fd8bc8eeb117499e296824": {
+   "id": "e37",
+   "content": "- Milk\n- Eggs\n- Bread\n- Coffee",
+   "tokens_in": 65,
+   "tokens_out": 23,
+   "finish_reason": "stop",
+   "latency_ms": 988
+  },
+  "5bb1ace1295bbe30d6f73726937dd8d2d69b10b34eb7ed1994b3ba47d4a73d83": {
+   "id": "e39",
+   "content": "The project was finished by the team.",
+   "tokens_in": 56,
+   "tokens_out": 11,
+   "finish_reason": "stop",
+   "latency_ms": 773
+  },
+  "1c0931d967ea7cfd5a2979c5335836f094127cec302104d03f18f13ba2f9f8c4": {
+   "id": "e38",
+   "content": "Options:\n\n- \"Reminder: Submit October timesheets by Friday\"\n- \"October timesheets due Friday\"\n- \"Action needed: October timesheets due Friday\"",
+   "tokens_in": 78,
+   "tokens_out": 57,
+   "finish_reason": "stop",
+   "latency_ms": 879
+  },
+  "675449012ad7f89fa33ed21c349bad2867d8ae32d0f452c5b5579ae30d0a542b": {
+   "id": "e40",
+   "content": "\"Please receive the package tomorrow.\"",
+   "tokens_in": 63,
+   "tokens_out": 15,
+   "finish_reason": "stop",
+   "latency_ms": 749
+  },
+  "9a82902af749d0e6032c2ffe0aa757c76e679bab106fadab3692646e396a0104": {
+   "id": "e41",
+   "content": "The Quick Guide to Onboarding",
+   "tokens_in": 58,
+   "tokens_out": 15,
+   "finish_reason": "stop",
+   "latency_ms": 924
+  },
+  "d5351171ba4bd67154c7bd030851da4a5ee2368679e40809924026b57addb82f": {
+   "id": "e42",
+   "content": "Here are a few options, depending on the tone you want:\n\n- \"We should try a new approach.\"\n- \"I recommend we try a new approach.\"\n- \"Let's move forward with a new approach.\"",
+   "tokens_in": 69,
+   "tokens_out": 58,
+   "finish_reason": "stop",
+   "latency_ms": 1034
+  },
+  "cb41fa571767ee93bf431848d9eb6fd0c3b82f20ad72ec1308d4f85031755c84": {
+   "id": "e43",
+   "content": "Here are a few paraphrases:\n\n- The deadline is firm and cannot be pushed back.\n- We're unable to extend the deadline.\n- There's no possibility of an extension on the deadline.\n- The due date is fixed and won't be moved.",
+   "tokens_in": 58,
+   "tokens_out": 80,
+   "finish_reason": "stop",
+   "latency_ms": 1123
+  },
+  "ebc5748849b59df35cacbcc66ffae2dbd51d83cdc91bc3cc6389e547be01596d": {
+   "id": "e44",
+   "content": "Does the server restart at midnight?",
+   "tokens_in": 60,
+   "tokens_out": 13,
+   "finish_reason": "stop",
+   "latency_ms": 869
+  },
+  "76b67546a43c73861c97ae60ec0bac42f31b49d11acb5552950d9581c66e690f": {
+   "id": "e45",
+   "content": "I'm currently out of the office on leave and will respond to your message when I return.",
+   "tokens_in": 61,
+   "tokens_out": 25,
+   "finish_reason": "stop",
+   "latency_ms": 892
+  },
+  "6cc998d10a939da52622d7546c9ffcfaaa51df2d6bfef4c1df44b369375a6296": {
+   "id": "e46",
+   "content": "\"Let's talk later and work together.\"",
+   "tokens_in": 65,
+   "tokens_out": 13,
+   "finish_reason": "stop",
+   "latency_ms": 1324
+  },
+  "3d78b749713c11bfc5ed747ba0ab72ac2e4842b0591543e0b3c335b711abbca0": {
+   "id": "e47",
+   "content": "Apple, banana, mango, pear",
+   "tokens_in": 62,
+   "tokens_out": 14,
+   "finish_reason": "stop",
+   "latency_ms": 953
+  },
+  "cdf3a0b5934dfa02fcb2519d16b2c09ea27f6161df2af8cdf560cf31bc58c24e": {
+   "id": "e48",
+   "content": "\"ETA\" stands for **Estimated Time of Arrival**. So the question asks: \"What's the estimated time of arrival for the delivery?\"",
+   "tokens_in": 64,
+   "tokens_out": 49,
+   "finish_reason": "stop",
+   "latency_ms": 866
+  },
+  "784686e450fed634f5717b683cbac8889c9b091730a8b1d431be422456e438f0": {
+   "id": "e50",
+   "content": "Here's a short tweet version:\n\n\"Our new Pune office opens next month, with space for 200 people! 🎉 #NewOffice #Pune\"",
+   "tokens_in": 73,
+   "tokens_out": 50,
+   "finish_reason": "stop",
+   "latency_ms": 983
+  },
+  "64d514c60a8daf28ba306574fde8d85215336bc73c68967e741101d79334bd41": {
+   "id": "e51",
+   "content": "Positive. The reviewer praises the speed of checkout (\"quick\") and the friendliness of the support team (\"lovely\").",
+   "tokens_in": 66,
+   "tokens_out": 41,
+   "finish_reason": "stop",
+   "latency_ms": 1194
+  },
+  "675482a615cb68dfbe4b439bee7b26e5613b5435287b30232dfe2c4fd1b0f56b": {
+   "id": "e49",
+   "content": "Here are a few friendlier options, depending on the tone you want:\n\n- \"Thanks for your request. Unfortunately, we're unable to approve it this time.\"\n- \"We appreciate you reaching out. After review, we're not able to approve your request at this time.\"\n- \"Thank you for submitting your request. We weren't able to approve it, but please feel free to reach out if you have questions or would like to discuss other options.\"",
+   "tokens_in": 56,
+   "tokens_out": 129,
+   "finish_reason": "stop",
+   "latency_ms": 1356
+  },
+  "0d07774b80896f87ff294e16a5edcc8af839574bd4ff5f0e5fed18e8bb10e100": {
+   "id": "e52",
+   "content": "The phone number is **044-2345-6789**.",
+   "tokens_in": 70,
+   "tokens_out": 17,
+   "finish_reason": "stop",
+   "latency_ms": 842
+  },
+  "fbfbdee049efc3055d3ba6adbf856fe52aa75e917292e27476f4c6c90bf0a6d2": {
+   "id": "e53",
+   "content": "The date mentioned is **14 March**.",
+   "tokens_in": 63,
+   "tokens_out": 15,
+   "finish_reason": "stop",
+   "latency_ms": 744
+  },
+  "457e3a892246ce9cb638867532cfc208111d54d14371c5c18fb181d7117b12aa": {
+   "id": "e54",
+   "content": "Billing",
+   "tokens_in": 65,
+   "tokens_out": 5,
+   "finish_reason": "stop",
+   "latency_ms": 945
+  },
+  "07ff2cec5f9a74c2353c431f69e43b7cfaa9f6c86429b9334df5fc0c62c3e65a": {
+   "id": "e56",
+   "content": "Arun, Meera, Ravi",
+   "tokens_in": 62,
+   "tokens_out": 14,
+   "finish_reason": "stop",
+   "latency_ms": 797
+  },
+  "e0f9911981f86a0eb1996d578ccbdfcd6869e03538091a3b865576488fe5f888": {
+   "id": "e55",
+   "content": "It's a request. Although it's phrased with \"please,\" it's a polite imperative asking you to close the door, not a question seeking information. Its grammatical form is an imperative sentence, which is the standard form for making requests or giving commands.",
+   "tokens_in": 55,
+   "tokens_out": 74,
+   "finish_reason": "stop",
+   "latency_ms": 1173
+  },
+  "0e398cbaebf71c89d12031481a011ca62bf0b58909e2d740f9629d33e0c57620": {
+   "id": "e58",
+   "content": "The order number is **48213**.",
+   "tokens_in": 68,
+   "tokens_out": 11,
+   "finish_reason": "stop",
+   "latency_ms": 881
+  },
+  "a9cf7c38568e7d514088f40d18e3f31981848caf36d3ae75ec494c33bb980053": {
+   "id": "e57",
+   "content": "The tone is **lukewarm, indifferent, or mildly dismissive**. The speaker isn't enthusiastic or impressed. \"Meh\" signals boredom or apathy, and \"I guess\" adds reluctance, suggesting the thing works adequately but without much satisfaction. It could also carry a slight note of disappointment or resignation, depending on context.",
+   "tokens_in": 59,
+   "tokens_out": 118,
+   "finish_reason": "stop",
+   "latency_ms": 1859
+  },
+  "229d14c562fe7418a732f24dc92e0b12d4870b36805ebd5a433d29faf3fe969a": {
+   "id": "e59",
+   "content": "This is **French**. \"Bonjour\" means \"hello,\" and \"Comment ça va ?\" means \"How are you?\"",
+   "tokens_in": 60,
+   "tokens_out": 38,
+   "finish_reason": "stop",
+   "latency_ms": 1153
+  },
+  "380d1f94b38861946dff02716d2e1bdeb07f2fee471c2c9b648ad89150b92d1e": {
+   "id": "e60",
+   "content": "No, it doesn't need a reply. It's an FYI, meaning the sender is just sharing information and isn't asking for anything. A quick thumbs-up or \"thanks\" is optional, depending on your team's norms.",
+   "tokens_in": 67,
+   "tokens_out": 71,
+   "finish_reason": "stop",
+   "latency_ms": 1138
+  },
+  "3c61c95279b5a727e322aefdd0d2c8f86336412aed64ff80659d73639f3b58d7": {
+   "id": "e62",
+   "content": "Carrot is the vegetable. Apple and banana are fruits.",
+   "tokens_in": 60,
+   "tokens_out": 24,
+   "finish_reason": "stop",
+   "latency_ms": 916
+  },
+  "85de5b307daaef1e85a24570838b728802f0c3dba000d0dccef51778c986f8a6": {
+   "id": "e61",
+   "content": "**High**\n\nA login page outage affecting every customer blocks access to the product for everyone at once, so it needs immediate attention.",
+   "tokens_in": 65,
+   "tokens_out": 41,
+   "finish_reason": "stop",
+   "latency_ms": 1044
+  },
+  "f3f40d6a3b4f3a854b59dab54ade6f9f399056d3cae8af04eabb787199c6a919": {
+   "id": "e63",
+   "content": "I'm doing well, thanks for asking! How about you? Is there anything I can help you with today?",
+   "tokens_in": 49,
+   "tokens_out": 32,
+   "finish_reason": "stop",
+   "latency_ms": 983
+  },
+  "47d62d5c83cdf7100b65f839fb195c41fa2d95977ff008e4a74b86697b3f8410": {
+   "id": "e64",
+   "content": "You're welcome! Glad it helped. If you have any other questions, just let me know.",
+   "tokens_in": 51,
+   "tokens_out": 28,
+   "finish_reason": "stop",
+   "latency_ms": 1040
+  },
+  "f3d4f17af2881f09d535d8e70c237444b43713430a0fc9a03166207b03a3b9b4": {
+   "id": "e66",
+   "content": "Exhausted",
+   "tokens_in": 51,
+   "tokens_out": 7,
+   "finish_reason": "stop",
+   "latency_ms": 926
+  },
+  "9470b5600920eec9cbd19d4e8d5b2505551cc69894313e80cea43aa0c81ee957": {
+   "id": "e65",
+   "content": "Octopuses have three hearts! Two pump blood through the gills, and a third pumps it to the rest of the body. Interestingly, the heart that serves the body stops beating when the octopus swims, which is one reason they prefer crawling to swimming.",
+   "tokens_in": 54,
+   "tokens_out": 82,
+   "finish_reason": "stop",
+   "latency_ms": 1651
+  },
+  "022cc425487ddcef2f4b686b93d9c3d3275546ffb9745cb5df9bba0b9a9376e1": {
+   "id": "e67",
+   "content": "Here are a few name ideas for a pet goldfish:\n\n- **Bubbles**\n- **Goldie**\n- **Nemo**\n- **Sushi**\n- **Captain Finn**\n- **Sunny**\n\nIf you tell me a bit about its personality or appearance, I can suggest something more tailored.",
+   "tokens_in": 54,
+   "tokens_out": 100,
+   "finish_reason": "stop",
+   "latency_ms": 903
+  },
+  "3bddf10f79308ec80b9e495b6cce40e526ae0cf3312b9dc9c1b533fb94d3ea81": {
+   "id": "e69",
+   "content": "Why did the computer go to the doctor?\n\nBecause it had a virus!",
+   "tokens_in": 54,
+   "tokens_out": 24,
+   "finish_reason": "stop",
+   "latency_ms": 950
+  },
+  "f64f97eb02716d4c288bc3869f1abd04ea2ee8e1c15f8895a18bd8f43f0fe871": {
+   "id": "e70",
+   "content": "Here are some words that rhyme with \"light\":\n\n- **bright**\n- **night**\n- **right**\n- **sight**\n- **flight**\n- **might**\n- **fight**\n- **tight**\n- **write**\n- **kite**\n- **bite**\n- **height**\n- **delight**\n- **polite**\n- **invite**",
+   "tokens_in": 49,
+   "tokens_out": 101,
+   "finish_reason": "stop",
+   "latency_ms": 1091
+  },
+  "d627ec63b3d9aef9277366980630d9d559e6e25871acb0e17d3d7755842b5525": {
+   "id": "e68",
+   "content": "Here are a few title ideas, depending on the tone you want:\n\n- **The Team Pulse**\n- **Behind the Scenes**\n- **Connected**\n- **The Weekly Spotlight**\n- **Inside Track**\n- **Momentum**\n\nIf you share your team's name, focus, or culture, I can tailor a title more specifically.",
+   "tokens_in": 53,
+   "tokens_out": 110,
+   "finish_reason": "stop",
+   "latency_ms": 1618
+  },
+  "553d05801fe9db440ef5dbe23bee12cb8b5f308d9091acd48f898da51a01828a": {
+   "id": "e72",
+   "content": "The opposite of \"generous\" is **stingy**. Other close antonyms include **selfish**, **greedy**, and **miserly**.",
+   "tokens_in": 51,
+   "tokens_out": 45,
+   "finish_reason": "stop",
+   "latency_ms": 687
+  },
+  "09a540c1146744decc4e2efa3004fa100ddafcc55cfbf37f8e7d7221f411d2a4": {
+   "id": "e71",
+   "content": "I'd recommend **Anna Karenina** by Leo Tolstoy. It's long enough to last a long flight, and the story keeps you hooked: a tangle of love affairs, family drama, and philosophical musings on marriage, faith, and what makes a life meaningful. The chapters are often short, so it's easy to read in bursts between meals, naps, and turbulence.\n\nIf you want something lighter and more propulsive, try **Pride and Prejudice** by Jane Austen. It's witty, quick to get into, and the romance and social comedy make it very easy to read for hours.",
+   "tokens_in": 54,
+   "tokens_out": 189,
+   "finish_reason": "stop",
+   "latency_ms": 1890
+  },
+  "7049c3f582f29b620a09a0b2507ff9594c02ae8f388bf46e71fbf0508e0b75f8": {
+   "id": "e73",
+   "content": "Here are three icebreaker questions for your team meeting:\n\n1. **If you could instantly become an expert at one skill, what would it be?**\n2. **What's the best piece of advice you've ever received?**\n3. **If you could have dinner with any historical figure, who would it be and why?**",
+   "tokens_in": 57,
+   "tokens_out": 91,
+   "finish_reason": "stop",
+   "latency_ms": 1698
+  },
+  "b4e67835919c48c85bae962fbe9d103fd92b7d3e009d4accb79e6ee6d8e26e2e": {
+   "id": "e74",
+   "content": "In Japanese, the most common way to say \"cheers\" when toasting is **\"Kanpai!\"** (乾杯), which literally means \"dry glass.\" You'd say it while raising your glass.\n\nOther options, depending on the situation:\n- **\"Dōzo yoroshiku\"** (どうぞよろしく) is not a toast, but a polite greeting meaning \"nice to meet you.\"\n- **\"Otsukaresama\"** (お疲れ様) is often said as a casual \"cheers\" after work, meaning \"thanks for your hard work.\"",
+   "tokens_in": 54,
+   "tokens_out": 174,
+   "finish_reason": "stop",
+   "latency_ms": 1519
+  },
+  "6a729b389fd8e8438e97a2c9897da65e9692cb6711a730ba2c77a1c65c623681": {
+   "id": "e75",
+   "content": "A haiku is a short form of Japanese poetry, traditionally consisting of three lines with a syllable pattern of 5, 7, and 5. It often focuses on nature or a specific moment, captures a vivid image or sensory experience, and may include a seasonal reference or a \"cutting word\" (kireji) that creates a pause or contrast between two ideas.\n\nExample:\n\n*An old silent pond,*\n*a frog jumps into the pond,*\n*splash! Silence again.*\n(Matsuo Bashō)",
+   "tokens_in": 46,
+   "tokens_out": 168,
+   "finish_reason": "stop",
+   "latency_ms": 1418
+  },
+  "d6f1763b93bf4a749fbcb8969c86a2e9932e03727ca9f8d471200d642f1c699d": {
+   "id": "h01",
+   "content": "Here's a function that merges two sorted lists in O(n) time using the two-pointer technique:\n\n```python\ndef merge_sorted(a, b):\n    \"\"\"Merge two sorted lists into a single sorted list in O(n + m) time.\"\"\"\n    result = []\n    i = j = 0\n\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            result.append(a[i])\n            i += 1\n        else:\n            result.append(b[j])\n            j += 1\n\n    # Append whatever remains in either list\n    result.extend(a[i:])\n    result.extend(b[j:])\n    return result\n\n\n# Example\nprint(merge_sorted([1, 3, 5, 7], [2, 4, 6, 8, 9]))\n# [1, 2, 3, 4, 5, 6, 7, 8, 9]\n```\n\n**How it works:**\n- Two pointers, `i` and `j`, start at the front of each list.\n- At each step, the smaller of `a[i]` and `b[j]` is appended to `result`, and its pointer advances.\n- Each element is visited exactly once, so the running time is O(n + m), where n and m are the lengths of the two lists. For two lists of total size n, this is O(n).\n- Once one list is exhausted, the rest of the other list is already sorted and is copied over in one slice.",
+   "tokens_in": 74,
+   "tokens_out": 428,
+   "finish_reason": "stop",
+   "latency_ms": 2250
+  },
+  "93ef7ffb485b192b4bcb197edca68f24903ce1683814cb211e436894c9efa502": {
+   "id": "h02",
+   "content": "Here's a query that works in PostgreSQL and most other major databases:\n\n```sql\nSELECT\n    c.id,\n    c.name,\n    SUM(o.amount) AS total_order_value\nFROM customers c\nJOIN orders o\n    ON o.customer_id = c.id\nWHERE o.created_at >= CURRENT_DATE - INTERVAL '90 days'\nGROUP BY c.id, c.name\nORDER BY total_order_value DESC\nLIMIT 3;\n```\n\n**Notes:**\n- **Date syntax:** `INTERVAL '90 days'` and `CURRENT_DATE` are PostgreSQL syntax. In MySQL, use `DATE_SUB(CURDATE(), INTERVAL 90 DAY)`. In SQL Server, use `DATEADD(DAY, -90, CAST(GETDATE() AS DATE))`.\n- **Limit syntax:** SQL Server uses `SELECT TOP 3` instead of `LIMIT 3`.\n- **Ties:** If customers can tie for third place, use `RANK()` in a subquery or CTE instead of `LIMIT` to include all tied customers.\n- **Customers with no orders** are excluded by the inner `JOIN`, which is what you want for a top-spenders ranking.",
+   "tokens_in": 94,
+   "tokens_out": 433,
+   "finish_reason": "stop",
+   "latency_ms": 2318
+  },
+  "132f35c86f737478764459d6e92e5b057e9aec3df6e968dd14c369b1b965f5e0": {
+   "id": "h05",
+   "content": "Assuming `getUser` and `getOrders` return promises (or can be promisified), the refactored version is:\n\n```javascript\nconst u = await getUser(id);\nconst o = await getOrders(u);\nrender(o);\n```\n\nThis must run inside an `async` function:\n\n```javascript\nasync function loadAndRender(id) {\n  const u = await getUser(id);\n  const o = await getOrders(u);\n  render(o);\n}\n```\n\nIf `getUser` or `getOrders` only accept callbacks, wrap them first:\n\n```javascript\nconst getUserAsync = (id) =>\n  new Promise((resolve, reject) =>\n    getUser(id, (u, err) => (err ? reject(err) : resolve(u)))\n  );\n```\n\nNote that the original callback passes only `u` and no error argument. If your callbacks follow the Node.js `(err, result)` convention, the wrapper above handles errors. Otherwise, adjust the wrapper to match the actual signature.",
+   "tokens_in": 84,
+   "tokens_out": 311,
+   "finish_reason": "stop",
+   "latency_ms": 1898
+  },
+  "47415116b7b97c786b4270e323046eda4006adea2ae1e260e47fcd9ca97a54ac": {
+   "id": "h03",
+   "content": "A **process** is an independent running program with its own memory space, file descriptors, and system resources. The operating system isolates processes from one another, so one process crashing or corrupting its memory generally doesn't affect the others.\n\nA **thread** is a unit of execution inside a process. Threads in the same process share its memory and resources, so they can communicate cheaply, but they also share its failure modes: a bug that corrupts memory in one thread can take down the whole process.\n\n**Key differences**\n\n| | Process | Thread |\n|---|---|---|\n| Memory | Separate address space | Shared with other threads in the process |\n| Creation/context-switch cost | Higher | Lower |\n| Communication | IPC (pipes, sockets, shared memory) | Direct shared memory (needs synchronization) |\n| Isolation/fault tolerance | Strong | Weak |\n| Synchronization | Mostly handled by the OS/IPC | Locks, mutexes, etc. are required |\n\n**When a web server should use each**\n\nMost web servers use a mix of both, and the choice depends on workload and fault-tolerance needs:\n\n- **Use multiple threads** when:\n  - Requests are I/O-bound (database queries, file reads, upstream API calls) and you want to handle many concurrent connections with modest memory use.\n  - Requests need to share in-memory state, such as caches or connection pools, and you want to avoid serialization overhead.\n  - You're on a platform where thread creation is cheap and threading is well supported (e.g., Java servers like Tomcat, or Go's goroutines, which are lightweight threads).\n\n- **Use multiple processes** when:\n  - You need strong isolation, for example running untrusted or plugin code, or limiting the blast radius of a crash.\n  - The language has a global interpreter lock (like CPython or Ruby MRI), which prevents threads from running Python or Ruby code in parallel. Multiple processes let you use multiple CPU cores. Apache's prefork MPM and Gunicorn's worker model are examples.\n  - You want process-level restarts to recover from memory leaks or a poisoned worker.\n\n- **Use an event-driven/asynchronous model** (often combined with a small number of threads or processes) when:\n  - You have very high numbers of mostly idle connections, such as long-polling, WebSockets, or streaming. Nginx and Node.js use this approach, handling many connections per worker without a thread per connection.\n\n**Common production pattern:** run several worker processes (typically one per CPU core), and inside each, use threads or an async event loop to handle concurrent requests. This gets you parallelism across cores, fault isolation between workers, and efficient handling of I/O-bound concurrency.",
+   "tokens_in": 62,
+   "tokens_out": 879,
+   "finish_reason": "stop",
+   "latency_ms": 5020
+  },
+  "85373fa32d29f2b9c8d54a1409feddb8cdb13fd6042dddc8f7aa6a7e89594d4c": {
+   "id": "h04",
+   "content": "## Regex\n\n```regex\n^((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$\n```\n\n## Explanation\n\n**Anchors**\n- `^` matches the start of the string.\n- `$` matches the end of the string. Together they ensure the entire input is an IPv4 address, not just a substring of a larger string.\n\n**One octet (0–255)**\nThe octet pattern is an alternation, `(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)`, with each branch covering a numeric range:\n\n| Branch | Matches | Example |\n|---|---|---|\n| `25[0-5]` | 250–255 | `255`, `251` |\n| `2[0-4]\\d` | 200–249 | `249`, `200` |\n| `1\\d\\d` | 100–199 | `192`, `100` |\n| `[1-9]?\\d` | 0–99 | `7`, `42`, `0` |\n\nThe branches are ordered from most to least specific so that, for example, `255` is matched by the first branch rather than being partially matched by `25` and left with a stray `5`. The `[1-9]?\\d` branch rejects leading zeros such as `01` or `001`.\n\n**Dots and repetition**\n- `\\.` matches a literal dot. The backslash is required because an unescaped `.` matches any character.\n- `(octet\\.){3}` repeats the octet-plus-dot group exactly three times, covering the first three octets.\n\n**Final octet**\n- The last octet is matched without a trailing dot, so the address has exactly four octets.\n\n## Example Usage (Python)\n\n```python\nimport re\n\nipv4 = re.compile(r\"^((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)$\")\n\nfor ip in [\"192.168.1.1\", \"255.255.255.255\", \"0.0.0.0\", \"256.1.1.1\", \"01.2.3.4\", \"1.2.3\"]:\n    print",
+   "tokens_in": 62,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 4843
+  },
+  "187d2505ff3bc261ddc9e90a3ce7729070995949720cd6717da13ad57bd7bc04": {
+   "id": "h06",
+   "content": "Here's an LRU cache in TypeScript using a `Map` (which preserves insertion order) for O(1) operations. Deleting and re-inserting a key moves it to the most-recently-used position, and the first key in the map is always the least recently used.\n\n```typescript\nclass LRUCache<K, V> {\n  private readonly capacity: number;\n  private readonly cache: Map<K, V>;\n\n  constructor(capacity: number) {\n    if (capacity <= 0) {\n      throw new RangeError(\"Capacity must be a positive integer\");\n    }\n    this.capacity = capacity;\n    this.cache = new Map<K, V>();\n  }\n\n  get(key: K): V | undefined {\n    if (!this.cache.has(key)) {\n      return undefined;\n    }\n    // Move key to most-recently-used position\n    const value = this.cache.get(key) as V;\n    this.cache.delete(key);\n    this.cache.set(key, value);\n    return value;\n  }\n\n  put(key: K, value: V): void {\n    if (this.cache.has(key)) {\n      // Remove so it gets re-inserted at the end (MRU position)\n      this.cache.delete(key);\n    } else if (this.cache.size >= this.capacity) {\n      // Evict least-recently-used (first entry in insertion order)\n      const lruKey = this.cache.keys().next().value as K;\n      this.cache.delete(lruKey);\n    }\n    this.cache.set(key, value);\n  }\n}\n\n// Usage example\nconst cache = new LRUCache<string, number>(2);\n\ncache.put(\"a\", 1);\ncache.put(\"b\", 2);\nconsole.log(cache.get(\"a\")); // 1  (order: b, a)\ncache.put(\"c\", 3);           // evicts \"b\"\nconsole.log(cache.get(\"b\")); // undefined\nconsole.log(cache.get(\"c\")); // 3\n```\n\n**Complexity:** `get` and `put` are both O(1) amortized, since `Map` lookups, inserts, and deletes are hash-based, and fetching the first key via `keys().next()` is constant time.\n\nIf you need an explicit implementation (e.g., for an interview or a language without an ordered map), the classic approach pairs a `Map<K, Node>` with a doubly linked list. The `Map` version above is the idiomatic choice in TypeScript/JavaScript.",
+   "tokens_in": 63,
+   "tokens_out": 760,
+   "finish_reason": "stop",
+   "latency_ms": 3318
+  },
+  "11b7f872d5b4085c9393cc64909431dcbb808f4216f175d408ad2d2357f4dc90": {
+   "id": "h08",
+   "content": "Here's a bash script that finds files over 100 MB under `/var/log` and sorts them by size, largest first:\n\n```bash\n#!/usr/bin/env bash\n#\n# list_large_logs.sh\n# Lists files larger than 100 MB under /var/log, sorted by size (largest first).\n\nset -euo pipefail\n\nSEARCH_DIR=\"/var/log\"\nMIN_SIZE=\"+100M\"   # find's -size syntax: strictly greater than 100 MiB\n\nif [[ ! -d \"$SEARCH_DIR\" ]]; then\n    echo \"Error: $SEARCH_DIR does not exist or is not a directory.\" >&2\n    exit 1\nfi\n\n# find prints: size_in_bytes<TAB>path\n# sort -rn sorts numerically, largest first\n# Errors (e.g., permission denied) are suppressed to keep output clean.\nfind \"$SEARCH_DIR\" -type f -size \"$MIN_SIZE\" -printf '%s\\t%p\\n' 2>/dev/null \\\n    | sort -rn \\\n    | awk -F'\\t' '{\n        size = $1\n        if (size >= 1073741824)      h = sprintf(\"%.2f GB\", size/1073741824)\n        else if (size >= 1048576)    h = sprintf(\"%.2f MB\", size/1048576)\n        else                         h = sprintf(\"%.2f KB\", size/1024)\n        printf \"%10s  %s\\n\", h, $2\n    }'\n```\n\n**Usage:**\n\n```bash\nchmod +x list_large_logs.sh\nsudo ./list_large_logs.sh\n```\n\nRunning with `sudo` is usually needed, since some files in `/var/log` are readable only by root.\n\n**Notes:**\n- `-size +100M` matches files strictly larger than 100 MiB. If you want 100 MB decimal (100,000,000 bytes), use `-size +100000000c` instead.\n- `-printf` is a GNU find feature. On BSD/macOS, use `find ... -exec stat` or install GNU findutils.\n- Output is sorted largest first; remove `-r` from `sort -rn` for smallest first.",
+   "tokens_in": 69,
+   "tokens_out": 705,
+   "finish_reason": "stop",
+   "latency_ms": 3388
+  },
+  "f346e3cec799d9eed0c00f46967f893609baa66007b3e60de1f9fe8907ac909d": {
+   "id": "h07",
+   "content": "In JavaScript, numbers are IEEE 754 double-precision floats, which store values in **binary**. Some decimal fractions, including 0.1 and 0.2, have no exact binary representation, just as 1/3 has none in decimal. The stored values are slightly off:\n\n```js\n0.1 + 0.2  // 0.30000000000000004\n0.1.toFixed(20) // \"0.10000000000000000555\"\n```\n\nThe error is tiny, but it accumulates and breaks exact comparisons.\n\n## How to store money\n\n**1. Store integers in the smallest currency unit (recommended for most apps).**\nKeep cents, not dollars, so all arithmetic is on whole numbers, which floats represent exactly (up to about 2^53):\n\n```js\nconst priceCents = 1999;            // $19.99\nconst total = priceCents * 3;       // 5997 → $59.97\nconst display = (total / 100).toFixed(2); // only for display\n```\n\nUse `Math.round` when a calculation produces fractions, such as tax, and decide explicitly how rounding should work.\n\n**2. Use `BigInt` for integer minor units** if values could get very large or you want to rule out precision issues entirely. Note that `BigInt` doesn't accept non-integer values, so you still need to keep money in integer units.\n\n**3. Use a decimal library** (e.g., `decimal.js`, `big.js`, or `dinero.js`) if you need arbitrary-precision decimal math, such as currency conversion with fractional rates or complex financial calculations.\n\n**4. Avoid:** storing money as a float in dollars, and doing arithmetic with `parseFloat` on formatted strings.\n\n## Other considerations\n\n- **Currency exponents vary.** USD and EUR use 2 decimal places, JPY uses 0, and BHD uses 3. Store the currency code alongside the amount so you know how to scale it.\n- **Format for display with `Intl.NumberFormat`**, which handles locale, symbols, and rounding:\n  ```js\n  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(5997 / 100);\n  // \"$59.97\"\n  ```\n- **Store as a typed field in the database**, such as `BIGINT` for cents or `DECIMAL(19,4)` in SQL, not `FLOAT` or `DOUBLE`. Keep the same representation across the API boundary, and send amounts as integers or strings, not JSON floats.",
+   "tokens_in": 80,
+   "tokens_out": 958,
+   "finish_reason": "stop",
+   "latency_ms": 5501
+  },
+  "ea6363f804546f2cd5665b62b0424ef288c375a6eb2451335f98e47509371e22": {
+   "id": "h09",
+   "content": "# Library REST API Design\n\n## Overview\n\nThe API manages three core resources:\n\n- **Books**: catalog of titles and copies\n- **Members**: library patrons\n- **Loans**: borrowing records linking members to books\n\n**Base URL:** `https://api.library.example.com/v1`\n**Format:** JSON (`Content-Type: application/json`)\n**Auth:** Bearer token (`Authorization: Bearer <token>`)\n\n---\n\n## 1. Books\n\n| Method | Endpoint | Description | Success | Errors |\n|--------|----------|-------------|---------|--------|\n| GET | `/books` | List books (supports `?q=`, `?author=`, `?page=`, `?limit=`) | 200 | 400 |\n| POST | `/books` | Add a new book | 201 (+ `Location`) | 400, 401, 403, 409 (duplicate ISBN) |\n| GET | `/books/{bookId}` | Get book details | 200 | 401, 404 |\n| PUT | `/books/{bookId}` | Replace book record | 200 | 400, 401, 403, 404 |\n| PATCH | `/books/{bookId}` | Partially update book | 200 | 400, 401, 403, 404 |\n| DELETE | `/books/{bookId}` | Remove book from catalog | 204 | 401, 403, 404, 409 (has active loans) |\n| GET | `/books/{bookId}/copies` | List physical copies | 200 | 401, 404 |\n| POST | `/books/{bookId}/copies` | Add a copy | 201 | 400, 401, 403, 404 |\n\n**Example: Create book**\n```http\nPOST /v1/books\nContent-Type: application/json\n\n{\n  \"isbn\": \"9780131103627\",\n  \"title\": \"The C Programming Language\",\n  \"author\": \"Kernighan & Ritchie\",\n  \"publishedYear\": 1988\n}\n```\n```http\nHTTP/1.1 201 Created\nLocation: /v1/books/bk_123\n```\n\n---\n\n## 2. Members\n\n| Method | Endpoint | Description | Success | Errors |\n|--------|----------|-------------|---------|--------|\n| GET | `/members` | List members (`?status=`, `?page=`, `?limit=`) | 200 | 400, 401 |\n| POST | `/members` | Register a member | 201 | 400, 401, 409 (email exists) |\n| GET | `/members/{memberId}` | Get member profile | 200 | 401, 403, 404 |\n| PUT | `/members/{memberId}` | Replace member profile | 200 | 400, 401, 403, 404 |\n| PATCH | `/members/{memberId}` | Update member fields | 200 | 400, 401, 403, 404 |\n| DELETE | `/members/{memberId}` | Deactivate/remove member | 204 | 401, 403, 404, 409 (outstanding loans) |\n| GET | `/members/{memberId}/loans` | List member's loans | 200 | 401, 403, 404 |\n| GET | `/members/{memberId}/fines` | List outstanding fines | 200 | ",
+   "tokens_in": 68,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 4106
+  },
+  "ba5e75ec9dd8aee0e0ded404700d85f14c83504100d85e884cb23f5cebeabe2d": {
+   "id": "h11",
+   "content": "Here's an iterative version that runs in linear time and constant space:\n\n```python\ndef fib(n):\n    if n < 2:\n        return n\n    prev, curr = 0, 1\n    for _ in range(2, n + 1):\n        prev, curr = curr, prev + curr\n    return curr\n```\n\n**Complexity comparison**\n\n| Version | Time | Space |\n|---|---|---|\n| Recursive (original) | O(φⁿ) ≈ O(1.618ⁿ), exponential | O(n) call stack depth |\n| Iterative (above) | O(n) | O(1) |\n\n**Why the recursive version is exponential:** each call to `fib(n)` makes two more calls, `fib(n-1)` and `fib(n-2)`, and those subproblems overlap heavily. The same values are recomputed over and over. The number of calls grows roughly by the golden ratio φ ≈ 1.618 for each increase in n.\n\n**Why the iterative version is linear:** it computes each Fibonacci number exactly once, from the bottom up, keeping only the last two values. The loop runs n−1 times, and each step does constant work.\n\n**Caveat:** for large n, the arithmetic itself is not constant time. Fibonacci numbers have about 0.69n bits, so each addition costs O(n) bit operations. Counting bit operations, the total cost is O(n²). The O(n) figure counts arithmetic operations on integers.",
+   "tokens_in": 95,
+   "tokens_out": 466,
+   "finish_reason": "stop",
+   "latency_ms": 2662
+  },
+  "ab240ce3829adf8e250797efa1b9ba906d960b7b5bfe8fb91bb174dbb8e42680": {
+   "id": "h10",
+   "content": "Here's a Jest test suite for a `slugify(title)` function that lowercases, trims, and replaces spaces with hyphens.\n\nFirst, a reference implementation (in `slugify.js`) so the tests have something concrete to run against:\n\n```javascript\n// slugify.js\nfunction slugify(title) {\n  return title.trim().toLowerCase().replace(/\\s+/g, '-');\n}\n\nmodule.exports = { slugify };\n```\n\nThen the tests (in `slugify.test.js`):\n\n```javascript\n// slugify.test.js\nconst { slugify } = require('./slugify');\n\ndescribe('slugify', () => {\n  describe('lowercasing', () => {\n    test('converts uppercase letters to lowercase', () => {\n      expect(slugify('HELLO WORLD')).toBe('hello-world');\n    });\n\n    test('handles mixed case', () => {\n      expect(slugify('Hello World')).toBe('hello-world');\n    });\n\n    test('leaves already lowercase input unchanged', () => {\n      expect(slugify('hello-world')).toBe('hello-world');\n    });\n  });\n\n  describe('trimming', () => {\n    test('removes leading whitespace', () => {\n      expect(slugify('   hello world')).toBe('hello-world');\n    });\n\n    test('removes trailing whitespace', () => {\n      expect(slugify('hello world   ')).toBe('hello-world');\n    });\n\n    test('removes leading and trailing whitespace', () => {\n      expect(slugify('  hello world  ')).toBe('hello-world');\n    });\n\n    test('returns empty string for whitespace-only input', () => {\n      expect(slugify('     ')).toBe('');\n    });\n  });\n\n  describe('replacing spaces with hyphens', () => {\n    test('replaces a single space with a hyphen', () => {\n      expect(slugify('hello world')).toBe('hello-world');\n    });\n\n    test('replaces multiple words', () => {\n      expect(slugify('the quick brown fox')).toBe('the-quick-brown-fox');\n    });\n\n    test('collapses consecutive spaces into a single hyphen', () => {\n      expect(slugify('hello    world')).toBe('hello-world');\n    });\n\n    test('replaces tabs and newlines as whitespace', () => {\n      expect(slugify('hello\\tworld\\nfoo')).toBe('hello-world-foo');\n    });\n  });\n\n  describe('combined behavior', () => {\n    test('trims, lowercases, and hyphenates together', () => {\n      expect(slugify('  The Quick  Brown Fox  ')).toBe('the-quick-brown-fox');\n    });\n  });\n\n  describe('edge cases', () => {\n    test('returns empty string for empty input', () => {\n      expect(slugify('')).toBe('');\n    });\n\n    test('handles a single word with no spaces', () => {\n      expect(slugify('Hello')).toBe('hello');\n    });\n  });\n});\n```\n\nTo run them:\n\n```bash\nnpm install --save-dev jest\nnpx jest\n```\n\nNote: the `collapses consecutive spaces` and `tabs and newlines` tests reflect the `\\",
+   "tokens_in": 78,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 3918
+  },
+  "4fb674dd113d93bce864e5f1e86448f5f98a2a5cae217c37ad5db820695468d0": {
+   "id": "h12",
+   "content": "```go\npackage main\n\nimport (\n\t\"encoding/csv\"\n\t\"errors\"\n\t\"fmt\"\n\t\"io\"\n\t\"math\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\n// SumSecondColumn returns the sum of the numeric values in the second column\n// of the CSV file at path. Malformed rows are skipped:\n//   - rows that fail CSV syntax parsing\n//   - rows with fewer than two fields\n//   - rows whose second field is not a finite number\n//\n// I/O errors are returned to the caller.\nfunc SumSecondColumn(path string) (float64, error) {\n\tf, err := os.Open(path)\n\tif err != nil {\n\t\treturn 0, err\n\t}\n\tdefer f.Close()\n\n\tr := csv.NewReader(f)\n\tr.FieldsPerRecord = -1 // accept rows with var",
+   "tokens_in": 73,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 4510
+  },
+  "ff692e6ca2f96be7c8d8bb7ff63c571d87049abc43d80a1f313885747855aafe": {
+   "id": "h14",
+   "content": "A **race condition** happens when two or more threads (or processes) access shared data concurrently, at least one of them modifies it, and the final result depends on the unpredictable timing of how their operations interleave. Because `counter++` is really three steps (read, add, write), two threads can read the same old value and both write back the same increment, losing an update.\n\nA **mutex** (mutual exclusion lock) fixes this by ensuring only one thread at a time can execute the critical section that touches the shared data.\n\n**Example in C with pthreads:**\n\n```c\n#include <stdio.h>\n#include <pthread.h>\n\n#define ITERATIONS 1000000\n\nlong counter = 0;\npthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;\n\nvoid *increment(void *arg) {\n    for (int i = 0; i < ITERATIONS; i++) {\n        pthread_mutex_lock(&lock);    // enter critical section\n        counter++;                    // shared data access\n        pthread_mutex_unlock(&lock);  // leave critical section\n    }\n    return NULL;\n}\n\nint main(void) {\n    pthread_t t1, t2;\n    pthread_create(&t1, NULL, increment, NULL);\n    pthread_create(&t2, NULL, increment, NULL);\n    pthread_join(t1, NULL);\n    pthread_join(t2, NULL);\n\n    printf(\"Counter: %ld (expected %d)\\n\", counter, 2 * ITERATIONS);\n    return 0;\n}\n```\n\nWithout the lock and unlock calls, the output would typically be less than 2,000,000 and vary from run to run. With the mutex, the output is always exactly 2,000,000.\n\n**Key points:**\n- Lock before touching shared state, unlock immediately after.\n- Every thread that accesses the same data must use the same mutex.\n- Keep critical sections short to limit contention.",
+   "tokens_in": 66,
+   "tokens_out": 619,
+   "finish_reason": "stop",
+   "latency_ms": 3198
+  },
+  "5ed137c6f72e5b63d2fd876c323f23c5c167e5ab4a46dfa15492bfe220c9bcce": {
+   "id": "h13",
+   "content": "This is a SQL injection vulnerability. Because `name` is concatenated directly into the query string, an attacker can change the query's structure by supplying input containing SQL syntax.\n\n**Example attack:** If `name` is set to `' OR '1'='1`, the query becomes:\n\n```sql\nSELECT * FROM users WHERE name = '' OR '1'='1'\n```\n\nThis returns every row in the table. More damaging payloads can read other tables, modify or delete data, bypass authentication, or in some configurations execute operating system commands.\n\n**Fix: use a parameterized query.** The database driver then treats `name` strictly as data, never as SQL.\n\nPython (sqlite3 / psycopg2 style):\n```python\ncursor.execute(\"SELECT * FROM users WHERE name = %s\", (name,))\n```\n\nJava (JDBC):\n```java\nPreparedStatement ps = conn.prepareStatement(\"SELECT * FROM users WHERE name = ?\");\nps.setString(1, name);\n```\n\nNode.js (pg):\n```javascript\nclient.query(\"SELECT * FROM users WHERE name = $1\", [name]);\n```\n\n**Additional recommendations:**\n- Use the least-privileged database account the application needs. Don't run it as an admin or owner.\n- Avoid `SELECT *`. Select only the columns you need so you don't expose sensitive fields like password hashes.\n- Validate input for expected format where practical, but treat this as a supplement, not a replacement, for parameterization.\n- Use an ORM or query builder where it fits your project, since they parameterize by default.\n- Check whether the codebase has other queries built the same way. Grep for string concatenation near SQL keywords.",
+   "tokens_in": 76,
+   "tokens_out": 552,
+   "finish_reason": "stop",
+   "latency_ms": 3735
+  },
+  "f1ef6ddaa4a8f122aa823f2d81e886da1dde45858ee78ea3c15111b325a6a44a": {
+   "id": "h15",
+   "content": "**Claim:** For every positive integer n, 1 + 3 + 5 + ⋯ + (2n − 1) = n².\n\n**Proof by induction on n.**\n\n**Base case (n = 1):** The first odd number is 1, and 1 = 1². The claim holds.\n\n**Inductive step:** Assume that for some integer k ≥ 1,\n\n1 + 3 + 5 + ⋯ + (2k − 1) = k².\n\nWe must show that\n\n1 + 3 + 5 + ⋯ + (2k − 1) + (2(k+1) − 1) = (k+1)².\n\nThe last term on the left is 2(k+1) − 1 = 2k + 1. Using the inductive hypothesis:\n\n1 + 3 + ⋯ + (2k − 1) + (2k + 1) = k² + (2k + 1) = k² + 2k + 1 = (k + 1)².\n\nSo the claim holds for k + 1.\n\n**Conclusion:** By the principle of mathematical induction, the sum of the first n odd numbers equals n² for all positive integers n. ∎\n\n---\n\n**Alternative (geometric) view:** Build a square of side n out of L-shaped layers. The first layer is a single cell (1 cell). Each subsequent layer is an L-shape that extends the square from side k to side k+1, adding 2k+1 cells (k+1 cells down one side and k cells along the other side, totaling 2k+1). The k-th layer contains the (k)-th odd number, so the n layers together contain 1 + 3 + ⋯ + (2n − 1) = n² cells.",
+   "tokens_in": 60,
+   "tokens_out": 519,
+   "finish_reason": "stop",
+   "latency_ms": 2723
+  },
+  "922ab8294b36bc00c8e7d81f12a592adea83486ed7ffbf14b325c3818b0e2137": {
+   "id": "h17",
+   "content": "The final price is lower than the original by 4%.\n\nLet the original price be $100.\n- After a 20% cut: $100 × 0.80 = $80\n- After a 20% raise: $80 × 1.20 = $96\n\nBecause the percentage changes apply to different base amounts, they don't cancel out. The 20% raise is applied to the smaller $80 price, so it adds only $16, while the earlier cut removed $20. The net result is a 4% decrease.",
+   "tokens_in": 78,
+   "tokens_out": 147,
+   "finish_reason": "stop",
+   "latency_ms": 1437
+  },
+  "aa10e5b3663c122020896963c91a4323b3f42e36e5e81439cc214124642595f9": {
+   "id": "h16",
+   "content": "The population doubles in about **23.4 years** (so it has doubled by the end of year 24).\n\n**Setup:** After *t* years, with growth rate 3% per year:\n\nP(t) = P₀ × (1.03)ᵗ\n\nWe want P(t) = 2P₀:\n\n2P₀ = P₀ × (1.03)ᵗ\n\n**Solve:** Divide both sides by P₀:\n\n2 = (1.03)ᵗ\n\nTake the natural log of both sides:\n\nln 2 = t × ln 1.03\n\nt = ln 2 / ln 1.03\n\n**Compute:**\n\n- ln 2 ≈ 0.693147\n- ln 1.03 ≈ 0.029559\n\nt = 0.693147 / 0.029559 ≈ **23.45 years**\n\n**Check:** The Rule of 72 gives 72 / 3 = 24 years, which is a close approximation.",
+   "tokens_in": 64,
+   "tokens_out": 435,
+   "finish_reason": "stop",
+   "latency_ms": 2496
+  },
+  "84c6dfe8af7b7ddb9740380a4a17012444d9bda2b7dca3c0e59a26890e0d11cc": {
+   "id": "h18",
+   "content": "The probability of rolling at least one six in four rolls is found by taking the complement: the probability of rolling no sixes in four rolls.\n\n- Probability of not rolling a six on one roll: 5/6\n- Probability of no sixes in four rolls: (5/6)⁴ = 625/1296\n\nSo the probability of at least one six is:\n\n1 − 625/1296 = 671/1296 ≈ **0.518**, or about **51.8%**.",
+   "tokens_in": 63,
+   "tokens_out": 144,
+   "finish_reason": "stop",
+   "latency_ms": 1171
+  },
+  "76a6f366fe92bf6de503aa24d2287bbc3caf46ce5ba2083c9a6679dada68c83f": {
+   "id": "h21",
+   "content": "No, 1001 is not prime. It factors as:\n\n**1001 = 7 × 11 × 13**\n\nYou can verify this directly: 7 × 11 = 77, and 77 × 13 = 1001.\n\nA prime number has exactly two positive divisors, 1 and itself. Since 1001 is divisible by 7, 11, and 13, it has more than two divisors, so it is composite.",
+   "tokens_in": 59,
+   "tokens_out": 149,
+   "finish_reason": "stop",
+   "latency_ms": 1322
+  },
+  "ab77a139a2ab917a07fa9a59d66617cfd7a2748ed7c95484233eb3b7a29d5dde": {
+   "id": "h19",
+   "content": "**Step 1: Simplify by factoring out the common factor.**\nAll coefficients (3, −12, 9) are divisible by 3, so divide the whole equation by 3:\n\n$$x^2 - 4x + 3 = 0$$\n\n**Step 2: Factor the quadratic.**\nWe need two numbers that multiply to 3 and add to −4. Those are −1 and −3:\n\n$$(x - 1)(x - 3) = 0$$\n\n**Step 3: Apply the zero-product property.**\nIf a product equals zero, at least one factor must be zero:\n\n- $x - 1 = 0 \\;\\Rightarrow\\; x = 1$\n- $x - 3 = 0 \\;\\Rightarrow\\; x = 3$\n\n**Step 4: Check the solutions.**\n\n- For $x = 1$: $3(1)^2 - 12(1) + 9 = 3 - 12 + 9 = 0$ ✓\n- For $x = 3$: $3(3)^2 - 12(3) + 9 = 27 - 36 + 9 = 0$ ✓\n\n**Answer:** $x = 1$ or $x = 3$",
+   "tokens_in": 64,
+   "tokens_out": 371,
+   "finish_reason": "stop",
+   "latency_ms": 2590
+  },
+  "98c433cc30d87e74beaf7e0a0862a9302639eec291a4055f28cec5f67cc04e34": {
+   "id": "h20",
+   "content": "**Bala:** ₹510\n**Asha:** ₹1,020 (twice Bala's share)\n**Chitra:** ₹810 (₹300 more than Bala's share)\n\nCheck: 510 + 1,020 + 810 = 2,340.",
+   "tokens_in": 92,
+   "tokens_out": 191,
+   "finish_reason": "stop",
+   "latency_ms": 3360
+  },
+  "80e2000b464963aa09b1d765f20f563a55284e6dbb06573f693257f3dbd28fe1": {
+   "id": "h23",
+   "content": "**Compound interest ≈ ₹13,412.09**\n\n**Given:** P = ₹50,000, annual rate = 8%, compounded quarterly, time = 3 years\n\n- Rate per quarter: r = 8% / 4 = 2% = 0.02\n- Number of quarters: n = 3 × 4 = 12\n\n**Amount:**\n\nA = P(1 + r)^n = 50,000 × (1.02)^12 = 50,000 × 1.268242 ≈ ₹63,412.09\n\n**Compound interest:**\n\nCI = A − P = 63,412.09 − 50,000 = **₹13,412.09**",
+   "tokens_in": 78,
+   "tokens_out": 400,
+   "finish_reason": "stop",
+   "latency_ms": 2326
+  },
+  "b4406a9586825cd5e3e0945f30251ac64786b1ff260a002b7824e5771324914b": {
+   "id": "h24",
+   "content": "Rates per hour:\n- Pipe A: 1/6\n- Pipe B: 1/9\n- Pipe C (emptying): -1/12\n\nCombined rate: 1/6 + 1/9 - 1/12\n\nUsing a common denominator of 36:\n- 1/6 = 6/36\n- 1/9 = 4/36\n- 1/12 = 3/36\n\nCombined rate = (6 + 4 - 3)/36 = 7/36 of the tank per hour.\n\nTime to fill = 36/7 hours ≈ 5.14 hours, or 5 hours 9 minutes (about 5 hours 8.6 minutes).",
+   "tokens_in": 96,
+   "tokens_out": 209,
+   "finish_reason": "stop",
+   "latency_ms": 1482
+  },
+  "0550b2a6edf3a587e25f1c57548b0ce57ac13b6d6c9a9c76d841880f6268b209": {
+   "id": "h22",
+   "content": "In the Monty Hall problem, you pick one of three doors, behind one of which is a car (the other two hide goats). The host, who knows what's behind each door, opens one of the two doors you didn't pick, always revealing a goat. You then choose whether to stay with your original door or switch to the remaining closed door. Switching wins 2/3 of the time.\n\n**The key idea:** Your first pick has a 1/3 chance of being the car. That probability doesn't change when the host opens a door. So the other two doors together have a 2/3 chance of hiding the car.\n\n**Why the host's action matters:** The host is not choosing at random. He always opens a door with a goat, and he always avoids the car. This constrains what he can do:\n\n- **If your first pick was the car (probability 1/3):** The host can open either of the two goat doors. You lose if you switch.\n- **If your first pick was a goat (probability 2/3):** The host has only one goat door he can open, the other goat. The car must be behind the remaining closed door. You win if you switch.\n\nSince you start with a goat 2/3 of the time, and switching wins whenever you start with a goat, switching wins 2/3 of the time.\n\n**A way to see it:** Imagine there are 100 doors. You pick one, and the host opens 98 goat doors, leaving one other door closed. Your first pick had a 1/100 chance of being the car, so the single remaining door almost certainly hides it. Opening 98 of the other 99 doors doesn't change the fact that those 99 doors held a 99/100 chance together. With three doors, the same logic gives 2/3 versus 1/3.\n\n**The common mistake:** People assume that after one goat is revealed, the two remaining doors are 50/50. That ignores the fact that the host's choice was not random. The information he provides is what shifts the probability toward the door you didn't pick.",
+   "tokens_in": 62,
+   "tokens_out": 628,
+   "finish_reason": "stop",
+   "latency_ms": 3773
+  },
+  "c4de1cda44d87d6352e7df0e25f69d3098773e9ccb8f4881313f559242fba305": {
+   "id": "h27",
+   "content": "For a five-person startup, a monolith is almost always the better choice. Here are the trade-offs.\n\n**Monolith**\n\n*Advantages:*\n- **Simplicity:** One codebase, one deployment, one database. Easy to reason about and debug.\n- **Speed of development:** No network calls between components, no service contracts to maintain, and refactoring across the whole system is straightforward.\n- **Lower operational burden:** One thing to deploy, monitor, and secure. Your small team isn't spending time on infrastructure.\n- **Cheaper:** Fewer servers, less tooling, simpler CI/CD.\n- **Easier local development and testing:** Run the whole app on one machine.\n\n*Disadvantages:*\n- **Scaling is all-or-nothing:** You scale the entire app even if only one feature is under load.\n- **Coupling risk:** Without discipline, code paths become tangled, making later extraction harder.\n- **Deployment coupling:** A bug in one module can take down everything.\n- **Technology lock-in:** The whole app uses one language and framework.\n\n**Microservices**\n\n*Advantages:*\n- **Independent scaling and deployment:** Teams can ship parts of the system without coordinating.\n- **Fault isolation:** One service failing doesn't necessarily take down the rest.\n- **Technology flexibility:** Different services can use different stacks where it makes sense.\n- **Organizational scaling:** Useful when you have many teams stepping on each other.\n\n*Disadvantages:*\n- **High operational overhead:** Service discovery, networking, observability, distributed tracing, container orchestration, and CI/CD for each service.\n- **Distributed systems complexity:** Network failures, eventual consistency, partial outages, and harder debugging.\n- **Slower early development:** Every feature that crosses boundaries requires API design, versioning, and coordination.\n- **Cost:** More infrastructure, and often a dedicated platform or DevOps person you can't afford.\n- **Premature boundaries:** At an early stage you don't yet know where the right service boundaries are, so you tend to draw them wrong and pay for it.\n\n**Recommendation**\n\nStart with a **modular monolith**: a single deployable with clear internal module boundaries (separate packages/domains with well-defined interfaces, and no reaching into each other's database tables). This gives you monolith speed now and a realistic path to extract services later if a specific component genuinely needs independent scaling or deployment.\n\nMove to microservices only when you have concrete pain, such as multiple teams blocking each other, a component with very different scaling needs, or compliance requirements that demand isolation. Team size and product-market fit matter far more than architecture at this stage.",
+   "tokens_in": 64,
+   "tokens_out": 884,
+   "finish_reason": "stop",
+   "latency_ms": 5386
+  },
+  "6e9b98ff93dd7646ae8d579933ddd1b6f155fbe7fe48e8b1bdc6810510341148": {
+   "id": "h25",
+   "content": "Here's a structured plan to work out why support tickets rose 40% after the pricing change. The core question is whether the pricing change caused the increase directly, indirectly, or coincidentally.\n\n**1. Confirm the signal**\n- Verify the 40% figure: same time windows, same definitions of a \"ticket,\" and no changes to the ticketing system, routing, or auto-generated tickets.\n- Compare against seasonality and trend: look at the same period last year and the pre-change trend. A 40% jump may partly reflect normal growth or a seasonal peak.\n- Check for other concurrent changes: product releases, outages, marketing campaigns, onboarding changes, or staffing changes.\n\n**2. Break down the increase**\nSlice ticket volume by:\n- **Time:** Is the increase immediate, gradual, or tied to billing cycles (renewal dates, first invoice at new prices)?\n- **Customer segment:** Plan tier, region, company size, tenure, new vs. existing customers.\n- **Pricing exposure:** Customers who were affected by the change vs. those who weren't (e.g., grandfathered accounts, different plans). A difference-in-differences comparison is ideal if you have a control group.\n- **Ticket category:** Billing, cancellations, feature questions, confusion about plan limits, bugs. This is often the fastest way to see the mechanism.\n- **Channel:** Email, chat, phone, self-serve. Did ticket deflection fail?\n\n**3. Read the tickets directly**\n- Sample 50–100 tickets from the spike and categorize them manually.\n- Look for recurring phrases like \"why did my price change,\" \"what's included now,\" \"I was charged,\" or \"how do I downgrade.\"\n- Note whether customers are confused, angry, or blocked. Confusion suggests communication problems; anger suggests value perception problems; blocked suggests product or process gaps.\n\n**4. Connect tickets to behavior**\n- Did affected customers churn, downgrade, or change usage more than unaffected ones?\n- Did tickets come before or after cancellations?\n- Do customers who filed a pricing ticket have different retention outcomes?\n\n**5. Check the operational side**\n- Did the pricing change alter the self-serve path (e.g., billing page changes that drive people to support)?\n- Were support macros, FAQs, or in-app messaging updated?\n- Did the change create new edge cases (proration, mid-cycle changes, invoice formatting) that the team didn't anticipate?\n\n**6. Form and test hypotheses**\nCommon explanations to test:\n- Customers didn't understand what changed (communication gap)\n- Invoices or billing amounts were confusing or incorrect (billing bug)\n- Plan limits or features changed in ways customers didn't expect\n- Price increase triggered cancellation or downgrade attempts\n- Specific segments were hit harder (e.g., legacy customers, annual plans)\n\nFor each hypothesis, define what data would confirm or refute it before looking.\n\n**7. Deliver findings and actions**\n- Quantify each driver's contribution to the 40% (e.g., \"60% billing confusion, 25% down",
+   "tokens_in": 72,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6512
+  },
+  "9b2fb73ef2275ef5f2bdbdd28cf7cf3df1511edcbd4670f04ee13b9e3abbd34e": {
+   "id": "h26",
+   "content": "# Rollout Plan: Migrating 30 Microservices from VMs to Kubernetes (Zero Downtime)\n\n## 1. Goals and Constraints\n- **Goal:** Move all 30 services to Kubernetes with no user-visible downtime and no data loss.\n- **Constraints to confirm:** peak traffic windows, change freeze periods, compliance requirements, and the SLO for each service.\n- **Success criteria:** error rate and p95 latency within SLO during and after each cutover; rollback possible within 5 minutes for every service until decommissioning.\n\n## 2. Prerequisites (Before Any Service Moves)\n- **Cluster foundation:** Production-grade clusters (ideally multi-AZ), with IaC (Terraform/Helm/GitOps via Argo CD or Flux), RBAC, network policies, secrets management (Vault or cloud KMS), and an ingress/service mesh decision.\n- **Connectivity:** Network paths between VMs and the cluster (VPN/peering/private links) so services can call each other across both environments during the transition.\n- **Observability parity:** Metrics, logs, and traces flowing from both environments into the same dashboards, with alerts defined per service before migration.\n- **CI/CD:** Pipelines that build container images, scan them, and deploy via GitOps to staging and production.\n- **Service inventory:** For each service, document dependencies, owners, SLOs, traffic volume, state (stateless vs. stateful), config sources, and cron/batch jobs.\n- **Runbooks and rollback procedures** reviewed by on-call teams.\n\n## 3. Migration Pattern (Applied to Every Service)\nUse **strangler fig with progressive traffic shifting**:\n\n1. **Containerize** the service and verify it behaves identically (same config, env vars, file paths, and dependencies).\n2. **Deploy to Kubernetes in parallel** with the VM version. Do not route production traffic yet.\n3. **Shadow traffic (optional, for critical services):** Mirror requests to the new deployment and compare responses without acting on them.\n4. **Canary:** Route 1% → 5% → 25% → 50% → 100% of traffic using weighted routing (ingress, service mesh, or load balancer weights). Hold at each step for a defined soak period (e.g., 15–60 minutes depending on traffic).\n5. **Automated gates:** Promote or abort based on error rate, latency, saturation, and business metrics. Use Argo Rollouts or Flagger for automated analysis.\n6. **Full cutover:** At 100%, keep the VM deployment warm for a defined period (e.g., 1–2 weeks) as a fast rollback path.\n7. **Decommission**",
+   "tokens_in": 76,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6126
+  },
+  "16639fb86bc052030204b30e9fe0b2cc9013f61d76a4f17b42dd9dd2e69e0f73": {
+   "id": "h29",
+   "content": "Customer count rises from 10,000 to about **10,968** after 12 months, with growth slowing each month.\n\n**Model:** each month, 4% of the existing base churns and 500 new customers join:\n\nCustomers(t) = Customers(t−1) × 0.96 + 500\n\n| Month | Customers | Net change |\n|---|---|---|\n| 0 | 10,000 | — |\n| 1 | 10,100 | +100 |\n| 2 | 10,196 | +96 |\n| 3 | 10,288 | +92 |\n| 4 | 10,377 | +88 |\n| 5 | 10,462 | +85 |\n| 6 | 10,543 | +81 |\n| 7 | 10,621 | +78 |\n| 8 | 10,697 | +75 |\n| 9 | 10,769 | +72 |\n| 10 | 10,838 | +69 |\n| 11 | 10,904 | +66 |\n| 12 | 10,968 | +64 |\n\n**Trend explained:**\n\n- **Growth is positive but decelerating.** Churn is proportional to the base, so it grows as the base grows. In month 1, 400 customers churn against 500 new ones (net +100). By month 12, about 439 churn (net +64).\n- **The count converges to a steady state of 12,500.** That is where monthly churn equals new acquisition: 4% × 12,500 = 500. The gap to 12,500 shrinks by 4%",
+   "tokens_in": 88,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 4763
+  },
+  "383020d32a6363d17350ace20d9d9cf3fdb0765c032c01fa5602a5f0d6e0f355": {
+   "id": "h30",
+   "content": "**Strengths**\n- **Simple and easy to explain.** The value proposition fits in one sentence.\n- **Real health benefit.** Many people do underhydrate, and habit-forming reminders can help.\n- **Low build cost.** The core feature is technically trivial, so development and maintenance are cheap.\n\n**Weaknesses**\n- **Free alternatives are good.** Apple Health, Google Fit, Samsung Health, and smartwatches all offer water reminders at no cost. Many water-tracking apps already exist, some free, so you'd be competing with established players.\n- **Weak willingness to pay.** Users rarely pay monthly for something they could set up in a phone's clock app. Subscription fatigue makes this harder.\n- **Reminders are easy to ignore or disable.** Notification fatigue is a serious retention problem. Users often install, get annoyed, and turn off notifications within days.\n- **Hard to demonstrate value.** The outcome (better hydration) is invisible and hard to measure, so users may not feel they're getting their money's worth.\n- **Commoditized feature.** A single feature is easy for platforms to absorb. If Apple adds smarter hydration reminders, the app loses its reason to exist.\n- **Unclear target user.** \"People who should drink more water\" is broad. Without a specific segment (athletes, older adults, pregnant women, people on medication, office workers), marketing will be diffuse.\n\n**What could make it viable**\n- **Pick a niche with a real need:** e.g., endurance athletes, people in hot climates, older adults at risk of dehydration, or patients whose doctors have set fluid targets.\n- **Go beyond reminders:** personalized targets based on weight, activity, weather, and medication; integration with wearables; hydration tracking tied to urine color or other feedback.\n- **Make it a feature, not a product:** sell it as part of a broader wellness or fitness subscription, or bundle it with coaching or nutrition tools.\n- **Use a freemium model:** free basic reminders, paid personalization and analytics. Monthly subscriptions are hard to justify for reminders alone.\n- **Reduce notification fatigue:** context-aware reminders (location, activity, calendar gaps) rather than fixed intervals.\n\n**Bottom line:** As described, it's a weak standalone subscription because free native features do the same job and the value is hard to sustain. It could work as a focused product for a specific audience with clear personalization or a bundled wellness offering. The next step is to identify who would pay and why they wouldn't just use their phone's built-in reminders.",
+   "tokens_in": 62,
+   "tokens_out": 899,
+   "finish_reason": "stop",
+   "latency_ms": 5764
+  },
+  "c496c5fa0aae86bbb9a51cabdef2468219279e0da72b8d908710645dc5152c0c": {
+   "id": "h28",
+   "content": "# Risks of Employees Pasting Company Data into Personal AI Tools\n\n## Key Risks\n\n**1. Data leakage and loss of confidentiality**\n- Prompts may be stored, logged, or used for model training, depending on the provider's terms and the account type. Free and consumer tiers are most likely to retain data for training.\n- Once submitted, data may be outside the company's control, with no reliable way to delete it.\n- Sensitive material can include source code, financial forecasts, M&A plans, customer lists, employee records, and strategy documents.\n\n**2. Regulatory and legal exposure**\n- Personal data pasted into unapproved tools can breach GDPR, UK GDPR, CCPA, HIPAA, or similar laws. This may require breach notification and can lead to fines.\n- Transferring data to a third party without a Data Processing Agreement may violate contractual or statutory obligations.\n- Client confidentiality clauses and NDAs may be breached.\n- Regulated sectors (finance, healthcare, legal) face additional supervisory scrutiny.\n\n**3. Intellectual property risks**\n- Proprietary code, designs, or research may be exposed or, in some cases, arguably lose trade secret protection if reasonable secrecy measures are not maintained.\n- Outputs may contain third-party copyrighted material, creating infringement risk for the company.\n- Ownership of AI-generated content may be unclear under some terms of service.\n\n**4. Security risks**\n- Credentials, API keys, internal URLs, and architecture details can be pasted accidentally, especially in debugging.\n- Browser extensions and unvetted AI tools can themselves be malicious or harvest data.\n- Shadow AI adoption creates unmonitored data flows that security teams cannot audit.\n\n**5. Output and decision risks**\n- Hallucinated or incorrect outputs may be used in client deliverables, legal documents, or code without verification.\n- Biased or non-compliant outputs can create reputational or legal harm.\n- Over-reliance can erode institutional knowledge and review discipline.\n\n**6. Governance and visibility risks**\n- The company has no inventory of what data has left its boundaries.\n- Incident response is hard without logs.\n- Inconsistent practices across teams create uneven risk.\n\n**7. Reputational and commercial risk**\n- Client trust may erode if data handling is found to be careless.\n- Competitors or adversaries could gain insight from leaked information.\n\n**Root causes to address:** Employees usually act out of productivity pressure, not malice. Approved tools are often missing, slow, or less capable, and policies are often unclear or unknown.\n\n---\n\n# Proposed Policy: Use of Generative AI Tools\n\n## 1. Purpose\nTo enable productive use of AI while protecting company, client, and employee data",
+   "tokens_in": 69,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6385
+  },
+  "cb52f13f823376f3b69c2b335add6ddeb27b9ab28c69d8896132b5ccdd97202b": {
+   "id": "h32",
+   "content": "**The CAP theorem** (Eric Brewer, 2000; proven by Gilbert and Lynch, 2002) states that a distributed data store can provide at most two of the following three guarantees at the same time:\n\n- **Consistency (C):** Every read receives the most recent write or an error. All nodes see the same data at the same time.\n- **Availability (A):** Every request to a non-failing node receives a non-error response, though it may not contain the most recent write.\n- **Partition tolerance (P):** The system keeps operating even when network messages between nodes are dropped or delayed.\n\nIn practice, network partitions are unavoidable in distributed systems, so the real choice is usually between consistency and availability when a partition occurs. A system that must keep running through partitions (P) has to choose one of the other two.\n\n## Example: An AP system (availability over consistency)\n\nConsider a shopping cart service replicated across two data centers, US-East and EU-West. A customer adds an item in the US and the update is written to US-East. The network link between the data centers then fails.\n\n- **Choice A (CP):** The system refuses writes or reads until the data centers can sync. The customer sees \"Service unavailable\" and may be unable to check out.\n- **Choice B (AP):** The system keeps accepting requests in both regions. A customer in Europe, whose cart hasn't received the US update, can still view and modify their cart. When the partition heals, the replicas reconcile, for example by merging the carts as a union of items.\n\nThe AP design favors availability. The cost is that for a time, the two regions may show different cart contents, which is an inconsistency the application must eventually resolve.\n\nAmazon's Dynamo paper describes this style of design, and systems such as Cassandra and Riak (with default settings) follow similar AP principles. The shopping cart was the motivating use case in the Dynamo paper.\n\n## Key takeaway\n\nCAP doesn't mean a system is permanently \"consistent\" or \"available.\" It describes behavior during a partition. Many systems let you tune this per operation, for example by choosing quorum settings in Cassandra, so the trade-off can vary with the requirements of each read or write.",
+   "tokens_in": 69,
+   "tokens_out": 690,
+   "finish_reason": "stop",
+   "latency_ms": 5099
+  },
+  "965bc145d3ac177ecdf1502615c102ed0b76039158562ff7364e7fded676dac8": {
+   "id": "h33",
+   "content": "# DR Architecture for a 5-Minute RPO Across Three Data Centres\n\nA 5-minute RPO means you can lose up to 5 minutes of committed data, so **asynchronous replication** is the right fit. Synchronous replication would give near-zero RPO, but it adds latency and cost that a 5-minute target doesn't require. Aim for replication lag well under 5 minutes (for example, alert at 1 minute and page at 3) so you have margin.\n\n## Recommended Topology\n\n```\n  DC-A (Primary, active)  ──async, <1 min lag",
+   "tokens_in": 79,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6838
+  },
+  "e15d8b77d160546f9d9f72ffd530f9443f07606ae7a703538556caf374093049": {
+   "id": "h35",
+   "content": "**Recommendation: Buy.** For a 50-person company, a commercial analytics tool (e.g., Metabase, Looker Studio, Tableau, Power BI, or Mode) almost always beats building one. Build only if you have a specific requirement no product meets.\n\n**Why buying usually wins at this size**\n\n- **Cost:** A custom dashboard needs engineering time for data pipelines, front-end work, auth, permissions, and ongoing maintenance. Even one engineer at 30% time for a year often costs more than years of a mid-tier BI license.\n- **Speed:** Buying gets you answers in days or weeks. Building takes months before anyone trusts the numbers.\n- **Opportunity cost:** Your engineers are better spent on the product that differentiates your business.\n- **Maintenance burden:** Dashboards break when schemas, sources, or requirements change. Someone has to own that indefinitely.\n- **Features you'd otherwise rebuild:** Scheduling, alerts, exports, role-based access, and connectors to common data sources come standard.\n\n**When building makes sense**\n\n- Your analytics are embedded in your own product for customers (a commercial BI tool may not fit a white-label need).\n- You have unusual data sources or compliance constraints that off-the-shelf tools can't meet.\n- The dashboard is core intellectual property or a competitive differentiator.\n- You already have a strong data engineering team with spare capacity.\n\n**Practical approach**\n\n1. Define the top 5–10 questions the dashboard must answer and who asks them.\n2. Trial two or three tools against your actual data for 2–4 weeks.\n3. Pick the cheapest option that covers those questions and connects to your main data sources.\n4. Revisit only if you hit a hard wall, such as a need for embedding or a data volume the tool can't handle.\n\nIf you share your data sources, budget, and whether the dashboard is internal-only or customer-facing, I can narrow this to specific tools.",
+   "tokens_in": 72,
+   "tokens_out": 687,
+   "finish_reason": "stop",
+   "latency_ms": 4591
+  },
+  "d3a6ef0ef3732e039b53af75c294f916e72cecb6fa41e59125a8ed8c2cdd0c90": {
+   "id": "h34",
+   "content": "# Optimistic vs. Pessimistic Locking for Inventory\n\n**Pessimistic locking** assumes conflicts are likely, so it locks the row before reading or modifying it. Other transactions wait.\n\n**Optimistic locking** assumes conflicts are rare, so it reads without locking and checks at write time whether the data changed (usually with a version number). If it did, the write fails and the application retries.\n\n## Implementations\n\n**Pessimistic (SQL):**\n```sql\nBEGIN;\nSELECT quantity FROM inventory WHERE sku = 'ABC' FOR UPDATE;  -- row locked\n-- application checks quantity >= requested, then:\nUPDATE inventory SET quantity = quantity - 2 WHERE sku = 'ABC';\nCOMMIT;\n```\n\n**Optimistic (SQL with version column):**\n```sql\nSELECT quantity, version FROM inventory WHERE sku = 'ABC';    -- say version = 7\n-- application computes new quantity\nUPDATE inventory\nSET quantity = 8, version = version + 1\nWHERE sku = 'ABC' AND version = 7;\n-- if rows affected = 0, someone else changed it: retry\n```\n\n## Comparison\n\n| Aspect | Pessimistic | Optimistic |\n|---|---|---|\n| Lock timing | Held from read to commit | None held; checked at write |\n| Throughput under low contention | Lower (unnecessary waiting) | Higher |\n| Throughput under high contention | Predictable, but serialized | Collapses into retry storms |\n| Deadlock risk | Yes, with multiple rows | No locks held, so no lock deadlocks |\n| Long transactions | Acceptable but blocks others | Poor fit; more chance of conflict |\n| Client/UI workflows | Poor (locks held across user think time) | Good (natural fit) |\n| Implementation complexity | Simple | Requires retry logic and version handling |\n\n## When Pessimistic Fails\n\n1. **Lock contention on hot items.** A flash sale where 10,000 users hit the same SKU serializes everything behind one row lock. Latency spikes and throughput caps at the speed of one transaction at a time.\n2. **Deadlocks across multiple rows.** Transaction A locks SKU-1 then SKU-2. Transaction B locks SKU-2 then SKU-1. Both wait forever until the database kills one. Ordering lock acquisition helps but is easy to get wrong across code paths.\n3. **Locks held across external calls.** If you lock the row, then call a payment API or wait for a warehouse service, the lock is held for seconds. Everything else queues behind it.\n4. **Locks held across user think time.** An operator opens a stock adjustment screen, goes to lunch, and the row stays locked. This is a common cause of production incidents.\n5. **Distributed",
+   "tokens_in": 70,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5568
+  },
+  "aa4fbc8d005a4a55f9ad00e7d91da931be9ac6788600d7733421b563bba53dd0": {
+   "id": "h36",
+   "content": "A slowdown limited to",
+   "tokens_in": 70,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6445
+  },
+  "48b0a497287bbf71884e4fb1399621a82334b58f0cbb6fea7b384e12433f5072": {
+   "id": "h37",
+   "content": "**Recommendation: Redis**, for nearly all high-traffic session storage use cases. Memcached is a valid choice only if you need pure, simple, multi-threaded caching and nothing else.\n\n### Comparison\n\n| Factor | Redis | Memcached |\n|---|---|---|\n| **Data structures** | Strings, hashes, lists, sets, sorted sets, etc. Sessions can be stored as hashes, so you can update one field without rewriting the whole blob. | Opaque key-value strings only. Every update means read-modify-write of the full session. |\n| **Persistence** | Optional RDB snapshots and AOF logs. Sessions can survive a restart. | None. A restart or crash wipes all sessions, logging out every user. |\n| **Replication & HA** | Built-in primary/replica replication, plus Redis Sentinel or Redis Cluster for automatic failover and sharding. | No built-in replication. HA must be handled by client-side sharding, and a failed node loses its data. |\n| **Expiry (TTL)** | Native per-key TTL, refreshable on each request (sliding expiration). | Native per-key TTL, also refreshable. |\n| **Eviction** | Configurable policies (e.g., `volatile-lru`). Be careful: evicting sessions logs users out. Use `noeviction` or size memory properly. | LRU eviction by default, which can silently drop active sessions under memory pressure. |\n| **Threading** | Single-threaded command execution (I/O threads added in 6.x). Very fast for typical session ops, but one instance is bounded by one core for commands. | Multi-threaded, which can scale better on a single large box for pure get/set. |\n| **Atomic ops** | Rich atomic operations (`HINCRBY`, `SETNX`, Lua scripts, transactions). Useful for rate limiting or concurrent session updates. | Limited to basic atomic ops like `incr`/`cas`. |\n| **Ecosystem** | Pub/sub, streams, locks, rate limiting, and framework support (Rails, Django, Express, Spring, etc.). | Simpler, mature, and well-known. Fewer features to lean on. |\n| **Operational cost** | Slightly more to configure and tune (persistence, memory policy, cluster setup). | Very simple to run. |\n\n### Why Redis wins for sessions\n\n1. **Session loss is user-visible.** Memcached's lack of persistence and replication means a node failure logs users out, which at high traffic is a real incident. Redis with replication and Sentinel/Cluster avoids this.\n2. **Sessions are a natural fit for hashes and TTLs.** Redis handles sliding expiration and partial updates cleanly.\n3. **You'll likely need more later.** Rate limiting, distributed locks, and caching often end up in the same infrastructure. Redis covers them without adding another system.\n4. **Managed offerings are mature.** A",
+   "tokens_in": 69,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5786
+  },
+  "dcbdaea5ef484c90ee25f131ec3318012757a96e9d7e7c3237e220cdc2700a4f": {
+   "id": "h38",
+   "content": "Here's how I'd approach it, step by step.\n\n## 1. Define the hypothesis and primary metric\n\nStart with a specific, falsifiable statement, for example: \"The new onboarding flow, which cuts setup to three steps, will increase the share of new users who complete setup within 7 days from 40% to 44%.\"\n\n- **Primary metric:** onboarding completion rate within 7 days (or whichever window matches your activation definition).\n- **Unit of randomization:** the new user (not sessions or pageviews), assigned once and held consistently.\n\n## 2. Calculate sample size\n\nInputs:\n- **Baseline rate (p₀):** 40%\n- **Minimum detectable effect (MDE):** +4 percentage points (to 44%). Pick the smallest lift that would justify shipping, not the lift you hope for.\n- **Significance level (α):** 0.05, two-sided\n- **Power (1−β):** 80%\n\nUsing the standard two-proportion formula, the required sample is roughly:\n\nn ≈ 2 × (z₁₋α/₂ + z_power)² × p(1−p) / δ²\n\nWith z = 1.96 and 0.84, p ≈ 0.42 (average of the two rates), and δ = 0.04:\n\nn ≈ 2 × (2.80)² × 0.2436 / 0.0016 ≈ **~1,870 per arm**, or about **3,800 total**.\n\nIn practice, I'd round up and add a buffer for sample ratio mismatch and dropouts, so plan for roughly **2,000–2,500 per variant**. Use a sample size calculator (e.g., Evan Miller's or statsmodels) to verify.\n\n**Duration:** divide total required users by daily new-user volume. If you get 500 new users/day, that's about 8 days. Run for at least one full weekly cycle (7 days) regardless, to smooth day-of-week effects, and account for the 7-day completion window before reading results.\n\n**Note on smaller effects:** detecting a 2-point lift would require roughly 4× the sample, so decide in advance whether that matters to the business.\n\n## 3. Set up the experiment\n\n- Randomize 50/50 (or 90/10 if the new flow carries risk; the sample then takes longer to collect).\n- Use a deterministic hash on user ID so assignment is stable.\n- Confirm instrumentation for both arms before launch with an A/A check or a quick data validation.\n- Pre-register: primary metric, MDE, sample size, stopping rule, and analysis plan. Don't peek and stop early on a good-looking result unless you use a sequential testing method.\n\n## 4. Metrics to watch\n\n**Primary**\n- 7-day onboarding completion rate\n\n**Secondary (where the flow is supposed to help)**\n- Time to complete onboarding\n- Activation (e.g., first key action such as creating a project or sending a first message)\n- Step-level drop-off funnel\n\n**Guardrails (ensure you're not breaking things)**\n- Day 7 and Day 30 retention\n- Support tickets related to setup\n- Error rates and page load/latency\n- Revenue or conversion to paid,",
+   "tokens_in": 71,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6146
+  },
+  "b3e775c9ffc7c0eff25f5d08e43ffd658c42a1fc049d0dc3a6bb2362f13eb350": {
+   "id": "h39",
+   "content": "# Why Water Use Matters in Data Centres\n\nEvery search, video stream, and AI query runs on physical infrastructure. Data centres, the warehouses full of servers that power the digital economy, consume large amounts of electricity, and much of that energy becomes heat that must be removed. Cooling is the reason water use matters.\n\nMany data centres use evaporative cooling. Water is sprayed or circulated through cooling towers, where some of it evaporates and carries heat away from the servers. This method is energy-efficient, but it consumes water permanently. Unlike water that is treated and returned to a river, evaporated water leaves the local supply entirely. A single large facility can use hundreds of thousands of litres per day, roughly the household demand of a small town.\n\nThe demand is not only direct. Data centres also use water indirectly through the power plants that supply their electricity. Thermoelectric plants, which burn fossil fuels or use nuclear fission, rely heavily on water for cooling. When a data centre draws more power, the water footprint of the grid it connects to grows as well. Since these indirect impacts are harder to measure, they are often overlooked in public discussions.\n\nLocation makes the problem sharper. Data centres are often built in places with cheap land, cool climates, or favourable tax deals, and some of these areas already face water stress. In parts of the American Southwest, for example, communities have raised concerns that new facilities compete with farms and residents for limited groundwater and reservoir supplies during droughts. When a company's cooling needs and a community's drinking water needs collide, the consequences are social as well as environmental.\n\nThe issue is also growing. The rapid expansion of artificial intelligence has increased the computing power packed into each rack, and with it the heat to be removed. Several major technology firms have reported rising water consumption in their sustainability reports, even as they set goals to become \"water positive\" by replenishing more water than they use.\n\nFortunately, there are practical ways to reduce the impact. Closed-loop and liquid cooling systems recirculate water or use direct-to-chip methods that need far less of it. Air-cooled designs remove the evaporation issue entirely, though they can require more electricity, so trade-offs must be weighed. Operators can use recycled or non-potable water, such as treated wastewater, rather than drinking-quality supplies. They can also choose sites with abundant, sustainably managed water and report transparently.\n\nUse",
+   "tokens_in": 60,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6260
+  },
+  "417f246ff9710200091b63c349f38babc3e3b77a8665b1a0e1dde4c296ab0e20": {
+   "id": "h40",
+   "content": "# Backend Engineer Onboarding Guide: Payments Team\n\nWelcome to the Payments team. This guide covers what you need to get productive, understand our domain, and contribute safely. Payments is a high-trust, high-stakes area: a bug can move real money, fail silently, or create compliance exposure. Our practices are designed around correctness, auditability, and careful change, so please read the sections on safety and incidents closely.\n\n---\n\n## 1. Our Mission and Scope\n\n**What we own:**\n- [Payment initiation and checkout API]\n- [Payment processing orchestration across PSPs/acquirers]\n- [Ledger and balance tracking]\n- [Refunds, disputes, and chargebacks]\n- [Payouts and settlement]\n- [Reconciliation with external providers]\n- [Webhooks and event publishing to downstream teams]\n\n**What we don't own (but integrate with):**\n- Fraud scoring (Risk team)\n- Customer accounts and identity (Identity team)\n- Tax calculation (Finance Platform)\n- Data warehouse and reporting (Data team)\n\n**Our success metrics:**\n- Payment success rate (by PSP, payment method, and region)\n- P99 latency for payment authorization\n- Ledger accuracy (zero unexplained discrepancies at reconciliation)\n- Incident count and MTTR\n- Reconciliation match rate\n\n---\n\n## 2. Core Payments Concepts\n\nBefore reading code, make sure you understand these terms. We use them precisely.\n\n| Term | Meaning |\n|---|---|\n| **PSP** (Payment Service Provider) | Third party that processes payments on our behalf (e.g., [Stripe / Adyen / internal provider]). |\n| **Acquirer / Issuer** | The merchant's bank (acquirer) and the cardholder's bank (issuer). |\n| **Authorization (auth)** | Hold placed on funds. Not yet money movement. |\n| **Capture** | Converts an auth into a charge that will settle. |\n| **Void / Cancel** | Releases an uncaptured auth. |\n| **Settlement** | Actual movement of funds between banks, usually T+1 to T+3. |\n| **Refund** | Returns funds to the customer after capture/settlement. |\n| **Chargeback / Dispute** | Customer-initiated reversal",
+   "tokens_in": 65,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5641
+  },
+  "b7456fdfac3df332eafaf1a1a9c7aba3a6136664df723b72180bee85ed37ca3a": {
+   "id": "h41",
+   "content": "**The Bottle at Gannet Point**\n\nFor thirty-one years, Elias Moor had climbed the spiral stairs of the Gannet Point lighthouse each evening to light the lamp. He had seen fishing boats limp home in storms, a whale breach so close he felt its spray, and one winter night, a freighter run aground on the rocks below. Nothing had ever washed up at his feet.\n\nSo when he found the green glass bottle tangled in kelp on the black stones one gray morning, he stared at it for a long while before picking it up.\n\nInside was a curl of paper, damp but legible, sealed with a twist of wax.\n\n*To whoever finds this,*\n*My name is Ruth Callow. I am nine years old, and I am sitting on the dock at Harrow Bay with my grandfather's old fishing line. Today I am throwing this bottle in the sea because Grandpa says the tide goes everywhere eventually. I hope it goes somewhere nice. I hope you are happy. If you are a lighthouse keeper, I think that is the best job in the world.*\n\nElias read it three times. The handwriting was careful, the letters pressed hard into the paper, as if the girl had wanted every word to count.\n\nHe checked the date. The bottle had been in the water eleven years.\n\nEleven years. Ruth Callow would be twenty now. Maybe she had forgotten writing it. Maybe she had moved away, or grown into someone who no longer threw messages to strangers. Or maybe she was still on that dock, still hopeful.\n\nElias set the letter on the iron table beside his logbook. That evening, as the sun sank behind the headland, he climbed the stairs slowly, his knees complaining with every step. At the top, he lit the lamp, and its beam swept across the darkening water, steady and bright.\n\nHe wrote in the logbook: *Clear skies. Calm sea. One message received.*\n\nThen, after a moment's thought, he added a second line.\n\n*Happy to be the one who found it.*\n\nBefore he went to bed, Elias folded the letter carefully and tucked it into his coat pocket. In the morning, he would write back. He wasn't sure yet what he would say, but he knew it would be something true. He had kept the light for thirty-one years, watching ships pass by without ever knowing the people aboard.\n\nNow, for once, someone had reached across the water to him.",
+   "tokens_in": 71,
+   "tokens_out": 809,
+   "finish_reason": "stop",
+   "latency_ms": 5992
+  },
+  "d0d3224a0e0f5c35c5741f98f5813903c6e74250969039cf8c34bc799c706dc9": {
+   "id": "h42",
+   "content": "# Proposal: Company-Wide Hackathon\n\n**Prepared by:** [Name, Title]\n**Date:** [Date]\n**Status:** Draft for review\n\n---\n\n## 1. Executive Summary\n\nThis proposal recommends a two-day, company-wide hackathon that brings together employees from all departments to build prototypes, improve internal processes, and explore new product ideas. Participants will form cross-functional teams, work on challenges aligned with company priorities, and present their results to a panel of leaders. The event will cost an estimated **$18,500**, with the majority of spending on meals, prizes, and logistics.\n\nWe believe the event will strengthen collaboration across teams, surface practical ideas from employees closest to the work, and build a repeatable model for innovation.\n\n---\n\n## 2. Background and Rationale\n\nOur teams often work in silos, which slows cross-functional problem-solving and limits the flow of good ideas. Many employees have identified process bottlenecks, tooling gaps, or product opportunities but lack a structured way to test them. A hackathon provides:\n\n- A time-boxed environment for experimentation with low risk\n- A reason for employees from different departments to work together\n- A visible signal from leadership that new ideas are welcome\n- A pipeline of prototypes that may become funded projects\n\n---\n\n## 3. Goals and Success Metrics\n\n### Primary Goals\n\n1. **Foster cross-functional collaboration.** Ensure at least 70% of teams include members from three or more departments.\n2. **Generate actionable ideas.** Produce at least 15 prototypes or concept proposals, with at least 3 selected for follow-up evaluation.\n3. **Increase engagement.** Achieve a participation rate of at least 25% of employees, and a post-event satisfaction score of 4.0/5 or higher.\n4. **Build an innovation habit.** Establish a quarterly or biannual event cadence based on outcomes.\n\n### Success Metrics\n\n| Metric | Target |\n|---|---|\n| Employee participation rate | ≥ 25% of headcount |\n| Cross-functional team composition | ≥ 70% of teams with 3+ departments |\n| Prototypes presented | ≥ 15 |\n| Ideas advanced to evaluation | ≥ 3 |\n| Post-event satisfaction | ≥ 4.0 / 5.0 |\n| Follow-up initiatives funded or scheduled | ≥ 1 within 90 days |\n\n---\n\n## 4. Scope and Format\n\n**Eligibility:** All full-time and part-time employees. Contractors may participate with manager approval.\n\n**Team size:** 3 to 5 people, mixed by department and seniority where possible. Individuals without a team will be matched by the organizing committee.\n\n**Challenge tracks:** Chall",
+   "tokens_in": 70,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5580
+  },
+  "8ce3d21649482846ca41804a291fa6c2ffab2d7545ace4c20a8b80dc71c08cae": {
+   "id": "h43",
+   "content": "# The Ethics of Using AI in Hiring Decisions\n\nArtificial intelligence is now common in recruitment. Algorithms screen résumés, rank candidates, analyze video interviews, and predict job performance. Proponents argue these tools make hiring faster, more consistent, and less susceptible to the whims of individual recruiters. Critics warn that they can entrench discrimination, obscure accountability, and reduce applicants to data points. The central ethical question is not whether AI should play any role in hiring, but under what conditions its use is fair, transparent, and respectful of the people it affects.\n\nThe strongest case for AI in hiring rests on the well-documented unreliability of human judgment. Recruiters are prone to snap impressions, affinity bias, and fatigue. Studies have repeatedly found that identical résumés receive different responses depending on the candidate's name, and interviewers often overweight first impressions. A well-designed algorithm can apply the same criteria to every applicant, can be audited in ways that a person's gut instinct cannot, and can help organizations surface qualified candidates who might otherwise be overlooked. Used carefully, AI may therefore expand opportunity rather than restrict it.\n\nThat promise is undermined, however, by the fact that AI systems learn from historical data, and historical hiring data often reflects past discrimination. The well-known case of a major technology company's experimental recruiting tool illustrates the problem. Trained on a decade of résumés submitted mostly by men, the system learned to penalize résumés containing the word \"women's\" and was ultimately abandoned. The algorithm did not intend to discriminate; it simply optimized for patterns in a biased record. This reveals an ethical hazard: automation can make bias look objective. A rejection delivered by a machine may seem neutral precisely because it lacks a human face, which makes it harder for applicants to recognize, contest, or correct.\n\nTransparency and accountability are therefore central. Applicants have a legitimate interest in knowing when an automated system is evaluating them and what factors it considers. Yet many commercial hiring tools are proprietary \"black boxes,\" and vendors often resist disclosure on the grounds of trade secrets. Ethically, this is difficult to justify when a decision materially affects someone's livelihood. If an algorithm screens out a candidate, someone within the organization must be able to explain why and must bear responsibility for the outcome. \"The software decided\" is not an adequate answer. Responsibility cannot be delegated to a system that cannot be held morally accountable.\n\nDignity and autonomy raise further concerns. Some AI tools infer personality traits or emotional states from facial expressions, tone of voice, or word choice. Such inferences rest on contested science and risk penalizing neurodiverg",
+   "tokens_in": 61,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6223
+  },
+  "9a51bc9b685a679249e75363d5526afebc2ab29cf825d304d4de26a211404e20": {
+   "id": "h44",
+   "content": "# Product Requirements Document: Mobile Expense Tracker\n\n**Document Owner:** [Name]\n**Last Updated:** [Date]\n**Status:** Draft\n**Version:** 1.0\n\n---\n\n## 1. Overview\n\n### 1.1 Purpose\nBuild a mobile application that lets users record, categorize, and review their personal expenses on the go, helping them understand spending habits and stay within budget.\n\n### 1.2 Background\nMany individuals lose track of small daily purchases and struggle to reconcile spending at month's end. Existing solutions are often cluttered, require manual entry for every transaction, or lack clear insights. This product aims to make expense tracking fast, low-friction, and insightful.\n\n### 1.3 Goals\n- Enable users to log an expense in under 10 seconds.\n- Provide clear visibility into spending by category and time period.\n- Help users stay within budgets through alerts and summaries.\n- Achieve 40% 30-day retention among active users within six months of launch.\n\n### 1.4 Non-Goals (v1)\n- Full accounting or tax-filing features.\n- Multi-currency conversion with live exchange rates.\n- Business/team expense approval workflows.\n- Automatic bank account syncing (planned for v2 pending evaluation).\n\n---\n\n## 2. Target Users\n\n| Persona | Description | Key Needs |\n|---|---|---|\n| **Budget-Conscious Individual** | Adult living on a fixed income who wants to control spending | Quick logging, monthly budget limits, clear totals |\n| **Busy Professional** | Frequently makes purchases while traveling or commuting | Fast entry, offline support, receipt capture |\n| **Student** | Manages limited funds and irregular income | Simple interface, low-cost or free access, category insights |\n\n---\n\n## 3. User Stories\n\n**Core**\n- As a user, I want to add an expense with an amount, category, date, and optional note so I can record my spending.\n- As a user, I want to edit or delete an expense so I can correct mistakes.\n- As a user, I want to create, rename, and delete custom categories so the app fits my spending habits.\n- As a user, I want to view a list of expenses filtered by date range and category.\n\n**Budgeting**\n- As a user, I want to set a monthly budget overall or per category so I can control spending.\n- As a user, I want to receive an alert when I reach 80% and 100% of a budget.\n\n**Insights**\n- As a user, I want to see a pie or bar chart of spending by category for a selected period.\n- As a user, I want to see month-over-month comparisons.\n\n**Capture**\n- As a user, I want to attach a receipt photo to an expense.\n- As a user, I want to log expenses while offline and have them sync later.\n\n**Account & Data**\n- As a user, I want to sign up and sign in securely, with optional biometric unlock.\n- As a user, I want to export my data as CSV.\n\n---\n\n## 4. Functional Requirements\n\n| ID | Requirement | Priority |\n|---|---|---|\n| FR-1 | Users can create an expense with amount (required), date (default today), category (required), and note (optional). | P0 |\n|",
+   "tokens_in": 60,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5390
+  },
+  "74a6bc7fac8cadf581e33618c607d5359951a064f3f7729ce1fbba87af5217f4": {
+   "id": "h45",
+   "content": "**Subject:** Request for $180K to Reduce Cloud Spend by ~20% ($1M+ Annual Savings)\n\nHi [Leadership Team Names],\n\nI'm requesting a one-time investment of **$180K** to reduce our cloud infrastructure costs. Based on our current usage, this investment should pay for itself within about two months and return roughly **$1M in annual savings**.\n\n**The Problem**\n- Our current cloud spend is **$420K per month (~$5.0M annualized)**, up 38% year over year.\n- Our analysis shows that roughly **25–30% of this spend is waste**: idle or oversized compute instances, unattached storage volumes, non-production environments running 24/7, and steady-state workloads paying on-demand rates instead of committed-use rates.\n- We currently have no consistent cost allocation or tagging, so no team is accountable for its own spend.\n\n**The Ask**\n1. **$180K budget**, allocated as:\n   - $120K for a 6-month FinOps engineering effort (roughly 1.5 FTE equivalent)\n   - $60K for cost-management tooling and commitment-plan",
+   "tokens_in": 74,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5706
+  },
+  "b595953cee87ac5951a75556c78c4ba96f2a98d95a3c4b0ddf30bc189f1d0d8e": {
+   "id": "h46",
+   "content": "# Postmortem: Customer-Facing Service Outage Due to Expired TLS Certificate\n\n**Date of incident:** [YYYY-MM-DD]\n**Duration:** 2 hours (14:00–16:00 UTC)\n**Severity:** SEV-1\n**Status:** Resolved\n**Authors:** [Names]\n**Review date:** [YYYY-MM-DD]\n\n---\n\n## 1. Summary\n\nAt 14:00 UTC, the TLS certificate for `api.example.com` expired. Clients received certificate validation errors on every HTTPS request, and the API was unreachable for 2 hours. The certificate was renewed and deployed to the load balancers at 16:00 UTC, restoring service. The certificate had been issued by our internal CA with a 90-day validity period, but the automated renewal job had been silently failing for 11 days.\n\n## 2. Impact\n\n- **Customers:** All API consumers and web app users were unable to load data or log in for 2 hours. Mobile clients showed \"secure connection failed\" errors.\n- **Scope:** ~100% of production traffic on `api.example.com`. Internal services using the same hostname were also affected.\n- **Support:** 147 support tickets were created, and 23 enterprise customers contacted their account managers.\n- **Revenue:** Estimated $[X] in lost transactions based on the traffic baseline for that window.\n- **SLA:** The monthly availability SLA of 99.9% was breached for this month.\n\n## 3. Timeline (UTC)\n\n| Time | Event |\n|---|---|\n| Day −11 | Certificate renewal job begins failing due to a changed DNS validation API token. Failures log to a dashboard nobody monitors. |\n| Day −7 | First expiry warning email sent to the shared infra-alerts inbox. No action taken; the inbox is not actively triaged. |\n| Day −1 | Second warning email sent. Still not acted upon. |\n| 14:00 | Certificate expires. Error rates jump from 0% to 100% on `api.example.com`. |\n| 14:04 | Automated uptime monitor pages on-call (synthetic checks alert on HTTP failures). |\n| 14:12 | On-call engineer acknowledges the page and begins investigating application logs, initially suspecting a deployment. |\n| 14:25 | Recent deployments are ruled out. On-call identifies TLS handshake failures in load balancer logs. |\n| 14:38 | Expired certificate confirmed via `openssl s_client`. Incident declared SEV-1,",
+   "tokens_in": 67,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6131
+  },
+  "82952311230a97888d4f124e87788eb9f92e84e0e4a73efca4d51382a7af9d40": {
+   "id": "h47",
+   "content": "Here's a cover letter you can adapt. Replace the bracketed placeholders with your details.\n\n---\n\n**[Your Name]**\n[Email] | [Phone] | [LinkedIn/Portfolio]\n\n[Date]\n\n[Hiring Manager's Name]\n[Company Name]\n[Company Address]\n\nDear [Hiring Manager's Name],\n\nI am writing to apply for the Senior Data Analyst position at [Company Name]. With [X] years of experience turning complex data into decisions that drive measurable business outcomes, I am confident I can help your team deliver actionable insight at scale. My expertise in SQL and my track record of building strong partnerships with stakeholders across business functions make me a strong fit for this role.\n\nI write advanced SQL daily, including multi-table joins, window functions, CTEs, and query optimization across large datasets. In my current role at [Current Company], I redesigned a core reporting pipeline that reduced query runtimes by [X]% and cut data refresh time from [X] hours to [X] minutes. I also established a shared library of tested, documented queries and views that became the foundation for [X] recurring dashboards, which improved consistency across teams and reduced ad hoc requests by [X]%.\n\nTechnical skill is only half of the job, though. I have learned that the most useful analysis is the analysis people act on. I regularly work with leaders in product, finance, and operations to clarify business questions before writing a single query, translate ambiguous requests into defined metrics, and communicate findings in terms of recommended actions. For example, when [a specific situation, e.g., marketing and sales disagreed on lead conversion figures], I facilitated alignment on a single metric definition and documented it in our data dictionary. That work ended the recurring debate and enabled [a specific outcome, e.g., a reallocation of $X in campaign spend]. I also manage competing priorities by maintaining transparent intake processes and setting realistic timelines, so stakeholders know what to expect and when.\n\nI am drawn to [Company Name] because of [specific reason, such as your data-driven approach to product growth or a particular initiative]. I would welcome the chance to discuss how my experience in SQL, analytics strategy, and stakeholder engagement can support your team's goals.\n\nThank you for your time and consideration. I look forward to hearing from you.\n\nSincerely,\n\n[Your Name]\n\n---\n\nIf you share your current role, a few specific achievements, and the job description, I can tailor the letter further and make the examples more precise.",
+   "tokens_in": 70,
+   "tokens_out": 892,
+   "finish_reason": "stop",
+   "latency_ms": 5501
+  },
+  "4c2eecad12740e2fd25e50fe4c80528a18cb9bc271aedd264d9f12b456aeb37c": {
+   "id": "h48",
+   "content": "Before you resign, check these things:\n\n1. **Get the 30-day agreement in writing.** Your manager's verbal okay may not bind the company. Ask for an email confirming the shorter notice period, or a signed letter amending the contract. If your manager's approval isn't backed by someone with authority, HR should confirm it.\n\n2. **Read the contract for waiver or amendment clauses.** Many contracts say changes must be in writing and signed by specific people, or that waivers must be in writing to be valid. Check the \"entire agreement,\" \"amendment,\" and \"notices\" sections.\n\n3. **Check the employee handbook and any bonus, equity, or incentive plans.** These often have their own rules about who must be employed on a given date, and leaving on short notice can forfeit payouts or unvested equity.\n\n4. **Check your local employment law.** Some jurisdictions limit how long a notice period can be enforced, and some restrict employers from withholding final pay or PTO as leverage.\n\n5. **Look for other obligations that continue after you leave:**\n   - Non-compete or non-solicitation terms\n   - Confidentiality agreements\n   - Repayment clauses for relocation, training, or signing bonuses\n\n6. **Confirm the mechanics:**\n   - Is notice counted from the date you submit it or from a date you specify?\n   - Does the company require a particular format or recipient?\n   - Will you be paid out for unused PTO, and when?\n   - Are there any benefits (health coverage, retirement matching) that end on a specific date?\n\n7. **Put your resignation in writing,** state your last working day, and keep a copy along with the written confirmation of the shorter notice period.\n\nIf there's significant money or a dispute at stake, such as equity, a large bonus, or a non-compete, a brief consult with an employment lawyer is worth the cost. This is general information, not legal advice.",
+   "tokens_in": 73,
+   "tokens_out": 854,
+   "finish_reason": "stop",
+   "latency_ms": 5808
+  },
+  "6b05666b30d1bcdc3185034b5cffc2264f07dee0e1834d9c0f08d228ab609b21": {
+   "id": "h49",
+   "content": "Metformin is a first-line medication for type 2 diabetes, and it's also sometimes used for prediabetes and polycystic ovary syndrome (PCOS), though those uses are off-label in some places.\n\n**Common side effects**\n- Gastrointestinal upset: nausea, diarrhea, stomach pain, bloating, gas, loss of appetite, and a metallic taste\n- These are most common when starting the drug or raising the dose, and often ease over a few weeks\n- Taking it with food, starting at a low dose, or using an extended-release form can help\n\n**Less common but serious**\n- **Lactic acidosis** (rare, but serious): signs include unusual muscle pain, trouble breathing, unusual sleepiness, dizziness, feeling very cold, or stomach pain with vomiting. This needs immediate medical attention.\n- **Vitamin B12 deficiency** with long-term use, which can cause numbness, tingling, or fatigue. Periodic blood tests may be recommended.\n\n**When to avoid metformin**\n- **Severe kidney impairment**: generally contraindicated when eGFR is below about 30 mL/min/1.73m². Dose reduction is often needed at moderately reduced kidney function (roughly eGFR 30–45), and the drug is typically stopped if kidney function falls further.\n- **Acute or unstable conditions that raise lactic acidosis risk**, such as acute heart failure, shock, severe infection or sepsis, dehydration, or significant liver disease\n- **Before iodinated contrast imaging** (such as some CT scans or angiograms), where it is usually held temporarily, especially if kidney function is reduced\n- **Heavy alcohol use**, which increases lactic acidosis risk\n- **Known hypersensitivity** to metformin or any ingredient in the product\n- **Pregnancy and breastfeeding**: use is decided case by case with a clinician, since metformin is sometimes continued in pregnancy (for example, in gestational diabetes or PCOS)\n\nAnyone considering starting, stopping, or changing metformin should talk with their doctor or pharmacist, since individual factors such as kidney function, other medications, and existing conditions matter.",
+   "tokens_in": 61,
+   "tokens_out": 725,
+   "finish_reason": "stop",
+   "latency_ms": 4316
+  },
+  "99e6b2563ed675e1b3a23afe617804ddc306a0b617269c0168e70d79e925f9bd": {
+   "id": "h50",
+   "content": "A will can split assets equally between two children in a few common ways:\n\n**1. Residuary clause (most common)**\nLeave the bulk of the estate, after specific gifts and debts, to both children in equal shares:\n\n> \"I give the residue of my estate, in equal shares, to my children, [Name A] and [Name B], and if either predeceases me, to the survivor of them. If both predecease me, to their descendants per stirpes.\"\n\n**2. Specific percentage gifts**\nState each child's share as a fraction or percentage:\n\n> \"I give fifty percent (50%) of my estate to my son, [Name A], and fifty percent (50%) to my daughter, [Name B].\"\n\n**3. Specific item gifts with equalization**\nIf the estate includes items that can't be divided (a house, a business, personal property), you can specify who gets what and add an equalization clause:\n\n> \"If the value of the property distributed to one child exceeds the value distributed to the other, the executor shall equalize the shares from the remaining estate so that each child receives equal total value.\"\n\n**Key points to address:**\n\n- **Non-probate assets override the will.** Bank accounts with payable-on-death (POD) designations, retirement accounts, life insurance, and jointly held property pass directly to the named beneficiary or co-owner regardless of what the will says. Check and align these beneficiary designations.\n- **Equal shares vs. equal value.** \"Equal\" should be defined. Decide whether it means equal dollar value at the time of distribution, and how to handle appreciation, debts, or illiquid assets.\n- **Contingent beneficiaries.** Specify what happens if one child dies before you, such as the share passing to that child's descendants or to the surviving child.\n- **Executor and trustee.** Name a responsible executor, and a trustee if the shares will be held in trust (e.g., for minor or vulnerable children).\n- **Formalities.** Most jurisdictions require the will to be in writing, signed by you, and witnessed by two (sometimes three) disinterested people. Requirements vary.\n- **Ambiguity.** Clear, specific language prevents disputes. Avoid vague terms like \"fairly\" or \"as my executor sees fit\" unless you intend that discretion.\n\nBecause estate law varies by state or country and tax rules can affect the outcome, have an estate planning attorney review the draft. This is especially important if the estate is large, includes a business or real estate in multiple jurisdictions, or if the children have unequal needs or relationships with you.",
+   "tokens_in": 58,
+   "tokens_out": 954,
+   "finish_reason": "stop",
+   "latency_ms": 5526
+  },
+  "5c68f24714b78968a7f9761614aee8a6514489c5a96b2498c4efca1ec9bd5e02": {
+   "id": "h51",
+   "content": "**Short answer:** For **listed Indian shares** (NSE/BSE) on which Securities Transaction Tax (STT) was paid, 18 months is more than 12 months, so the gain is a **Long-Term Capital Gain (LTCG)**.\n\n**Rules for listed equity shares (from 23 July 2024):**\n\n- **Tax rate:** 12.5% on LTCG, without indexation.\n- **Exemption:** The first ₹1.25 lakh of LTCG in a financial year is exempt (Section 112A).\n- **Surcharge:** Applies on income above certain thresholds, but the surcharge on these gains is capped at 15%.\n- **Cess:** 4% Health and Education Cess on the total tax.\n- **Grandfathering:** If you bought the shares before 31 January 2018, you can use their fair market value on that date (capped at the sale price) as the cost, rather than the original purchase price.\n\n**Example:** Buy shares for ₹1,00,000, sell for ₹3,00,000 after 18 months. Gain = ₹2,00,000. Taxable LTCG = ₹2,00,000 − ₹1,25,000 = ₹75,000. Tax at 12.5% = ₹9,375, plus cess (and surcharge if applicable).\n\n**Other points:**\n\n- **Losses:** LTCG losses can be set off only against other LTCGs. Unused losses can be carried forward for 8 years, provided you file your return on time.\n- **Comparison:** If you had sold within 12 months, the gain",
+   "tokens_in": 60,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5652
+  },
+  "23593538a163b4b64450228d236a3fd08950b5d75c66017a3b60d5fb96875310": {
+   "id": "h52",
+   "content": "Under GDPR, the key obligations in the first 72 hours are:\n\n**1. Establish awareness and start the clock**\n- Article 33 requires notification \"without undue delay and, where feasible, not later than 72 hours after having become aware\" of a breach. The clock generally starts when you have a reasonable degree of certainty that a security incident has compromised personal data, not when the investigation is finished. A customer's report can be enough to trigger it, so treat it as urgent now.\n- If you can't meet 72 hours, notify anyway and explain the delay.\n\n**2. Contain and investigate**\n- Stop the leak (revoke credentials, disable the affected endpoint, patch, or take the system offline).\n- Preserve logs and evidence.\n- Determine what data was affected, which data subjects, how many records, and whether the data was sensitive, financial, or credentials.\n\n**3. Assess risk**\n- Decide whether the breach is \"unlikely to result in a risk\" to individuals (no notification required, but you must still document it), a risk (notify the supervisory authority), or a **high risk** (also notify affected individuals without undue delay under Article 34).\n- Document the assessment regardless of the outcome (Article 33(5)).\n\n**4. Notify the supervisory authority (if required)**\nNotify your lead supervisory authority, or the relevant authority if you have no EU establishment and are not a one-stop-shop case. The notification must include:\n- Nature of the breach, and where possible the categories and approximate number of data subjects and records\n- Name and contact details of your DPO or other contact point\n- Likely consequences\n- Measures taken or proposed to address the breach and mitigate harm\n\nIf you don't have all of this yet, you can provide it in phases (Article 33(4)). An initial notice within 72 hours is better than a complete one that arrives late.\n\n**5. Notify affected individuals (if high risk)**\nExplain in clear language what happened, the likely consequences, contact details for the DPO, and what they should do to protect themselves (e.g., change",
+   "tokens_in": 73,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5980
+  },
+  "7edc0041f755b394127065a6c15fc96f3efa747dc43e821646e8612d4f10dbd6": {
+   "id": "h53",
+   "content": "Yes, for most healthy adults, paracetamol (acetaminophen) and ibuprofen can be used together or alternated. They work differently and don't have a significant interaction with each other. Combining them is often more effective for pain than either alone, but the dosing limits for each drug still apply separately.\n\n**Typical adult doses (check your local labeling):**\n- **Paracetamol:** 500–1000 mg every 4–6 hours as needed. Don't exceed 4 g/day (3 g/day for many over-the-counter labels, and lower if you drink alcohol, have liver problems, or are underweight).\n- **Ibuprofen:** 200–400 mg every 4–6 hours as needed. Over-the-counter maximum is usually 1200 mg/day unless a doctor directs otherwise.\n\n**Practical points:**\n- **Timing:** You can take them at the same time or stagger them (e.g., paracetamol now, ibuprofen 2–3 hours later) to spread out symptom relief. Keep track of each drug's own interval.\n- **Hidden doses:** Many cold, flu, and \"sinus\" products contain paracetamol or ibuprofen. Check labels to avoid accidental double-dosing.\n- **Food:** Take ibuprofen with food or milk to reduce stomach irritation.\n- **Hydration:** Ibuprofen is harder on the kidneys when you're dehydrated.\n\n**Avoid ibuprofen (and check with a clinician) if you have:**\n- Stomach ulcers or a",
+   "tokens_in": 71,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5476
+  },
+  "e9db868e13542fb3335872d9a506f5e9c5ff9f51d6a20982ddf51e2c92b5097c": {
+   "id": "h54",
+   "content": "This clause has several risks, mainly for the customer (the party receiving the services). It's a restrictive cap, and it's ambiguous in ways that could matter.\n\n**Key risks**\n\n1. **The cap is likely too low.** One month of fees is small relative to the damage a supplier can cause, such as a data breach, service outage, or IP claim. If fees are modest, recovery may not cover your actual losses.\n\n2. **Timing ambiguity.** \"Preceding month\" is undefined. Is it measured from the breach, the claim, or the date of judgment? If the breach happens early in the term, or after a payment gap, the cap could be near zero.\n\n3. **\"Fees paid\" vs. \"fees payable.\"** If you withhold payment during a dispute, or pay annually or in advance, the cap could shrink to zero or be argued down. The supplier could also use a payment dispute to reduce its own exposure.\n\n4. **No carve-outs.** The clause appears to cap all liability, including exposures that are often excluded from caps:\n   - Data breaches or confidentiality violations\n   - IP infringement\n   - Gross negligence, willful misconduct, or fraud (some jurisdictions won't enforce caps for these anyway)\n   - Bodily injury or property damage\n   - Indemnification obligations\n\n5. **One-sided.** Only the supplier's liability is capped. Check whether your liability is also capped, and whether your payment obligations are excluded from the cap (they usually should be).\n\n6. **Aggregate vs. per-claim.** \"Total\" liability suggests a single cap for the entire contract term, so one incident could exhaust it for all future claims.\n\n7. **Interaction with other clauses.** Check how this cap interacts with any consequential-damages waiver, insurance requirements",
+   "tokens_in": 77,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6102
+  },
+  "a337c6b4f8326e263228c7f126f8a03185bdc75e37f266d0799f62d90fc0f5ca": {
+   "id": "h55",
+   "content": "Before signing a five-year office lease, a small business should check the following:\n\n**Financial terms**\n- **Base rent and escalations:** Annual rent increases (fixed percentage or CPI-linked) and how they compound over five years.\n- **Operating expenses (CAM, taxes, insurance):** Whether the lease is gross, modified gross, or triple net (NNN), and what's included. NNN leases can add substantially to base rent.\n- **Hidden costs:** Utilities, parking, janitorial, security, and after-hours HVAC charges.\n- **Deposits and fees:** Security deposit size, prepaid rent, application or administrative fees, and the conditions for returning the deposit.\n\n**Flexibility and exit options**\n- **Early termination clause:** Whether you can exit early, under what conditions, and what it costs (often a fee equal to several months' rent plus unamortized build-out costs).\n- **Sublease and assignment rights:** Whether you can sublet or transfer the lease if the business is sold, merges, or shrinks.\n- **Expansion and contraction rights:** Options to add space (right of first offer or refusal) or give some back.\n- **Renewal options:** Whether you have the right to renew and at what rate. Without one, you may lose negotiating leverage at the end.\n\n**Space and building**\n- **Square footage measurement:** Confirm whether it's usable or rentable square footage. Rentable figures often include a \"load factor\" for common areas, which can inflate your costs by 10–20%.\n- **Condition and repairs:** Who is responsible for HVAC, roof, structural elements, and plumbing. Get a property inspection before signing.\n- **Build-out and improvements:** Whether the landlord will contribute tenant improvement (TI) allowances, and whether you must restore the space at lease end.\n- **Zoning and permitted use:** Confirm the space allows your business activities, signage, hours, and any special needs (e.g., inventory, customer traffic, food service).\n- **Parking, access, and amenities:** Ratio of parking spaces, 24/7 access, internet/fiber availability, and loading access.\n\n**Legal and risk protections**\n- **Personal guarantee:** Whether you must personally guarantee the lease. Try to limit it (e.g., to a set amount, or to decline over time), or negotiate a cap.\n- **Insurance requirements:** Coverage levels you must carry and whether you need to name the landlord as additional insured.\n- **Maintenance and default terms:** Cure periods for defaults and what triggers a default.\n- **Force majeure and co-tenancy clauses:** How disruptions affecting the building are handled.\n- **Landlord obligations:** Quiet enjoyment, restrictions on landlord relocating you, and what happens if the building is sold.\n\n**Before signing**\n- **Have a commercial real estate attorney review the lease.** Standard leases favor landlords, and attorney fees are small relative to a five-year commitment.\n- **Get a broker's perspective** (often the landlord's broker is paid by the landlord, so consider a tenant-side broker).\n- **Compare altern",
+   "tokens_in": 56,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5825
+  },
+  "0223d29cd9f49e9a0f941ebf51d495e6ae5a3f879d1c8f1043841d680d955928": {
+   "id": "h56",
+   "content": "**1. Privacy policy sign-off may not happen before launch**\n- **Why:** The DPO is on leave until 28 November, leaving only four days before the 2 December launch to complete review. Any feedback or revisions would push past launch. Launching with an unapproved privacy policy creates compliance exposure, and the terms of service are already approved, so the two documents would be out of sync.\n- **Owner:** Legal lead, to find cover for the DPO.\n- **Next step:** This week, ask Legal to name an interim reviewer with DPO authority, or get the DPO to do a short pre-leave or remote review. If neither is possible, decide now whether to move the launch or ship with the current policy, and get that decision made explicitly.\n\n**2. Payments testing is blocked by missing bank sandbox credentials**\n- **Why:** The credentials were promised three weeks ago. Without them, the payments team cannot run integration or end-to-end tests, and the new refund flow cannot be verified. Payments is a core launch function, so late-discovered defects here are the most costly kind to fix close to launch.\n- **Owner:** Divya (payments), with escalation to whoever manages the bank relationship.\n- **Next step:** Get a firm delivery date from the bank in writing today. If it is not before about 20 November, escalate and start a contingency plan, such as a mocked payment environment for early testing or a staged rollout of payment features.\n\n**3. Android 14 push notification failures are affecting about 8% of devices, with an unconfirmed cause**\n- **Why:** Eight percent is a large share of users, and push failures would show up immediately after launch. The root cause is still a hypothesis, so the fix is not scoped and could take longer than expected. If the cause is a permissions change, the fix could involve platform-specific handling, which takes time to build and test.\n- **Owner:** Karthik (to confirm the root cause), with the Android engineering lead responsible for the fix.\n- **Next step:** Confirm or rule out the permissions hypothesis within the next two working days by reproducing the failure on",
+   "tokens_in": 284,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6157
+  },
+  "269bd46ea0510fe229701f0255b78e1eaa92e1dcded86276019938c6a32415b6": {
+   "id": "h57",
+   "content": "**The bug:** the element removed from the window has the wrong index. When `i >= k`, the window after adding `values[i]` spans `values[i-k .. i]`, which has `k+1` elements. To keep exactly `k`, you must remove `values[i-k]`. The code removes `values[i-k+1]` instead, which is still inside the window, so the sum is wrong.\n\n**Example:** `values = [1, 2, 3, 4]`, `k = 2`\n\n- At `i = 2`, the window should be `[2, 3]`, so the average is `2.5`.\n- The buggy code subtracts `values[1] = 2` from `1 + 2 + 3 = 6`, getting `4`, and returns `2.0`.\n\n**Fixed version:**\n\n```python\ndef moving_average(values, k):\n    result = []\n    window_sum = 0\n    for i, v in enumerate(values):\n        window_sum += v\n        if i >= k:\n            window_sum -= values[i - k]  # remove the element that left the window\n        if i >= k - 1:\n            result.append(window_sum / k)\n    return result\n```\n\nFor the example above, this returns `[1.5, 2.5, 3.5]`, which is correct.",
+   "tokens_in": 188,
+   "tokens_out": 671,
+   "finish_reason": "stop",
+   "latency_ms": 3399
+  },
+  "4054a72692ad96545e701ee5d8201a004b554c08f72603af1aa34d67649460b5": {
+   "id": "h58",
+   "content": "**Subject: Your order 55102: refund, return pickup, and GST invoice**\n\nDear [Customer name],\n\nThank you for your patience, and I'm sorry for the frustration you've experienced with order 55102. A standing desk that arrives with a cracked leg is not the experience we want for you, and it's understandable that the return process has added to the difficulty. I've reviewed each of your concerns and want to address them directly.\n\n**1. Damaged desk on arrival**\nI'm sorry the desk arrived cracked on 9 November. Since it was damaged in transit, this is our responsibility, not yours. We will cover the full cost of the return.\n\n**2. Courier refused the return on 12 November**\nYou should not have been asked to use the original packaging without being told in advance, and I apologize that this wasn't communicated clearly. We have [arranged a new pickup for DATE / will arrange a pickup at a time convenient for you]. For a damaged-on-arrival item, our courier will accept the return in suitable protective packaging. [Confirm the packaging policy before sending.]\n\n**3. Restocking fee of ₹1,200**\nBecause the desk was damaged on arrival, the restocking fee should not have been applied. We have [reversed the ₹1,200 charge to your original payment method / initiated a refund of ₹1,200]. You should see this within [X business days], and I'll send you the confirmation reference.\n\n**4. GST invoice**\nI'm sorry you had to ask twice and didn't receive a reply. We have [issued / will issue by DATE] a GST invoice for order 55102 in the name of your company, with your GST number [confirm number on file]. It will be sent to [email address].\n\nOnce the desk has been collected, we will process your refund for the full order amount [confirm refund scope]. If you have any questions in the meantime, please reply to this email or contact me directly at [phone/email].\n\nThank you for your patience and for giving us the chance to make this right.\n\nWarm regards,\n[Your name]\n[Title]\n[Company name]\n\n---\n\n**Before sending, confirm:**\n- The refund scope (full order value or just the fee reversal)\n- Pickup date and the packaging requirement for damaged items\n- Refund and invoice timelines\n- The GST number on the customer",
+   "tokens_in": 226,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 6402
+  },
+  "c6c381979de013ea7d7d16648793d0dda9c132cb3abec1f4d59de96270be5a0c": {
+   "id": "h59",
+   "content": "**Themes, ranked by how much fixing them would help**\n\n**1. Search and findability (4 responses)**\n- \"Search never finds anything\"\n- \"I can't find the right form\"\n- \"Search results are irrelevant\"\n- \"Make search work like Google\"\n\nSearch has the most mentions, and it touches everyone, every day. Improving it would also make other problems easier to live with.\n\n**2. Logins and authentication (3 responses)**\n- \"Too many logins\"\n- \"Single sign-on please\"\n- \"Why do I need three passwords\"\n\nLogin friction is a daily annoyance for every user. Two of the three responses point to the same fix: single sign-on.\n\n**3. Mobile performance (3 responses)**\n- \"The expense tool is slow on mobile\"\n- \"Loading takes forever on my phone\"\n- \"The mobile site times out\"\n\nThese are spread across several tools, so fixing them could be a bigger engineering effort, but the payoff would reach every tool used on a phone.\n\n**4. Outdated documentation (2 responses)**\n- \"Docs are out of date\"\n- \"Nobody updates the wiki\"\n\nThis has the fewest mentions, and the root cause is likely ownership and process rather than tooling. It still feeds into search: stale docs make search results look irrelevant.\n\nThe ranking weighs mention count alongside how many users are affected and how many items a single fix would resolve. If you prefer a pure count, search and login swap places only if you treat \"I can't find the right form\" as a separate forms issue rather than search.",
+   "tokens_in": 209,
+   "tokens_out": 1018,
+   "finish_reason": "stop",
+   "latency_ms": 5497
+  },
+  "fa8e3ed237da281a98c03219b02f209b19b8aa0e4f63c37ceb8509cea180e40b": {
+   "id": "t01",
+   "content": "I don't have access to real-time data, so I can't give you today's weather in Bengaluru. For current conditions, you could check:\n\n- **Google** or **Apple Weather** (search \"Bengaluru weather\")\n- **IMD (India Meteorological Department)** at mausam.imd.gov.in\n- **AccuWeather** or **Weather.com**\n\nIf you tell me the date or what you're planning, I can offer general information about Bengaluru's typical climate for that time of year.",
+   "tokens_in": 54,
+   "tokens_out": 154,
+   "finish_reason": "stop",
+   "latency_ms": 1512
+  },
+  "956cea3c9024d193d85fd4a00e7e247916bd50b3b55eabaaa0de906016ab1492": {
+   "id": "h60",
+   "content": "## What it does\n\nThis is a simple reverse proxy for `app.example.com` on port 80:\n\n- **`location /`** forwards all requests to an application running on `127.0.0.1:3000`, passing the original `Host` header through.\n- **`location /admin`** forwards `/admin` requests to the same backend, under the `/admin` path, with an explicit `allow all`.\n- **`client_max_body_size 0`** removes the request body size limit.\n- **`",
+   "tokens_in": 194,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5569
+  },
+  "a02b1a87336b96c3a7803e9befc1064231b20f14e46da8b85098d7aca094e244": {
+   "id": "t02",
+   "content": "I don't have access to real-time news, so I can't pull up this morning's headlines. My knowledge also has a cutoff date, so anything recent may be missing or out of date.\n\nTo get current tech news, you could try:\n\n- **Tech news sites:** The Verge, TechCrunch, Ars Technica, Wired, or Reuters Technology\n- **Aggregators:** Google News (Technology section), Techmeme, or Hacker News\n- **Your company's news tools:** If your workspace has a news feed, newsletter, or Slack/Teams integration, check there first\n\nIf you paste in articles or headlines you've found, I can summarize them, pull out the key points, or explain what they mean for your team.",
+   "tokens_in": 53,
+   "tokens_out": 224,
+   "finish_reason": "stop",
+   "latency_ms": 1846
+  },
+  "c58aacc53b13ade9ed8e40a102d0eb282223b045d0e1e47c0a2efcf876b42bda": {
+   "id": "t04",
+   "content": "I don't have access to live or recent news, so I can't tell you the result of yesterday's IPL match. I also don't know today's date from within this conversation.\n\nTo find the result, you could check:\n- The official IPL website (iplt20.com)\n- The ESPNcricinfo or Cricbuzz apps and websites\n- A quick web search for \"IPL match result\" with the teams involved\n\nIf you tell me which teams played, I can share what I know about them, though my information may not include the most recent matches.",
+   "tokens_in": 52,
+   "tokens_out": 154,
+   "finish_reason": "stop",
+   "latency_ms": 1519
+  },
+  "f6c820ae91d4c8ead626ebb9dbedc4caafabd0e50f3ec6be74c6aad350fde3e3": {
+   "id": "t03",
+   "content": "I don't have access to live market data, so I can't give you today's gold price. Gold prices change throughout the trading day, so any number I gave you could be out of date.\n\nTo get the current price per gram, you can check:\n\n- **Financial sites:** Kitco, Bloomberg, Reuters, or Google Finance (search \"gold price\")\n- **Bullion dealers:** APMEX, JM Bullion, or your local dealer, which often list per-gram prices\n- **Your bank or brokerage app**, if you trade gold or gold ETFs\n\nIf you tell me the spot price per troy ounce, I can convert it to price per gram for you. One troy ounce is about 31.1035 grams.",
+   "tokens_in": 52,
+   "tokens_out": 220,
+   "finish_reason": "stop",
+   "latency_ms": 1863
+  },
+  "e2bb3f7e1ca685bc24c7a185b6a3b9929a0bd6e2e7211390a7e7795a8d7230cf": {
+   "id": "t05",
+   "content": "I can't check Slack's live status from here, so I can't tell you whether there's an outage right now. A few quick ways to find out:\n\n- **Slack's status page:** status.slack.com shows current incidents and component health.\n- **Downdetector:** Search \"Slack\" on downdetector.com to see whether other users are reporting problems.\n- **Social media:** Search \"Slack down\" on X or Reddit for recent reports.\n- **Your IT team:** If your company has an internal channel for IT issues, they'll know if it's affecting your workspace specifically.\n\nIf you're seeing errors or Slack won't load, that's also worth checking against your own network or VPN, since local issues can look like an outage.",
+   "tokens_in": 51,
+   "tokens_out": 222,
+   "finish_reason": "stop",
+   "latency_ms": 1792
+  },
+  "3c3d99fde8db16f9e25a81ecb74ceb17ea6af7d584c8c1ee6c2e04fda9914919": {
+   "id": "t06",
+   "content": "I don't have access to live market data, so I can't give you today's exact USD to INR rate. For a current rate, you could check:\n\n- **Google** (search \"USD to INR\")\n- **XE.com** or **Wise** for mid-market rates\n- **Your bank or payment provider** for the rate you'd actually get, which usually includes a markup\n- **Reuters** or **Bloomberg** for live market quotes\n\nIf you tell me the date you're interested in, I can share the approximate range from my training data, though it may be outdated. For anything involving a transaction or a payment, use a live source.",
+   "tokens_in": 54,
+   "tokens_out": 185,
+   "finish_reason": "stop",
+   "latency_ms": 1634
+  },
+  "fa439f730a0961c2c3c3084697e984f39940be6fc9c5f3ab3b694872365c2601": {
+   "id": "t08",
+   "content": "As of my last update, Sam Altman is the CEO of OpenAI. He was briefly removed in November 2023 but was reinstated within days and has continued to lead the company. Since leadership can change, you may want to verify the latest information on OpenAI's official website or recent news.",
+   "tokens_in": 54,
+   "tokens_out": 89,
+   "finish_reason": "stop",
+   "latency_ms": 1164
+  },
+  "521eb4681d73b8558a2877fcb77016761b6e3a97f009541abd3d41f8359ac10e": {
+   "id": "t10",
+   "content": "I don't have access to live flight data, so I can't tell you the current status of flights at Mumbai airport. To check, you can:\n\n- **Visit the airport's website:** Chhatrapati Shivaji Maharaj International Airport (BOM) posts departures and arrivals at csmia.in.\n- **Use a flight tracker:** FlightAware, Flightradar24, or Google Flights show real-time delays for BOM.\n- **Check your airline:** Their app or website will have the most accurate status for your specific flight.\n- **Call the airport or airline:** Useful if you need to confirm a connection or departure.\n\nIf you tell me your flight number or airline, I can help you figure out what to check or what to do about a delay.",
+   "tokens_in": 57,
+   "tokens_out": 232,
+   "finish_reason": "stop",
+   "latency_ms": 1862
+  },
+  "b74a0c7bfd6892b1823e6e5379b112c676f0ff47294ef2dc374ee67e63f0a4f3": {
+   "id": "t09",
+   "content": "I don't have access to current showtimes or release schedules, so I can't tell you what's opening this weekend. Some good ways to check:\n\n- **Local cinema websites or apps** (AMC, Cineworld, Vue, Odeon, etc.) list current showtimes.\n- **Google**: search \"movies near me\" or \"new releases this weekend\" for a list with local times.\n- **Fandango, Atom Tickets, or Letterboxd** for release dates and ticket purchases.\n- **Your company's internal channels**: if your office has a social or events channel, someone may be organizing a group outing.\n\nIf you tell me what genres or types of films you enjoy, I can suggest some recent or upcoming titles to look out for.",
+   "tokens_in": 56,
+   "tokens_out": 260,
+   "finish_reason": "stop",
+   "latency_ms": 2342
+  },
+  "91bc5c0450b3735890cd38b9f01a6586d102cefb549887086fe75aa08f42c090": {
+   "id": "t07",
+   "content": "I don't have live access to news, so I can't confirm the very latest developments. As of my most recent information, here's the general picture:\n\n- **Phase 1** (about 54 km) is largely operational across its corridors, with extensions such as the Poonamallee–Porur–Vadapalani stretch completed or nearing completion.\n- **Phase 2** (roughly 119 km, with many corridors and stations) has been planned by the Chennai Metro Rail Limited (CMRL) and the Tamil Nadu government. Its funding and central approvals have been key milestones, and construction timelines have been revised several times.\n\nFor current status, check:\n- **CMRL's official website** (chennaimetrorail.org) for station openings and project updates\n- **Tamil Nadu government announcements** and press releases\n- **Recent reporting from The Hindu, Times of India, or The New Indian Express**\n\nIf you tell me which corridor or aspect you care about (timelines, funding, specific stations), I can give you the background I have on it.",
+   "tokens_in": 58,
+   "tokens_out": 828,
+   "finish_reason": "stop",
+   "latency_ms": 5344
+  },
+  "dd790d81caacc457d380a55521ae14d46a2b8cb0b448a7e3526c0497f4885cc9": {
+   "id": "t11",
+   "content": "As of my most recent information, the newest iPhone lineup is the **iPhone 17 series** (iPhone 17, iPhone Air, iPhone 17 Pro, and iPhone 17 Pro Max), released in September 2025. Apple may have released newer models since then, and stock varies by region and retailer, so check apple.com/iphone or your carrier's site for what's currently on sale.",
+   "tokens_in": 54,
+   "tokens_out": 316,
+   "finish_reason": "stop",
+   "latency_ms": 2428
+  },
+  "998da0dd18f2814ce3773b36a4967cdc4e3bd6d84b11093f6a6332f274777575": {
+   "id": "t12",
+   "content": "I can't check GitHub's trending page directly. I don't have live internet access, and I don't know what's trending this week.\n\nSome ways to find out:\n\n- **GitHub Trending** (github.com/trending) lets you filter by language and time range (daily, weekly, monthly).\n- **Newsletters** like TLDR, Console.dev, or Changelog's weekly roundups often highlight notable repos.\n- **Hacker News and Reddit** (r/programming, r/github) frequently discuss popular new projects.\n- **The GitHub CLI or API** can query recently created repos sorted by stars, if you want to script it. For example, `gh search repos --created=\">2025-01-01\" --sort=stars --limit=20` (adjust the date to the past week).\n\nIf you tell me what area you're interested in, such as a language, framework, or type of tool, I can suggest well-known projects in that space, though I can't confirm which are currently trending.",
+   "tokens_in": 51,
+   "tokens_out": 300,
+   "finish_reason": "stop",
+   "latency_ms": 2407
+  },
+  "fadc5d0491ae980027dbd8a792e9771116feb62de10b15fb704978c348aecd4a": {
+   "id": "t13",
+   "content": "I don't have access to real-time market data, so I can't tell you where the Sensex is trading today. For current figures, you could check:\n\n- **BSE India's website** (bseindia.com), which publishes the Sensex directly\n- **Financial news sites** like Moneycontrol, Economic Times Markets, or Bloomberg\n- **Brokerage apps** you may already use, such as Zerodha, Groww, or your bank's trading platform\n- **Google Finance** or a quick search for \"Sensex today\"\n\nIf you paste in a recent figure or article, I can help you interpret it or analyze the movement.",
+   "tokens_in": 50,
+   "tokens_out": 194,
+   "finish_reason": "stop",
+   "latency_ms": 1492
+  },
+  "39899abd72e1e1608b3c2c0307ccf0ef626d246924316345c6117431af693484": {
+   "id": "t14",
+   "content": "I don't have access to the current date or live sports schedules, so I can't tell you when tomorrow's match starts. To find out:\n\n- **Check the official schedule** on the league or board website (e.g., ICC, ECB, BCCI, or Cricbuzz/ESPNcricinfo).\n- **Search online** for the teams playing, plus \"start time\" and your time zone.\n- **Look at your sports app or TV guide**, which usually lists local start times.\n\nIf you tell me the teams and the match or tournament, I can help you figure out what to look for or how to convert the start time to your time zone.",
+   "tokens_in": 54,
+   "tokens_out": 232,
+   "finish_reason": "stop",
+   "latency_ms": 1941
+  },
+  "957d19e365c55cf0ece79bd91bdbb1fb2ab7cc89ec40a13351c51c6fc0855fe5": {
+   "id": "t15",
+   "content": "I don't have access to live traffic data, so I can't tell you how OMR (Old Mahabalipuram Road in Chennai) looks right now. Some ways to check:\n\n- **Google Maps or Waze**: Enter your route to see live congestion and estimated travel times.\n- **Local news or traffic police updates**: Chennai Traffic Police often posts on X (@chennaipolice_) about incidents and diversions.\n- **Ride-hailing apps**: Uber or Ola fare and ETA estimates reflect current conditions.\n\nGenerally, OMR is busiest during weekday morning (about 8–11 AM) and evening (about 5–9 PM) peaks, especially around the IT corridor, Sholinganallur, Perungudi, and Thoraipakkam. Heavy rain or events can make it much worse.",
+   "tokens_in": 54,
+   "tokens_out": 331,
+   "finish_reason": "stop",
+   "latency_ms": 2520
+  },
+  "c94f635e305eb49ad88d1a8ffc547a6e135ede43e0680cd55b73c771f7c5fa8f": {
+   "id": "h31",
+   "content": "",
+   "tokens_in": 71,
+   "tokens_out": 1024,
+   "finish_reason": "length",
+   "latency_ms": 5930
+  }
+ }
+}

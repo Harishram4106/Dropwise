@@ -1,0 +1,65 @@
+{
+ "mode": "fixture",
+ "before": {
+  "factor_id": "electricity-water-intensity",
+  "label": "Water consumed per kWh of electricity generated (EWIF)",
+  "value": 7.6,
+  "range": {
+   "low": 7.6,
+   "high": 7.6
+  },
+  "unit": "L per kWh",
+  "counts": "indirect_only",
+  "source_url": "https://eta-publications.lbl.gov/sites/default/files/lbnl-1005775_v2.pdf",
+  "source_title": "United States Data Center Energy Usage Report (Lawrence Berkeley National Laboratory, 2016)",
+  "source_date": "2016-06",
+  "evidence": "A national average of 7.6 liters (2.0 gallons) of water are consumed for each kWh when weighting the water losses at both thermoelectric and hydroelectric plants in the U.S.",
+  "freshness_score": 0.03,
+  "last_verified": "2026-11-10",
+  "verified_by": "manual",
+  "status": "verified",
+  "version_hash": "sha256:ad71c31f05f1de68b7113c4b6ecdf6dea3d879750119784973b4ca4711c5470a"
+ },
+ "after": {
+  "factor_id": "electricity-water-intensity",
+  "label": "Water consumed per kWh of electricity generated (EWIF)",
+  "value": 7.6,
+  "range": {
+   "low": 7.6,
+   "high": 7.6
+  },
+  "unit": "L per kWh",
+  "counts": "indirect_only",
+  "source_url": "https://eta-publications.lbl.gov/sites/default/files/lbnl-1005775_v2.pdf",
+  "source_title": "United States Data Center Energy Usage Report (Lawrence Berkeley National Laboratory, 2016)",
+  "source_date": "2016-06",
+  "evidence": "A national average of 7.6 liters (2.0 gallons) of water are consumed for each kWh when weighting the water losses at both thermoelectric and hydroelectric plants in the U.S.",
+  "freshness_score": 0.03,
+  "last_verified": "2026-11-10",
+  "verified_by": "manual",
+  "status": "stale",
+  "version_hash": "sha256:aa72ae5e87156b8b36dc644430a92005b02d16a3bc2536fb1e9c2fafdaf6dc02",
+  "superseded_by": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf"
+ },
+ "outcome": {
+  "factor_id": "electricity-water-intensity",
+  "action": "flagged_stale",
+  "detail": "2024 United States Data Center Energy Usage Report (Lawrence Berkeley National Laboratory) (2024-12) reports 4.52 L per kWh"
+ },
+ "newer_source": {
+  "factor_id": "electricity-water-intensity",
+  "value": 4.52,
+  "range": {
+   "low": 4.52,
+   "high": 4.52
+  },
+  "unit": "L per kWh",
+  "counts": "indirect_only",
+  "source_url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf",
+  "source_title": "2024 United States Data Center Energy Usage Report (Lawrence Berkeley National Laboratory)",
+  "source_date": "2024-12",
+  "evidence": "In 2023, energy consumption by a data center translates to national average of 4.52 L/kWh of indirect water consumption, along with 0.34 kg/ kWh emissions.",
+  "found_at": "2026-11-10"
+ },
+ "explanation": "United States Data Center Energy Usage Report (Lawrence Berkeley National Laboratory, 2016) gave 7.6 L per kWh. Tavily found a newer source, 2024 United States Data Center Energy Usage Report (Lawrence Berkeley National Laboratory) (2024-12), giving 4.52 L per kWh. It is newer, uses the same unit and the ranges don't overlap, so the entry is flagged stale and the new figure waits for review. Age alone never flags an entry."
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "factor_id": "datacenter-wue-onsite",
+    "label": "On-site data-center water usage effectiveness (WUE)",
+    "unit": "L per kWh",
+    "counts": "direct_only",
+    "role": "estimator",
+    "query": "data center water usage effectiveness WUE liters per kWh annual sustainability report",
+    "include_domains": [
+      "sustainability.google",
+      "microsoft.com",
+      "sustainability.aboutamazon.com",
+      "lbl.gov"
+    ],
+    "time_range": "year"
+  },
+  {
+    "factor_id": "electricity-water-intensity",
+    "label": "Water consumed per kWh of electricity generated (EWIF)",
+    "unit": "L per kWh",
+    "counts": "indirect_only",
+    "role": "estimator",
+    "query": "electricity generation water consumption intensity liters per kWh grid average",
+    "include_domains": [
+      "nrel.gov",
+      "lbl.gov",
+      "iea.org",
+      "eia.gov",
+      "wri.org"
+    ]
+  },
+  {
+    "factor_id": "llm-inference-energy-per-1k-output-tokens",
+    "label": "LLM inference energy per 1,000 output tokens",
+    "unit": "Wh per 1k output tokens",
+    "counts": "not_applicable",
+    "role": "estimator",
+    "query": "measured LLM inference energy per output token Wh",
+    "include_domains": [
+      "arxiv.org",
+      "epoch.ai",
+      "huggingface.co",
+      "mlcommons.org"
+    ],
+    "time_range": "year"
+  },
+  {
+    "factor_id": "google-gemini-median-prompt-water",
+    "label": "Water per median Gemini Apps text prompt (Google)",
+    "unit": "mL per prompt",
+    "counts": "direct_only",
+    "role": "reference",
+    "subjects": [
+      "gemini",
+      "google",
+      "bard"
+    ],
+    "query": "Google Gemini median text prompt water consumption mL",
+    "include_domains": [
+      "arxiv.org",
+      "cloud.google.com",
+      "blog.google",
+      "sustainability.google"
+    ]
+  },
+  {
+    "factor_id": "google-gemini-median-prompt-energy",
+    "label": "Energy per median Gemini Apps text prompt (Google)",
+    "unit": "Wh per prompt",
+    "counts": "not_applicable",
+    "role": "reference",
+    "subjects": [
+      "gemini",
+      "google",
+      "bard"
+    ],
+    "query": "Google Gemini median text prompt energy Wh",
+    "include_domains": [
+      "arxiv.org",
+      "cloud.google.com",
+      "blog.google",
+      "sustainability.google"
+    ]
+  },
+  {
+    "factor_id": "mistral-le-chat-400-token-response-water",
+    "label": "Water per 400-token Le Chat response, lifecycle (Mistral)",
+    "unit": "mL per response",
+    "counts": "direct_plus_indirect",
+    "role": "reference",
+    "subjects": [
+      "mistral",
+      "le chat"
+    ],
+    "query": "Mistral lifecycle analysis water per response mL Le Chat",
+    "include_domains": [
+      "mistral.ai"
+    ]
+  },
+  {
+    "factor_id": "openai-chatgpt-average-query-water",
+    "label": "Water per average ChatGPT query (OpenAI CEO statement)",
+    "unit": "mL per query",
+    "counts": "unclear",
+    "role": "reference",
+    "subjects": [
+      "chatgpt",
+      "openai",
+      "gpt-4",
+      "gpt-4o",
+      "gpt-5"
+    ],
+    "query": "OpenAI ChatGPT average query water use gallons Altman",
+    "include_domains": [
+      "openai.com",
+      "blog.samaltman.com",
+      "datacenterdynamics.com"
+    ]
+  },
+  {
+    "factor_id": "openai-chatgpt-average-query-energy",
+    "label": "Energy per average ChatGPT query (OpenAI CEO statement)",
+    "unit": "Wh per query",
+    "counts": "not_applicable",
+    "role": "reference",
+    "subjects": [
+      "chatgpt",
+      "openai",
+      "gpt-4",
+      "gpt-4o",
+      "gpt-5"
+    ],
+    "query": "OpenAI ChatGPT average query energy watt-hours Altman",
+    "include_domains": [
+      "openai.com",
+      "blog.samaltman.com",
+      "datacenterdynamics.com"
+    ]
+  },
+  {
+    "factor_id": "ucr-gpt3-medium-response-water",
+    "label": "Water per medium-length GPT-3 response (UC Riverside, Making AI Less Thirsty)",
+    "unit": "mL per response",
+    "counts": "direct_plus_indirect",
+    "role": "reference",
+    "subjects": [
+      "gpt-3",
+      "gpt3",
+      "chatgpt"
+    ],
+    "query": "Making AI Less Thirsty GPT-3 500ml bottle of water medium-length responses",
+    "include_domains": [
+      "arxiv.org",
+      "ucr.edu"
+    ]
+  }
+]

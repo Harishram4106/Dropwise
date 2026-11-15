@@ -1,0 +1,84 @@
+1
+00:00:00,300 --> 00:00:13,309
+AI answers use water, and nobody can see how much. Dropwise sits in front of the Bifrost AI gateway, and uses Tavily search to keep each water figure sourced.
+
+2
+00:00:13,539 --> 00:00:18,722
+Bifrost carries each request to the model; Tavily finds the evidence.
+
+3
+00:00:19,383 --> 00:00:22,826
+Real requests: Dropwise, then Bifrost, then Claude.
+
+4
+00:00:24,058 --> 00:00:30,110
+An easy prompt asked of Opus goes to Haiku, and Bifrost forwards it.
+
+5
+00:00:31,369 --> 00:00:36,986
+Asked again, it comes from cache: no call to Bifrost at all.
+
+6
+00:00:38,086 --> 00:00:41,965
+A time-sensitive question skips the cache on purpose.
+
+7
+00:00:43,484 --> 00:00:47,362
+A hard prompt stays on Opus, through Bifrost.
+
+8
+00:00:49,598 --> 00:00:53,911
+Every request gets a receipt: measured tokens, estimated water.
+
+9
+00:00:55,956 --> 00:01:03,747
+Each receipt cites registry versions; the water factors were found with Tavily, so numbers trace to sources.
+
+10
+00:01:04,991 --> 00:01:11,478
+Measured numbers are labelled measured. Water is always an estimated range, from Tavily-found factors.
+
+11
+00:01:13,010 --> 00:01:20,801
+Budgets are per team key, including Bifrost virtual keys. Alert at eighty percent; the limit is soft.
+
+12
+00:01:21,952 --> 00:01:29,744
+Same two hundred requests, Bifrost alone versus Dropwise: about twenty-two percent fewer calls, twenty-four percent fewer tokens.
+
+13
+00:01:29,932 --> 00:01:36,854
+The answers are replayed recordings, so cost is a what-if, and the page says so.
+
+14
+00:01:38,442 --> 00:01:47,973
+The classifier is plain rules: no model call, no Tavily search. A hard prompt like this stays on the large model.
+
+15
+00:01:49,995 --> 00:01:56,047
+A request can be deferred. I'll send one with a six hour deadline.
+
+16
+00:01:57,411 --> 00:02:05,637
+This hour is already the quietest, so it runs now through the same Bifrost path, and says why.
+
+17
+00:02:08,086 --> 00:02:16,312
+The profile is illustrative, and the water estimate doesn't change with the hour, so we claim no saving.
+
+18
+00:02:17,985 --> 00:02:27,950
+Claim checker: each part is checked against the registry. This saved example uses the registry only; a Tavily key adds live sources.
+
+19
+00:02:28,492 --> 00:02:34,979
+Each factor has a source and a date. Tavily found two of the eight.
+
+20
+00:02:35,679 --> 00:02:47,818
+Tavily finds newer sources, Haiku reads the figure through Bifrost, and code flags the old one stale. This replays a captured Tavily result; a person accepts changes.
+
+21
+00:02:48,348 --> 00:02:57,878
+Dropwise: Bifrost carries the requests, Tavily keeps the numbers sourced, and all is labelled measured or estimated. Open source. Thank you.
+

@@ -1,0 +1,8 @@
+{
+  "period": "day",
+  "keys": {
+    "team-search": { "limit_ml": 25, "scope": "direct_plus_indirect" },
+    "team-support": { "limit_ml": 100, "scope": "direct_plus_indirect" },
+    "*": { "limit_ml": 50, "scope": "direct_plus_indirect" }
+  }
+}

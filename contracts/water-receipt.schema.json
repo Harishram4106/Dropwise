@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dropwise/water-receipt",
+  "title": "Water receipt",
+  "description": "One record per gateway request, produced by gateway/ and displayed by the dashboard. Water is always an estimated range; token and cache fields are measured.",
+  "type": "object",
+  "required": [
+    "request_id",
+    "created_at",
+    "virtual_key",
+    "model",
+    "routed_to",
+    "region",
+    "tokens_in",
+    "tokens_out",
+    "tokens_estimated",
+    "water_ml",
+    "water_ml_by_scope",
+    "scope",
+    "method",
+    "factor_versions",
+    "cache_hit",
+    "cache",
+    "route",
+    "tokens_saved",
+    "avoided_ml_by_scope",
+    "latency_ms",
+    "budget"
+  ],
+  "$defs": {
+    "range": {
+      "type": "object",
+      "required": ["low", "high"],
+      "properties": {
+        "low": { "type": "number", "minimum": 0 },
+        "high": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "byScope": {
+      "type": "object",
+      "required": ["direct_only", "direct_plus_indirect"],
+      "properties": {
+        "direct_only": { "$ref": "#/$defs/range" },
+        "direct_plus_indirect": { "$ref": "#/$defs/range" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "request_id": { "type": "string", "pattern": "^req_[0-9a-f]{16}$" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "virtual_key": { "type": "string", "description": "From the x-bf-vk or x-dropwise-key header; \"default\" when neither is sent." },
+    "model": { "type": "string", "description": "Model the caller asked for (or \"dropwise/auto\")." },
+    "routed_to": { "type": "string", "description": "Model that actually served the request, or \"cache\" on a cache hit." },
+    "region": { "type": "string", "description": "Provider region, or \"unknown\" when the provider doesn't disclose it (US averages are then assumed, as `method` says)." },
+    "tokens_in": { "type": "integer", "minimum": 0 },
+    "tokens_out": { "type": "integer", "minimum": 0 },
+    "tokens_estimated": { "type": "boolean", "description": "True when the provider sent no usage and tokens were approximated as characters / 4." },
+    "water_ml": { "oneOf": [{ "$ref": "#/$defs/range" }, { "type": "null" }], "description": "Estimated range in `scope`; null when the registry was unreachable." },
+    "water_ml_by_scope": { "oneOf": [{ "$ref": "#/$defs/byScope" }, { "type": "null" }], "description": "Both scopes, so the dashboard's what-is-counted toggle needs no second request." },
+    "scope": { "enum": ["direct_only", "direct_plus_indirect"] },
+    "method": { "type": "string" },
+    "factor_versions": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+@sha256:[0-9a-f]{64}$" },
+      "description": "factor_id@version_hash for every registry entry used in the estimate (empty on a cache hit)."
+    },
+    "cache_hit": { "type": "boolean" },
+    "cache": { "enum": ["hit", "miss", "bypass", "skipped", "off"], "description": "bypass: time-sensitive prompt (or no classifier), cache skipped on purpose. skipped: not cacheable (streaming or tools)." },
+    "route": {
+      "oneOf": [{ "$ref": "route-decision.schema.json" }, { "type": "null" }],
+      "description": "The classifier's decision; null when it was unreachable (see route_note)."
+    },
+    "route_note": { "type": "string" },
+    "tokens_saved": { "type": "integer", "minimum": 0, "description": "On a cache hit, the tokens the original answer used." },
+    "avoided_ml_by_scope": { "oneOf": [{ "$ref": "#/$defs/byScope" }, { "type": "null" }], "description": "On a cache hit, the estimated water the skipped model call would have used." },
+    "latency_ms": {
+      "type": "object",
+      "required": ["total", "gateway"],
+      "properties": {
+        "total": { "type": "number", "minimum": 0 },
+        "gateway": { "type": "number", "description": "Time spent in Dropwise itself, excluding the upstream model call." }
+      },
+      "additionalProperties": false
+    },
+    "deferred": {
+      "type": "object",
+      "description": "Present when the request was sent with x-dropwise-defer and ran later, at a lower-impact hour (time shifting). The water estimate does not change with the hour (the registry has no hourly factor), so no water saving from shifting is ever claimed; the profile's index records why the hour was chosen.",
+      "required": ["job_id", "requested_at", "deadline", "scheduled_for", "ran_at", "run_early", "profile", "relative_index", "reason"],
+      "properties": {
+        "job_id": { "type": "string" },
+        "requested_at": { "type": "string", "format": "date-time" },
+        "deadline": { "type": "string", "format": "date-time" },
+        "scheduled_for": { "type": "string", "format": "date-time" },
+        "ran_at": { "type": ["string", "null"], "format": "date-time" },
+        "run_early": { "type": "boolean", "description": "True when an operator ran it before its scheduled hour." },
+        "profile": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["name", "source", "illustrative", "timezone"],
+              "properties": {
+                "name": { "type": "string" },
+                "source": { "type": "string" },
+                "illustrative": { "type": "boolean", "description": "True when the hourly numbers are an illustration, not a measurement." },
+                "timezone": { "type": "string" }
+              },
+              "additionalProperties": false
+            },
+            { "type": "null" }
+          ]
+        },
+        "relative_index": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["at_request", "at_run"],
+              "properties": { "at_request": { "type": "number" }, "at_run": { "type": "number" } },
+              "additionalProperties": false
+            },
+            { "type": "null" }
+          ],
+          "description": "The hourly profile's relative index (1.0 is an average hour, lower is better) when the request arrived and at the scheduled hour. Not a water figure."
+        },
+        "reason": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "budget": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["virtual_key", "period", "scope", "limit_ml", "used_ml", "used_pct", "status"],
+          "properties": {
+            "virtual_key": { "type": "string" },
+            "period": { "type": "string" },
+            "scope": { "enum": ["direct_only", "direct_plus_indirect"] },
+            "limit_ml": { "type": "number" },
+            "used_ml": { "$ref": "#/$defs/range" },
+            "used_pct": { "type": "number", "description": "High end of used_ml as a percentage of limit_ml." },
+            "status": { "enum": ["ok", "alert", "soft_limit"] }
+          },
+          "additionalProperties": false
+        },
+        { "type": "null" }
+      ]
+    },
+    "prompt_preview": { "type": "string", "description": "First characters of the last user message (PROMPT_PREVIEW_CHARS; 0 turns it off)." }
+  },
+  "additionalProperties": false
+}

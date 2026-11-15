@@ -1,0 +1,84 @@
+1
+00:00:00,604 --> 00:00:14,047
+Every AI answer uses water, but nobody can see how much. Dropwise sits in front of the Bifrost AI gateway, estimates the water behind every request, and cuts the waste.
+
+2
+00:00:14,399 --> 00:00:20,886
+Apps point at Dropwise instead of Bifrost, and nothing else in their code changes.
+
+3
+00:00:24,904 --> 00:00:30,956
+This is the live Requests page. I'll send real requests through the gateway.
+
+4
+00:00:31,308 --> 00:00:39,099
+An easy prompt, asked of the large Opus model. Dropwise routes it to the small Haiku model.
+
+5
+00:00:40,453 --> 00:00:46,940
+Asking again is answered from the cache: no model call, and no new water.
+
+6
+00:00:48,292 --> 00:00:55,214
+A time-sensitive question skips the cache on purpose, so it never serves a stale answer.
+
+7
+00:00:56,565 --> 00:01:01,748
+A hard prompt stays on Opus, so quality isn't traded away.
+
+8
+00:01:11,900 --> 00:01:17,952
+Every request gets a receipt: tokens measured, and water estimated as a range.
+
+9
+00:01:23,238 --> 00:01:31,899
+The receipt names the exact registry version behind each factor, so every number can be traced to its source.
+
+10
+00:01:35,791 --> 00:01:45,756
+The Overview now shows what just happened. Measured numbers are labelled measured. Water is always an estimated range, with what it counts.
+
+11
+00:01:50,213 --> 00:02:00,178
+Teams get daily water budgets, with an alert at eighty percent. The limit is soft: a team is flagged, but still served.
+
+12
+00:02:04,039 --> 00:02:14,439
+Before and after: the same two hundred requests, with and without Dropwise. About twenty-two percent fewer model calls, and twenty-four percent fewer tokens.
+
+13
+00:02:14,791 --> 00:02:22,582
+These answers are replayed recordings, so the cost shown is a what-if, and the page says so.
+
+14
+00:02:26,453 --> 00:02:44,244
+Routing and cache. The classifier is plain rules, with no model call, so it adds almost no delay. Only prompts it is confident are easy go to the small model; a hard one like this stays on the large model.
+
+15
+00:02:48,113 --> 00:02:54,165
+A request can be deferred. I'll send one with a six hour deadline.
+
+16
+00:02:57,782 --> 00:03:11,225
+Right now is already the lowest-demand hour in the profile, so Dropwise runs it at once, and says why. At a busier hour it would wait for the quiet one.
+
+17
+00:03:11,576 --> 00:03:21,106
+The hourly profile is illustrative and says so. The water estimate doesn't change with the hour, so we claim no saving.
+
+18
+00:03:24,966 --> 00:03:37,540
+The claim checker splits a claim into parts and checks each against the registry: supported, overstated, understated, unsupported or outdated, with citations. This one uses a saved example.
+
+19
+00:03:41,400 --> 00:03:46,583
+Every factor has a source, a date and a signed version.
+
+20
+00:03:53,403 --> 00:04:08,586
+Tavily finds newer sources, Haiku reads the figure, and code checks the quote is really in the source before an old figure is flagged stale. Nothing enters the registry until a person accepts it.
+
+21
+00:04:11,947 --> 00:04:22,347
+Dropwise: measured where it can be, estimated where it must be, and honest about which is which. It is open source. Thank you.
+

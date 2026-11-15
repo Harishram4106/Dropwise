@@ -1,0 +1,234 @@
+{
+  "created_at": "2026-11-13T07:26:32.220Z",
+  "run_id": "2026-11-13T07-24-25-221Z",
+  "clean": true,
+  "workload": {
+    "file": "gateway/bench/prompts.json",
+    "seed": 7,
+    "hash": "sha256:ab629cac184888dbd95f551b15357f903032855aa73b87a66232fd36dcda3e2b",
+    "system_prompt": "You are a helpful assistant in a company's internal workspace. Answer clearly and concisely.",
+    "requests": 200,
+    "unique_prompts": 150,
+    "repeats": 50,
+    "repeat_share": 0.25,
+    "by_category": {
+      "easy": {
+        "requests": 100,
+        "repeats": 25
+      },
+      "hard": {
+        "requests": 80,
+        "repeats": 20
+      },
+      "time_sensitive": {
+        "requests": 20,
+        "repeats": 5
+      }
+    }
+  },
+  "setup": {
+    "bifrost_url": "http://localhost:8081",
+    "gateway_url": "http://localhost:8088",
+    "model": "anthropic/claude-opus-5-5",
+    "max_tokens": 1024,
+    "concurrency": 8,
+    "small_model": "anthropic/claude-haiku-5-5",
+    "large_model": "anthropic/claude-opus-5-5",
+    "routing": true,
+    "cache": true,
+    "registry_version": 2,
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "classifier_version": "rules-1",
+    "replay": {
+      "recorded_at": "2026-11-13T07:23:40.834Z",
+      "model": "anthropic/claude-haiku-5-5",
+      "max_tokens": 1024,
+      "answers": 150
+    }
+  },
+  "runs": {
+    "without_dropwise": {
+      "requests": 200,
+      "ok": 200,
+      "errors": 0,
+      "retries": 0,
+      "truncated": 43,
+      "model_calls": 200,
+      "tokens_in": 13479,
+      "tokens_out": 76460,
+      "tokens_total": 89939,
+      "tokens_estimated_requests": 0,
+      "by_model": {
+        "anthropic/claude-opus-5-5": {
+          "calls": 200,
+          "tokens_in": 13479,
+          "tokens_out": 76460
+        }
+      },
+      "latency_ms": {
+        "p50": 1524.2,
+        "p95": 6232.5,
+        "mean": 2658.5
+      },
+      "wall_ms": 70768,
+      "error_samples": []
+    },
+    "with_dropwise": {
+      "requests": 200,
+      "ok": 200,
+      "errors": 0,
+      "retries": 0,
+      "truncated": 43,
+      "model_calls": 155,
+      "tokens_in": 10335,
+      "tokens_out": 57915,
+      "tokens_total": 68250,
+      "tokens_estimated_requests": 0,
+      "by_model": {
+        "anthropic/claude-opus-5-5": {
+          "calls": 83,
+          "tokens_in": 6317,
+          "tokens_out": 48130
+        },
+        "anthropic/claude-haiku-5-5": {
+          "calls": 72,
+          "tokens_in": 4018,
+          "tokens_out": 9785
+        }
+      },
+      "latency_ms": {
+        "p50": 1167.6,
+        "p95": 6138.1,
+        "mean": 2031.1
+      },
+      "wall_ms": 56212,
+      "error_samples": [],
+      "cache_hits": 45,
+      "cache_misses": 135,
+      "cache_bypassed": 20,
+      "cache_skipped": 0,
+      "routed_small": 72,
+      "routed_small_share": 0.465,
+      "gateway_overhead_ms": {
+        "p50": 3.1,
+        "p95": 6.4,
+        "mean": 3.5
+      },
+      "cache_hit_latency_ms": {
+        "p50": 4.7,
+        "p95": 6.9,
+        "mean": 4.8
+      },
+      "receipts_missing": 0
+    }
+  },
+  "measured": {
+    "calls_avoided": 45,
+    "calls_avoided_share": 0.225,
+    "tokens_saved": 21689,
+    "tokens_saved_share": 0.241,
+    "tokens_served_from_cache": 21689,
+    "cache_hit_share": 0.225,
+    "cache_bypassed": 20,
+    "routed_small_share": 0.465,
+    "gateway_overhead_ms": {
+      "p50": 3.1,
+      "p95": 6.4,
+      "mean": 3.5
+    }
+  },
+  "estimated": {
+    "water_ml": {
+      "direct_only": {
+        "without_dropwise": {
+          "low": 14.5701,
+          "high": 20.6406
+        },
+        "with_dropwise": {
+          "low": 11.0566,
+          "high": 15.6631
+        },
+        "avoided": {
+          "low": 3.5135,
+          "high": 4.9775
+        }
+      },
+      "direct_plus_indirect": {
+        "without_dropwise": {
+          "low": 258.4852,
+          "high": 366.1865
+        },
+        "with_dropwise": {
+          "low": 196.151,
+          "high": 277.8796
+        },
+        "avoided": {
+          "low": 62.3342,
+          "high": 88.3069
+        }
+      }
+    },
+    "method": "energy per prompt (Google median to OpenAI average) x (tokens / 400, assumed linear) x water factor (Microsoft on-site WUE; plus LBNL US grid water for indirect). Provider region not disclosed, so US averages are assumed.",
+    "factor_versions": [
+      "google-gemini-median-prompt-energy@sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5",
+      "openai-chatgpt-average-query-energy@sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410",
+      "datacenter-wue-onsite@sha256:14ad7f30c7fb22196d78444c5453995fed8e4c86b0ca3efc22954eef97166769",
+      "electricity-water-intensity@sha256:688636e5454af5bee9f7b43aed318c7db85ef830a3ff7b446e13bab75b29b11f"
+    ],
+    "cost_usd": {
+      "without_dropwise": 1.5831,
+      "with_dropwise": 0.9932,
+      "saved": 0.5899,
+      "prices_per_mtok": {
+        "anthropic/claude-opus-5-5": {
+          "input": 4,
+          "output": 20
+        },
+        "anthropic/claude-sonnet-5-5": {
+          "input": 2,
+          "output": 10
+        },
+        "anthropic/claude-haiku-5-5": {
+          "input": 0.1,
+          "output": 0.5
+        }
+      },
+      "prices_as_of": "2026-11"
+    }
+  },
+  "by_category": {
+    "easy": {
+      "requests": 100,
+      "model_calls_without_dropwise": 100,
+      "model_calls_with_dropwise": 75,
+      "routed_small": 55,
+      "cache_hits": 25,
+      "cache_bypassed": 0
+    },
+    "hard": {
+      "requests": 80,
+      "model_calls_without_dropwise": 80,
+      "model_calls_with_dropwise": 60,
+      "routed_small": 3,
+      "cache_hits": 20,
+      "cache_bypassed": 0
+    },
+    "time_sensitive": {
+      "requests": 20,
+      "model_calls_without_dropwise": 20,
+      "model_calls_with_dropwise": 20,
+      "routed_small": 14,
+      "cache_hits": 0,
+      "cache_bypassed": 20
+    }
+  },
+  "notes": [
+    "Workload: 200 requests, 150 unique prompts, 50 sent twice word for word (25%), seed 7. The repeat share is an assumption about traffic, not a measurement; cache savings scale with it.",
+    "Both runs ask for anthropic/claude-opus-5-5 with max_tokens 1024, the same system prompt and 8 requests in flight. Without Dropwise every request goes straight to Bifrost; with Dropwise the same requests go through the gateway.",
+    "Answers were replayed, not generated live: each prompt was sent once to anthropic/claude-haiku-5-5 on 2026-11-13 (max_tokens 1024) and both runs get that same recorded answer, whichever model the request names. Token totals therefore differ between the runs only by what Dropwise avoided; request latency includes the recorded model time.",
+    "Water is estimated from measured tokens with signed registry factors, as on the receipts. Routing to a smaller model doesn't change it, because the registry has no per-model energy figure; only calls avoided and shorter answers do.",
+    "Cost is a what-if: the recorded answers' measured tokens priced at list rates (USD per million tokens, 2026-11) for the model that served each call. A call kept on the large model is priced as if it had produced an answer of the same length, which is an assumption.",
+    "Gateway overhead is the time a request spent inside Dropwise (classifier call, cache lookup, receipt and budget writes), excluding the model call.",
+    "Prompt categories are the team's own labels, used only for the breakdown; the gateway never sees them."
+  ]
+}

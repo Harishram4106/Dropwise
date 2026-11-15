@@ -1,0 +1,190 @@
+{
+ "note": "Demo-mode fixture: POST /route/classify for each sample prompt and GET /eval/routing from the intelligence API.",
+ "samples": [
+  {
+   "prompt": "What's the weather in Chennai right now?",
+   "decision": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "relative_time",
+     "volatile_topic"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: refers to a time relative to now, so the cache is bypassed.",
+     "Time-sensitive: asks about something that changes often (prices, weather, news, scores), so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "Fix the typo in this sentence: 'Their going to the market tomorow.'",
+   "decision": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "transform"
+    ],
+    "reasons": [
+     "Small model: is a small rewrite, extraction or classification."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "Is 2^31 - 1 prime?",
+   "decision": {
+    "tier": "large",
+    "confidence": 0.9,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "math",
+     "word_problem"
+    ],
+    "reasons": [
+     "Large model: asks for mathematical reasoning.",
+     "Large model: is a multi-step word problem."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "Convert 72 degrees Fahrenheit to Celsius.",
+   "decision": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "conversion"
+    ],
+    "reasons": [
+     "Small model: is a unit conversion or simple arithmetic."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "Write a Python function that merges two sorted lists.",
+   "decision": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "code"
+    ],
+    "reasons": [
+     "Large model: contains or asks for code."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "What are the latest tech news headlines today?",
+   "decision": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": true,
+    "cache": "bypass",
+    "signals": [
+     "lookup",
+     "relative_time",
+     "recency",
+     "volatile_topic"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup.",
+     "Time-sensitive: refers to a time relative to now, so the cache is bypassed.",
+     "Time-sensitive: asks for the latest information, so the cache is bypassed.",
+     "Time-sensitive: asks about something that changes often (prices, weather, news, scores), so the cache is bypassed."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "Is it safe to take ibuprofen together with a blood thinner?",
+   "decision": {
+    "tier": "large",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "high_stakes"
+    ],
+    "reasons": [
+     "Large model: touches on legal, medical or financial advice."
+    ],
+    "classifier_version": "rules-1"
+   }
+  },
+  {
+   "prompt": "What is the capital of Canada?",
+   "decision": {
+    "tier": "small",
+    "confidence": 0.8,
+    "time_sensitive": false,
+    "cache": "use",
+    "signals": [
+     "lookup"
+    ],
+    "reasons": [
+     "Small model: is a short factual lookup."
+    ],
+    "classifier_version": "rules-1"
+   }
+  }
+ ],
+ "eval": {
+  "items": 53,
+  "tier_accuracy": 0.962,
+  "routed_small_share": 0.604,
+  "hard_routed_small": [],
+  "easy_kept_large": [
+   {
+    "id": "math-linear",
+    "prompt": "Solve for x: 3x + 7 = 2x - 5",
+    "expected": "small",
+    "got": "large",
+    "signals": [
+     "math"
+    ]
+   },
+   {
+    "id": "timely-outage",
+    "prompt": "Is GitHub down right now?",
+    "expected": "small",
+    "got": "large",
+    "signals": [
+     "relative_time",
+     "outage"
+    ]
+   }
+  ],
+  "time_sensitivity": {
+   "precision": 0.889,
+   "recall": 1,
+   "false_positives": [
+    {
+     "id": "lookup-stock-concept",
+     "prompt": "What does a company's stock price represent?",
+     "expected": "evergreen",
+     "got": "time-sensitive",
+     "signals": [
+      "lookup",
+      "volatile_topic"
+     ]
+    }
+   ],
+   "missed": []
+  },
+  "avg_classify_us": 10.6
+ }
+}

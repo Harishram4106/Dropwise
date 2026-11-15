@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dropwise/route-decision",
+  "title": "Route decision",
+  "description": "Output of the right-sizing classifier (POST /route/classify, or classify() imported directly). Produced by Member A; B maps tier to a model in the routing rules and uses cache to decide whether the semantic cache may answer.",
+  "type": "object",
+  "required": ["tier", "confidence", "time_sensitive", "cache", "signals", "reasons", "classifier_version"],
+  "properties": {
+    "tier": {
+      "enum": ["small", "large"],
+      "description": "small only when the prompt shows an easy-task signal and no hard-task signal; everything else is large."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Rule strength, not a calibrated probability: 1 for images/tools, 0.9 for two or more matching signals, 0.8 for one, 0.5 when nothing matched."
+    },
+    "time_sensitive": { "type": "boolean", "description": "The answer is likely to change over time." },
+    "cache": { "enum": ["use", "bypass"], "description": "bypass whenever time_sensitive is true." },
+    "signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Machine-readable rule ids that fired, e.g. lookup, code, math, relative_time. Log them with the receipt."
+    },
+    "reasons": { "type": "array", "items": { "type": "string" }, "description": "One readable sentence per signal, for the dashboard." },
+    "classifier_version": { "type": "string" }
+  },
+  "additionalProperties": false
+}

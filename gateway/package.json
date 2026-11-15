@@ -1,0 +1,23 @@
+{
+  "name": "@dropwise/gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dropwise gateway sidecar: sits in front of Bifrost, right-sizes, caches, estimates water per request and keeps budgets",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "serve": "node --env-file-if-exists=.env src/server.ts",
+    "bench": "node --env-file-if-exists=.env bench/cli.ts",
+    "bench:record": "node --env-file-if-exists=.env bench/record-cli.ts",
+    "bench:replay": "node bench/replay-cli.ts",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "fake-stack": "node scripts/fake-stack.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "^5.9.0"
+  }
+}

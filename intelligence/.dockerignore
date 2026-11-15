@@ -1,0 +1,11 @@
+# Secrets never go into the image: keys come in as environment variables at run time.
+.env
+.env.*
+!.env.example
+registry/keys/*.private.pem
+
+node_modules
+.cache
+test
+eval/results
+.DS_Store

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dropwise/quality-report",
+  "title": "Right-sizing quality report",
+  "description": "Output of `npm run eval -- quality` (GET /eval/quality). The measured 'answer quality after right-sizing' number for the README and dashboard.",
+  "type": "object",
+  "required": [
+    "created_at", "eval_set_hash", "classifier_version", "small_model", "large_model", "method", "items_scored",
+    "routed_small_share", "pass_rate", "quality_drop_pts", "max_drop_pts", "guard", "recommendation", "lost", "results"
+  ],
+  "properties": {
+    "created_at": { "type": "string", "format": "date-time" },
+    "eval_set_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$", "description": "Hash of the eval set used, so a result can't be quoted against a different set." },
+    "classifier_version": { "type": "string" },
+    "small_model": { "type": "string" },
+    "large_model": { "type": "string" },
+    "method": { "type": "string" },
+    "items_scored": { "type": "integer", "minimum": 0 },
+    "routed_small_share": { "type": "number", "minimum": 0, "maximum": 1 },
+    "pass_rate": {
+      "type": "object",
+      "required": ["all_large", "routed", "all_small"],
+      "properties": {
+        "all_large": { "type": "number", "minimum": 0, "maximum": 1, "description": "Baseline: every prompt on the large model." },
+        "routed": { "type": "number", "minimum": 0, "maximum": 1, "description": "With Dropwise right-sizing." },
+        "all_small": { "type": "number", "minimum": 0, "maximum": 1, "description": "What naive downsizing would do." }
+      },
+      "additionalProperties": false
+    },
+    "quality_drop_pts": { "type": "number", "description": "(all_large - routed) in percentage points." },
+    "max_drop_pts": { "type": "number" },
+    "guard": { "enum": ["pass", "fail"], "description": "fail means: turn routing off and rely on caching and budgets." },
+    "recommendation": { "type": "string" },
+    "lost": { "type": "array", "items": { "type": "string" }, "description": "Item ids the large model passed but the routed configuration failed." },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "tier", "large_pass", "routed_pass", "small_pass", "answers"],
+        "properties": {
+          "id": { "type": "string" },
+          "tier": { "enum": ["small", "large"] },
+          "large_pass": { "type": "boolean" },
+          "routed_pass": { "type": "boolean" },
+          "small_pass": { "type": "boolean" },
+          "answers": {
+            "type": "object",
+            "required": ["large", "small"],
+            "properties": { "large": { "type": "string" }, "small": { "type": "string" } },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

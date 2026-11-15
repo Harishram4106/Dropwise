@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "created_at": "2026-11-08T14:04:54.704Z",
+  "previous_hash": null,
+  "entries": [
+    {
+      "factor_id": "google-gemini-median-prompt-energy",
+      "label": "Energy per median Gemini Apps text prompt (Google)",
+      "value": 0.24,
+      "range": {
+        "low": 0.24,
+        "high": 0.24
+      },
+      "unit": "Wh per prompt",
+      "counts": "not_applicable",
+      "source_url": "https://arxiv.org/abs/2508.15734",
+      "source_title": "Measuring the environmental impact of delivering AI at Google Scale",
+      "source_date": "2025-08-21",
+      "evidence": "Median Gemini Apps text prompt uses 0.24 Wh under the comprehensive boundary (0.10 Wh counting only active accelerators). Google reports a 33x drop in energy per median prompt over one year.",
+      "freshness_score": 0.66,
+      "last_verified": "2026-11-08",
+      "verified_by": "manual",
+      "status": "verified",
+      "version_hash": "sha256:761840584849886fda653540da54a940ac43130255b73c79c14b52284b17deb5"
+    },
+    {
+      "factor_id": "google-gemini-median-prompt-water",
+      "label": "Water per median Gemini Apps text prompt (Google)",
+      "value": 0.26,
+      "range": {
+        "low": 0.26,
+        "high": 0.26
+      },
+      "unit": "mL per prompt",
+      "counts": "direct_only",
+      "source_url": "https://arxiv.org/abs/2508.15734",
+      "source_title": "Measuring the environmental impact of delivering AI at Google Scale",
+      "source_date": "2025-08-21",
+      "evidence": "Google reports 0.26 mL of water (about five drops), 0.24 Wh and 0.03 gCO2e for the median Gemini Apps text prompt under its comprehensive serving boundary. A narrower boundary counting only active TPU/GPU use gives 0.12 mL. Counts data-center water consumption, not the water behind electricity generation. Self-reported; models not named.",
+      "freshness_score": 0.66,
+      "last_verified": "2026-11-08",
+      "verified_by": "manual",
+      "status": "verified",
+      "version_hash": "sha256:3a1218c52286447a29b6d258ec0ddd12fb3f58d458653dbd96508eaf7983a77b"
+    },
+    {
+      "factor_id": "mistral-le-chat-400-token-response-water",
+      "label": "Water per 400-token Le Chat response, lifecycle (Mistral)",
+      "value": 45,
+      "range": {
+        "low": 45,
+        "high": 45
+      },
+      "unit": "mL per response",
+      "counts": "direct_plus_indirect",
+      "source_url": "https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai",
+      "source_title": "Our contribution to a global environmental standard for AI",
+      "source_date": "2025-07-22",
+      "evidence": "Marginal footprint of one 400-token Le Chat response (Mistral Large 2): 45 mL of water, 1.14 gCO2e, 0.16 mg Sb eq, excluding user devices. Lifecycle scope that includes electricity and hardware, so it is not comparable with on-site-only figures. Mistral calls it a rough estimate.",
+      "freshness_score": 0.64,
+      "last_verified": "2026-11-08",
+      "verified_by": "manual",
+      "status": "verified",
+      "version_hash": "sha256:21e2067e42b86dde1a25457a06a00237f3bcac9135d4c75dee733b8b96dfec9f"
+    },
+    {
+      "factor_id": "openai-chatgpt-average-query-energy",
+      "label": "Energy per average ChatGPT query (OpenAI CEO statement)",
+      "value": 0.34,
+      "range": {
+        "low": 0.34,
+        "high": 0.34
+      },
+      "unit": "Wh per query",
+      "counts": "not_applicable",
+      "source_url": "https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/",
+      "source_title": "Sam Altman: ChatGPT queries consume 0.34 watt-hours of electricity and 0.000085 gallons of water",
+      "source_date": "2025-06",
+      "evidence": "Altman states an average ChatGPT query uses about 0.34 Wh. Unverified, with no published methodology.",
+      "freshness_score": 0.61,
+      "last_verified": "2026-11-08",
+      "verified_by": "manual",
+      "status": "verified",
+      "version_hash": "sha256:381a95a9800dbec8a43010bf8b0c6b4a0d9b7a47f425b93137a7b2fb086da410"
+    },
+    {
+      "factor_id": "openai-chatgpt-average-query-water",
+      "label": "Water per average ChatGPT query (OpenAI CEO statement)",
+      "value": 0.32,
+      "range": {
+        "low": 0.32,
+        "high": 0.32
+      },
+      "unit": "mL per query",
+      "counts": "unclear",
+      "source_url": "https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/",
+      "source_title": "Sam Altman: ChatGPT queries consume 0.34 watt-hours of electricity and 0.000085 gallons of water",
+      "source_date": "2025-06",
+      "evidence": "Altman's blog post 'The Gentle Singularity' (June 2025) says an average query uses about 0.000085 gallons of water, roughly one fifteenth of a teaspoon (about 0.32 mL). No methodology, scope or definition of 'average query' was published.",
+      "freshness_score": 0.61,
+      "last_verified": "2026-11-08",
+      "verified_by": "manual",
+      "status": "verified",
+      "version_hash": "sha256:4c6c2711361c349969d075e4c3eeda1fa16cfdafed408c0eb2bd78778e1b176b"
+    },
+    {
+      "factor_id": "ucr-gpt3-medium-response-water",
+      "label": "Water per medium-length GPT-3 response (UC Riverside, Making AI Less Thirsty)",
+      "value": null,
+      "range": {
+        "low": 10,
+        "high": 50
+      },
+      "unit": "mL per response",
+      "counts": "direct_plus_indirect",
+      "source_url": "https://arxiv.org/abs/2304.03271",
+      "source_title": "Making AI Less \"Thirsty\": Uncovering and Addressing the Secret Water Footprint of AI Models",
+      "source_date": "2025-03",
+      "evidence": "GPT-3 needs to consume a 500 mL bottle of water for roughly 10-50 medium-length responses, depending on when and where it is deployed (on-site cooling plus water behind the electricity). A modeled scenario, not a measurement; the authors call it conservative. Origin of the 'one bottle of water per query' claim, which misreads it as one bottle per response.",
+      "freshness_score": 0.56,
+      "last_verified": "2026-11-08",
+      "verified_by": "manual",
+      "status": "verified",
+      "version_hash": "sha256:c6b9c46bf05f6255d7b799dab32c25743cc5300019f1e89d7ed71017aa16a6c7"
+    }
+  ],
+  "registry_hash": "sha256:ac782d0932ac67e4e6c43d646026593ac7b02319c70dfe6333e6591393096e58",
+  "signature": "XgCdWJEL07FClrYol459B/sS1R88jQD0u8e5iM9RExF5y8LLzGesJtbFU5uoDL6KJQJGIxGjtH0kIWGoYmCyDA==",
+  "public_key_fingerprint": "sha256:6985a30bf9a7990ad6d0bbb44286ec3a8a6186926c6c2a067e9a337ff0569aca"
+}

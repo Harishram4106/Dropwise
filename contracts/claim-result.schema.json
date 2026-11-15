@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dropwise/claim-result",
+  "title": "Claim result",
+  "description": "Output of the claim checker (POST /claims/check). Produced by Member A, displayed by C.",
+  "type": "object",
+  "required": ["claim", "checked_at", "decomposition", "evidence", "registry_hash", "atomic_claims"],
+  "properties": {
+    "claim": { "type": "string", "description": "Original claim text as pasted." },
+    "checked_at": { "type": "string", "format": "date-time" },
+    "decomposition": {
+      "enum": ["model", "rules"],
+      "description": "Whether the claim was split by a model through Bifrost or by deterministic rules."
+    },
+    "evidence": {
+      "enum": ["registry", "registry_and_live"],
+      "description": "registry = signed Evidence Registry only; registry_and_live = plus figures Tavily found just now."
+    },
+    "registry_hash": {
+      "type": ["string", "null"],
+      "description": "Hash of the signed registry version used; null if no version has been published yet."
+    },
+    "atomic_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "counts", "verdict", "explanation", "claimed", "freshness_score", "sources", "registry_factors"],
+        "properties": {
+          "text": { "type": "string" },
+          "counts": {
+            "enum": ["direct_only", "indirect_only", "direct_plus_indirect", "unclear", "not_applicable"],
+            "description": "What the claim itself says it counts."
+          },
+          "verdict": {
+            "enum": ["supported", "overstated", "understated", "unsupported", "outdated"],
+            "description": "supported: a current source agrees within 1.5x. overstated/understated: above the highest or below the lowest source by more than 1.5x. outdated: only superseded sources agree. unsupported: no figure, not per prompt, or between sources with none agreeing."
+          },
+          "explanation": { "type": "string" },
+          "claimed": {
+            "type": ["object", "null"],
+            "description": "The figure parsed from the claim, normalised to mL or Wh.",
+            "required": ["low", "high", "unit"],
+            "properties": {
+              "low": { "type": "number" },
+              "high": { "type": "number" },
+              "unit": { "type": "string" }
+            }
+          },
+          "freshness_score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "sources": { "type": "array", "items": { "type": "string", "format": "uri" } },
+          "registry_factors": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "factor_id values from the registry used to judge this atomic claim."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

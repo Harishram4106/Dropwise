@@ -1,0 +1,79 @@
+# Dropwise, end to end:  app -> gateway (8088) -> Bifrost (8080) -> Anthropic,  with the intelligence API (8787) beside it.
+#
+#   export ANTHROPIC_API_KEY=...        # in your own terminal; never in a file (see README: Running everything)
+#   docker compose up --build
+#
+# The key is read from your shell when you start compose and is handed to Bifrost only. Nothing here stores it, and
+# the gateway and the intelligence API never see it. Every port is published on localhost only.
+#
+# No key, no spend: replay recorded answers instead of calling a model (README: record once, replay for free):
+#   BIFROST_URL=http://replay:8080 docker compose --profile replay up --build gateway intelligence replay
+
+services:
+  bifrost:
+    # Pinned to the image this was tested with (maximhq/bifrost "latest" on 2026-11-13), so a later release can't change behaviour.
+    image: maximhq/bifrost@sha256:5ec9873acaf1687556b6e4dd854b92b539d9debf87a5a683b66338648b84d3c8
+    ports: ["127.0.0.1:8080:8080"]
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      APP_HOST: 0.0.0.0
+    volumes:
+      # Provider config, with the key as an env reference. File-only mode: no database, no dashboard.
+      - ./bifrost/config.json:/app/data/config.json:ro
+
+  intelligence:
+    build: ./intelligence
+    ports: ["127.0.0.1:8787:8787"]
+    environment:
+      # Only used for live claim splitting; leave EXTRACTION_MODEL unset in intelligence/.env to run fully offline.
+      BIFROST_URL: http://bifrost:8080
+      DASHBOARD_ORIGIN: http://localhost:3000
+    env_file:
+      - path: ./intelligence/.env
+        required: false
+    volumes:
+      - ./intelligence/eval/results:/app/eval/results   # keep quality reports in the repo
+
+  gateway:
+    build: ./gateway
+    ports: ["127.0.0.1:8088:8088"]
+    environment:
+      BIFROST_URL: ${BIFROST_URL:-http://bifrost:8080}
+      INTELLIGENCE_URL: http://intelligence:8787
+      DASHBOARD_ORIGIN: http://localhost:3000
+      SMALL_MODEL: anthropic/claude-haiku-5-5
+      LARGE_MODEL: anthropic/claude-opus-5-5
+    volumes:
+      - gateway-data:/app/data   # receipts and budget usage survive restarts
+      # Time shifting's hourly profile. Edit it on your machine (24 relative values, a time zone, a source); the shipped one is illustrative.
+      - ./gateway/data/hourly-profile.json:/app/data/hourly-profile.json:ro
+      # The benchmark runs on the host and saves its report here; mounting it lets GET /benchmark/latest serve it.
+      - ./gateway/data/benchmark:/app/data/benchmark:ro
+    depends_on:
+      intelligence:
+        condition: service_healthy
+
+  # The dashboard and landing page. Open http://localhost:3000. Its addresses are baked into the build because the BROWSER
+  # reads them, so they are localhost URLs, not service names. It falls back to saved demo data if the gateway is down.
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8088
+        NEXT_PUBLIC_INTELLIGENCE_URL: http://localhost:8787
+        NEXT_PUBLIC_REPO_URL: ${NEXT_PUBLIC_REPO_URL:-}      # set these two in your shell when the repo and video exist
+        NEXT_PUBLIC_VIDEO_URL: ${NEXT_PUBLIC_VIDEO_URL:-}
+    ports: ["127.0.0.1:3000:3000"]
+
+  # Stands in for Bifrost with recorded answers. Only started with --profile replay.
+  replay:
+    profiles: ["replay"]
+    image: node:22-alpine
+    working_dir: /app
+    command: ["node", "bench/replay-cli.ts", "--port", "8080"]
+    volumes:
+      - ./gateway/bench:/app/bench:ro
+    ports: ["127.0.0.1:8081:8080"]
+
+volumes:
+  gateway-data:

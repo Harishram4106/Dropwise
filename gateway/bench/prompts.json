@@ -1,0 +1,756 @@
+{
+  "description": "Benchmark workload: 150 prompts an internal company assistant might get, none taken from intelligence/eval/routing-set.json (the set the classifier was tuned on). Categories are the team's own labels, used only to break results down; the gateway never sees them. easy: lookups, conversions, rewrites, extraction, chat. hard: code, maths, analysis, long-form, high-stakes advice, long context. time_sensitive: needs current information.",
+  "system_prompt": "You are a helpful assistant in a company's internal workspace. Answer clearly and concisely.",
+  "prompts": [
+    {
+      "id": "e01",
+      "category": "easy",
+      "text": "What is the capital of Canada?"
+    },
+    {
+      "id": "e02",
+      "category": "easy",
+      "text": "How many days are there in a leap year?"
+    },
+    {
+      "id": "e03",
+      "category": "easy",
+      "text": "Who wrote Pride and Prejudice?"
+    },
+    {
+      "id": "e04",
+      "category": "easy",
+      "text": "What does HTTP stand for?"
+    },
+    {
+      "id": "e05",
+      "category": "easy",
+      "text": "Which planet is closest to the Sun?"
+    },
+    {
+      "id": "e06",
+      "category": "easy",
+      "text": "What language is spoken in Brazil?"
+    },
+    {
+      "id": "e07",
+      "category": "easy",
+      "text": "How many bytes are in a kilobyte?"
+    },
+    {
+      "id": "e08",
+      "category": "easy",
+      "text": "What is the chemical symbol for sodium?"
+    },
+    {
+      "id": "e09",
+      "category": "easy",
+      "text": "Who painted the Mona Lisa?"
+    },
+    {
+      "id": "e10",
+      "category": "easy",
+      "text": "What is the largest ocean on Earth?"
+    },
+    {
+      "id": "e11",
+      "category": "easy",
+      "text": "How many continents are there?"
+    },
+    {
+      "id": "e12",
+      "category": "easy",
+      "text": "In which country is the Taj Mahal?"
+    },
+    {
+      "id": "e13",
+      "category": "easy",
+      "text": "What is the square root of 144?"
+    },
+    {
+      "id": "e14",
+      "category": "easy",
+      "text": "How many minutes are there in a day?"
+    },
+    {
+      "id": "e15",
+      "category": "easy",
+      "text": "In what year did the Berlin Wall fall?"
+    },
+    {
+      "id": "e16",
+      "category": "easy",
+      "text": "What is the currency of Japan?"
+    },
+    {
+      "id": "e17",
+      "category": "easy",
+      "text": "What is the plural of \"cactus\"?"
+    },
+    {
+      "id": "e18",
+      "category": "easy",
+      "text": "What does the acronym PDF stand for?"
+    },
+    {
+      "id": "e19",
+      "category": "easy",
+      "text": "What is the freezing point of water in Fahrenheit?"
+    },
+    {
+      "id": "e20",
+      "category": "easy",
+      "text": "Which gas do plants absorb from the air?"
+    },
+    {
+      "id": "e21",
+      "category": "easy",
+      "text": "Convert 5 miles to kilometres."
+    },
+    {
+      "id": "e22",
+      "category": "easy",
+      "text": "How many grams are in 3.5 kilograms?"
+    },
+    {
+      "id": "e23",
+      "category": "easy",
+      "text": "Convert 100 degrees Fahrenheit to Celsius."
+    },
+    {
+      "id": "e24",
+      "category": "easy",
+      "text": "How many minutes are in 2 hours and 30 minutes?"
+    },
+    {
+      "id": "e25",
+      "category": "easy",
+      "text": "Convert 750 millilitres to litres."
+    },
+    {
+      "id": "e26",
+      "category": "easy",
+      "text": "How many inches are in 3 feet?"
+    },
+    {
+      "id": "e27",
+      "category": "easy",
+      "text": "Convert 3:45 PM to 24-hour time."
+    },
+    {
+      "id": "e28",
+      "category": "easy",
+      "text": "What is 25% of 360?"
+    },
+    {
+      "id": "e29",
+      "category": "easy",
+      "text": "How many gigabytes are in 2 terabytes?"
+    },
+    {
+      "id": "e30",
+      "category": "easy",
+      "text": "How many seconds are in 3 hours?"
+    },
+    {
+      "id": "e31",
+      "category": "easy",
+      "text": "Fix the grammar: \"Me and him goes to the office every day.\""
+    },
+    {
+      "id": "e32",
+      "category": "easy",
+      "text": "Make this sentence more polite: \"Send me the report now.\""
+    },
+    {
+      "id": "e33",
+      "category": "easy",
+      "text": "Rewrite in plain English: \"Please be advised that the meeting has been rescheduled to a later date.\""
+    },
+    {
+      "id": "e34",
+      "category": "easy",
+      "text": "Translate \"Good morning, team\" into French."
+    },
+    {
+      "id": "e35",
+      "category": "easy",
+      "text": "Translate \"Thank you for your patience\" into German."
+    },
+    {
+      "id": "e36",
+      "category": "easy",
+      "text": "Summarise in one line: \"The quarterly sync moves from Tuesday to Thursday because the conference room is being renovated.\""
+    },
+    {
+      "id": "e37",
+      "category": "easy",
+      "text": "Turn this into a bulleted list: milk, eggs, bread, coffee."
+    },
+    {
+      "id": "e38",
+      "category": "easy",
+      "text": "Shorten this subject line: \"Reminder: please submit your timesheets for the month of October by the end of the day on Friday\""
+    },
+    {
+      "id": "e39",
+      "category": "easy",
+      "text": "Change this to passive voice: \"The team finished the project.\""
+    },
+    {
+      "id": "e40",
+      "category": "easy",
+      "text": "Correct the spelling: \"Plese recieve the pakage tommorow.\""
+    },
+    {
+      "id": "e41",
+      "category": "easy",
+      "text": "Convert to title case: \"the quick guide to onboarding\""
+    },
+    {
+      "id": "e42",
+      "category": "easy",
+      "text": "Rewrite this to sound more confident: \"I think maybe we could possibly try a new approach.\""
+    },
+    {
+      "id": "e43",
+      "category": "easy",
+      "text": "Paraphrase: \"The deadline cannot be extended.\""
+    },
+    {
+      "id": "e44",
+      "category": "easy",
+      "text": "Turn this statement into a question: \"The server restarts at midnight.\""
+    },
+    {
+      "id": "e45",
+      "category": "easy",
+      "text": "Write a one-line out-of-office reply for when I'm on leave."
+    },
+    {
+      "id": "e46",
+      "category": "easy",
+      "text": "Remove the jargon: \"Let's circle back offline and leverage our synergies.\""
+    },
+    {
+      "id": "e47",
+      "category": "easy",
+      "text": "Put these in alphabetical order: pear, apple, mango, banana."
+    },
+    {
+      "id": "e48",
+      "category": "easy",
+      "text": "Expand the abbreviation in: \"What's the ETA on the delivery?\""
+    },
+    {
+      "id": "e49",
+      "category": "easy",
+      "text": "Make this friendlier: \"Your request has been denied.\""
+    },
+    {
+      "id": "e50",
+      "category": "easy",
+      "text": "Rewrite this as a short tweet: \"Our new office in Pune opens next month with space for 200 people.\""
+    },
+    {
+      "id": "e51",
+      "category": "easy",
+      "text": "Is this review positive or negative? \"Checkout was quick and the support team was lovely.\""
+    },
+    {
+      "id": "e52",
+      "category": "easy",
+      "text": "Extract the phone number from: \"Call the front desk on 044-2345-6789 to book a room.\""
+    },
+    {
+      "id": "e53",
+      "category": "easy",
+      "text": "What date is mentioned here: \"The audit is scheduled for 14 March.\""
+    },
+    {
+      "id": "e54",
+      "category": "easy",
+      "text": "Tag this ticket as billing, technical or account: \"I was charged twice this month.\""
+    },
+    {
+      "id": "e55",
+      "category": "easy",
+      "text": "Is this a question or a request: \"Please close the door.\""
+    },
+    {
+      "id": "e56",
+      "category": "easy",
+      "text": "List the names in: \"Arun and Meera met Ravi at the airport.\""
+    },
+    {
+      "id": "e57",
+      "category": "easy",
+      "text": "What is the tone of this message: \"Meh, it works I guess.\""
+    },
+    {
+      "id": "e58",
+      "category": "easy",
+      "text": "Extract the order number from: \"Hi, my order #48213 hasn't arrived yet.\""
+    },
+    {
+      "id": "e59",
+      "category": "easy",
+      "text": "Which language is this: \"Bonjour, comment ça va ?\""
+    },
+    {
+      "id": "e60",
+      "category": "easy",
+      "text": "Does this message need a reply: \"FYI, the printer on floor 3 is fixed.\""
+    },
+    {
+      "id": "e61",
+      "category": "easy",
+      "text": "Classify the urgency as low, medium or high: \"The login page is down for every customer.\""
+    },
+    {
+      "id": "e62",
+      "category": "easy",
+      "text": "Which of these is a vegetable: apple, carrot, banana?"
+    },
+    {
+      "id": "e63",
+      "category": "easy",
+      "text": "Hi! How are you doing?"
+    },
+    {
+      "id": "e64",
+      "category": "easy",
+      "text": "Thanks, that was really helpful!"
+    },
+    {
+      "id": "e65",
+      "category": "easy",
+      "text": "Tell me a fun fact about octopuses."
+    },
+    {
+      "id": "e66",
+      "category": "easy",
+      "text": "Give me a word that means \"very tired\"."
+    },
+    {
+      "id": "e67",
+      "category": "easy",
+      "text": "Suggest a name for a pet goldfish."
+    },
+    {
+      "id": "e68",
+      "category": "easy",
+      "text": "Suggest a title for our team newsletter."
+    },
+    {
+      "id": "e69",
+      "category": "easy",
+      "text": "Tell me a short, clean joke about computers."
+    },
+    {
+      "id": "e70",
+      "category": "easy",
+      "text": "What rhymes with \"light\"?"
+    },
+    {
+      "id": "e71",
+      "category": "easy",
+      "text": "Recommend a classic novel for a long flight."
+    },
+    {
+      "id": "e72",
+      "category": "easy",
+      "text": "What's the opposite of \"generous\"?"
+    },
+    {
+      "id": "e73",
+      "category": "easy",
+      "text": "Give me three icebreaker questions for a team meeting."
+    },
+    {
+      "id": "e74",
+      "category": "easy",
+      "text": "How do you say \"cheers\" in Japanese?"
+    },
+    {
+      "id": "e75",
+      "category": "easy",
+      "text": "What is a haiku?"
+    },
+    {
+      "id": "h01",
+      "category": "hard",
+      "text": "Write a Python function that merges two sorted lists into one sorted list in O(n) time, with a short explanation."
+    },
+    {
+      "id": "h02",
+      "category": "hard",
+      "text": "Write a SQL query that returns the top 3 customers by total order value in the last 90 days, given customers(id, name) and orders(id, customer_id, amount, created_at)."
+    },
+    {
+      "id": "h03",
+      "category": "hard",
+      "text": "Explain the difference between a process and a thread, and when a web server should use each."
+    },
+    {
+      "id": "h04",
+      "category": "hard",
+      "text": "Write a regular expression that validates an IPv4 address and explain each part."
+    },
+    {
+      "id": "h05",
+      "category": "hard",
+      "text": "Refactor this callback code to async/await: `getUser(id, (u) => { getOrders(u, (o) => { render(o); }); });`"
+    },
+    {
+      "id": "h06",
+      "category": "hard",
+      "text": "Implement an LRU cache in TypeScript with O(1) get and put."
+    },
+    {
+      "id": "h07",
+      "category": "hard",
+      "text": "Why is 0.1 + 0.2 not equal to 0.3 in JavaScript, and how should an app store money amounts?"
+    },
+    {
+      "id": "h08",
+      "category": "hard",
+      "text": "Write a bash script that lists files larger than 100 MB under /var/log, sorted by size."
+    },
+    {
+      "id": "h09",
+      "category": "hard",
+      "text": "Design a REST API for a library with books, members and loans: endpoints, methods and status codes."
+    },
+    {
+      "id": "h10",
+      "category": "hard",
+      "text": "Write Jest unit tests for a slugify(title) function that lowercases, trims and replaces spaces with hyphens."
+    },
+    {
+      "id": "h11",
+      "category": "hard",
+      "text": "Convert this recursive function to an iterative one and explain the complexity difference: `def fib(n): return n if n < 2 else fib(n-1) + fib(n-2)`"
+    },
+    {
+      "id": "h12",
+      "category": "hard",
+      "text": "Write a Go function that reads a CSV file and returns the sum of the second column, skipping malformed rows."
+    },
+    {
+      "id": "h13",
+      "category": "hard",
+      "text": "Review this code for security problems: `query = \"SELECT * FROM users WHERE name = '\" + name + \"'\"`"
+    },
+    {
+      "id": "h14",
+      "category": "hard",
+      "text": "Explain what a race condition is and show how a mutex fixes one, with a short code example."
+    },
+    {
+      "id": "h15",
+      "category": "hard",
+      "text": "Prove that the sum of the first n odd numbers is n squared."
+    },
+    {
+      "id": "h16",
+      "category": "hard",
+      "text": "If a population grows 3% a year, how many years until it doubles? Show the working."
+    },
+    {
+      "id": "h17",
+      "category": "hard",
+      "text": "A price is cut by 20% and then raised by 20%. Is the final price higher or lower than the original, and by what percentage?"
+    },
+    {
+      "id": "h18",
+      "category": "hard",
+      "text": "What is the probability of rolling at least one six in four rolls of a fair die?"
+    },
+    {
+      "id": "h19",
+      "category": "hard",
+      "text": "Solve 3x² − 12x + 9 = 0 and explain each step."
+    },
+    {
+      "id": "h20",
+      "category": "hard",
+      "text": "Asha pays twice what Bala pays, and Chitra pays 300 rupees more than Bala. The bill is 2,340 rupees. How much does each pay?"
+    },
+    {
+      "id": "h21",
+      "category": "hard",
+      "text": "Is 1001 a prime number? Explain your reasoning."
+    },
+    {
+      "id": "h22",
+      "category": "hard",
+      "text": "Explain why switching doors wins more often in the Monty Hall problem."
+    },
+    {
+      "id": "h23",
+      "category": "hard",
+      "text": "Calculate the compound interest on 50,000 rupees at 8% a year, compounded quarterly, for 3 years."
+    },
+    {
+      "id": "h24",
+      "category": "hard",
+      "text": "A tank fills in 6 hours with pipe A and in 9 hours with pipe B. Pipe C empties it in 12 hours. How long does it take to fill with all three open?"
+    },
+    {
+      "id": "h25",
+      "category": "hard",
+      "text": "Our support tickets rose 40% after a pricing change. Suggest an analysis plan to find out why."
+    },
+    {
+      "id": "h26",
+      "category": "hard",
+      "text": "Draft a rollout plan for moving 30 microservices from virtual machines to Kubernetes with no downtime."
+    },
+    {
+      "id": "h27",
+      "category": "hard",
+      "text": "What are the trade-offs between a monolith and microservices for a five-person startup?"
+    },
+    {
+      "id": "h28",
+      "category": "hard",
+      "text": "Analyse the risks of employees pasting company data into personal AI tools, and propose a policy."
+    },
+    {
+      "id": "h29",
+      "category": "hard",
+      "text": "With 4% monthly churn and 500 new customers a month, starting from 10,000 customers, project the customer count for the next 12 months and explain the trend."
+    },
+    {
+      "id": "h30",
+      "category": "hard",
+      "text": "Critique this product idea: a subscription app that reminds people to drink water."
+    },
+    {
+      "id": "h31",
+      "category": "hard",
+      "text": "Plan a two-week sprint for four engineers building single sign-on login, with tasks and estimates."
+    },
+    {
+      "id": "h32",
+      "category": "hard",
+      "text": "Explain the CAP theorem with a concrete example of a system that chooses availability over consistency."
+    },
+    {
+      "id": "h33",
+      "category": "hard",
+      "text": "We run three data centres and need disaster recovery with a 5-minute RPO. Outline an architecture and its cost drivers."
+    },
+    {
+      "id": "h34",
+      "category": "hard",
+      "text": "Compare optimistic and pessimistic locking for an inventory system, with examples of when each fails."
+    },
+    {
+      "id": "h35",
+      "category": "hard",
+      "text": "Should a 50-person company build or buy an analytics dashboard? Weigh the options and recommend one."
+    },
+    {
+      "id": "h36",
+      "category": "hard",
+      "text": "A web page loads slowly only for users in one region. Walk through the likely causes and how to debug them."
+    },
+    {
+      "id": "h37",
+      "category": "hard",
+      "text": "Compare Redis and Memcached for session storage in a high-traffic web app and recommend one."
+    },
+    {
+      "id": "h38",
+      "category": "hard",
+      "text": "Explain how you would A/B test a new onboarding flow, including sample size and the metrics to watch."
+    },
+    {
+      "id": "h39",
+      "category": "hard",
+      "text": "Write a 500-word blog post on why water use matters in data centres."
+    },
+    {
+      "id": "h40",
+      "category": "hard",
+      "text": "Write a detailed onboarding guide for a backend engineer joining a payments team."
+    },
+    {
+      "id": "h41",
+      "category": "hard",
+      "text": "Write a short story of about 400 words about a lighthouse keeper who finds a message in a bottle."
+    },
+    {
+      "id": "h42",
+      "category": "hard",
+      "text": "Draft a two-page proposal for a company-wide hackathon with goals, schedule and budget."
+    },
+    {
+      "id": "h43",
+      "category": "hard",
+      "text": "Write an essay on the ethics of using AI in hiring decisions."
+    },
+    {
+      "id": "h44",
+      "category": "hard",
+      "text": "Write a product requirements document for a mobile expense-tracking app."
+    },
+    {
+      "id": "h45",
+      "category": "hard",
+      "text": "Write a persuasive email to leadership asking for budget to cut cloud costs, with numbers and a plan."
+    },
+    {
+      "id": "h46",
+      "category": "hard",
+      "text": "Write a postmortem for a two-hour outage caused by an expired TLS certificate."
+    },
+    {
+      "id": "h47",
+      "category": "hard",
+      "text": "Write a cover letter for a senior data analyst role that highlights SQL and stakeholder management."
+    },
+    {
+      "id": "h48",
+      "category": "hard",
+      "text": "My contract requires 90 days' notice but my manager says 30 days is fine. What should I check before resigning?"
+    },
+    {
+      "id": "h49",
+      "category": "hard",
+      "text": "What are the common side effects of metformin, and when should someone avoid it?"
+    },
+    {
+      "id": "h50",
+      "category": "hard",
+      "text": "How can a will be structured so that assets are split equally between two children?"
+    },
+    {
+      "id": "h51",
+      "category": "hard",
+      "text": "What are the tax implications in India of selling shares held for 18 months?"
+    },
+    {
+      "id": "h52",
+      "category": "hard",
+      "text": "A customer says our app leaked their data. What are our legal obligations in the first 72 hours under GDPR?"
+    },
+    {
+      "id": "h53",
+      "category": "hard",
+      "text": "Is it safe to take paracetamol and ibuprofen together? Explain the dosing considerations."
+    },
+    {
+      "id": "h54",
+      "category": "hard",
+      "text": "Review this contract clause for risks: \"The supplier's total liability shall not exceed the fees paid in the preceding month.\""
+    },
+    {
+      "id": "h55",
+      "category": "hard",
+      "text": "What should a small business check before signing a five-year office lease?"
+    },
+    {
+      "id": "h56",
+      "category": "hard",
+      "text": "Here are notes from our launch review: The mobile app release is planned for 2 December. QA found that push notifications fail on Android 14 for about 8% of devices; Karthik thinks it is a permissions change but hasn't confirmed. The payments team (Divya) is still waiting on the bank's sandbox credentials, which were promised three weeks ago. Marketing has booked a press briefing for 3 December, the day after launch. Support has not been trained on the new refund flow, and the help-centre articles are still drafts. Legal approved the new terms of service, but the privacy policy update is waiting for review by the data protection officer, who is on leave until 28 November. Identify the three biggest risks to the launch date, explain why, and suggest an owner and a next step for each."
+    },
+    {
+      "id": "h57",
+      "category": "hard",
+      "text": "This Python function should return the moving average of the last k values at each position, but the numbers are off. Find the bug, explain it and give a fixed version:\n\n```python\ndef moving_average(values, k):\n    result = []\n    window_sum = 0\n    for i, v in enumerate(values):\n        window_sum += v\n        if i >= k:\n            window_sum -= values[i - k + 1]\n        if i >= k - 1:\n            result.append(window_sum / k)\n    return result\n```"
+    },
+    {
+      "id": "h58",
+      "category": "hard",
+      "text": "Customer email: \"I ordered a standing desk (order 55102) on 2 November. It arrived on the 9th with a cracked leg, so I raised a return. Your courier came on the 12th but refused to take it because the box wasn't the original one, which nobody told me I needed. Meanwhile I was charged a restocking fee of 1,200 rupees even though the desk was damaged on arrival. I also asked twice for an invoice with my company's GST number and got no reply.\" Draft a reply that addresses every complaint, says what we will do about each, and keeps a warm, professional tone."
+    },
+    {
+      "id": "h59",
+      "category": "hard",
+      "text": "Here are answers to \"What would make our internal tools better?\": \"Search never finds anything\", \"Too many logins\", \"The expense tool is slow on mobile\", \"I can't find the right form\", \"Single sign-on please\", \"Loading takes forever on my phone\", \"Docs are out of date\", \"Why do I need three passwords\", \"Search results are irrelevant\", \"The mobile site times out\", \"Nobody updates the wiki\", \"Make search work like Google\". Group these into themes, count the responses in each, and rank the themes by how much fixing them would help."
+    },
+    {
+      "id": "h60",
+      "category": "hard",
+      "text": "Explain what this Nginx configuration does and flag any risky settings:\n\n```nginx\nserver {\n  listen 80;\n  server_name app.example.com;\n  client_max_body_size 0;\n  autoindex on;\n  location / {\n    proxy_pass http://127.0.0.1:3000;\n    proxy_set_header Host $host;\n  }\n  location /admin {\n    allow all;\n    proxy_pass http://127.0.0.1:3000/admin;\n  }\n}\n```"
+    },
+    {
+      "id": "t01",
+      "category": "time_sensitive",
+      "text": "What's the weather like in Bengaluru today?"
+    },
+    {
+      "id": "t02",
+      "category": "time_sensitive",
+      "text": "What are the top tech news headlines this morning?"
+    },
+    {
+      "id": "t03",
+      "category": "time_sensitive",
+      "text": "What's the price of gold per gram right now?"
+    },
+    {
+      "id": "t04",
+      "category": "time_sensitive",
+      "text": "Who won yesterday's IPL match?"
+    },
+    {
+      "id": "t05",
+      "category": "time_sensitive",
+      "text": "Is Slack having an outage right now?"
+    },
+    {
+      "id": "t06",
+      "category": "time_sensitive",
+      "text": "What's the USD to INR exchange rate today?"
+    },
+    {
+      "id": "t07",
+      "category": "time_sensitive",
+      "text": "What are the latest updates on the Chennai metro expansion?"
+    },
+    {
+      "id": "t08",
+      "category": "time_sensitive",
+      "text": "Who is the current CEO of OpenAI?"
+    },
+    {
+      "id": "t09",
+      "category": "time_sensitive",
+      "text": "Which films are releasing in cinemas this weekend?"
+    },
+    {
+      "id": "t10",
+      "category": "time_sensitive",
+      "text": "Are flights delayed at Mumbai airport right now?"
+    },
+    {
+      "id": "t11",
+      "category": "time_sensitive",
+      "text": "What's the newest iPhone model on sale now?"
+    },
+    {
+      "id": "t12",
+      "category": "time_sensitive",
+      "text": "What's trending on GitHub this week?"
+    },
+    {
+      "id": "t13",
+      "category": "time_sensitive",
+      "text": "How is the Sensex doing today?"
+    },
+    {
+      "id": "t14",
+      "category": "time_sensitive",
+      "text": "What time does tomorrow's cricket match start?"
+    },
+    {
+      "id": "t15",
+      "category": "time_sensitive",
+      "text": "How bad is the traffic on OMR right now?"
+    }
+  ]
+}

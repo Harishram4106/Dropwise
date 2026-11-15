@@ -1,0 +1,12 @@
+node_modules/
+.env
+.cache/
+dist/
+.DS_Store
+*.private.pem
+gateway/data/receipts.jsonl
+gateway/data/usage.json
+gateway/data/jobs.json
+
+# Recorded demo video and its script (large; the video goes on YouTube, not in the repo)
+demo/*.mp4

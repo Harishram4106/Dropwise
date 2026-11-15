@@ -1,0 +1,199 @@
+{
+ "note": "Demo-mode fixture: POST /claims/check for each sample claim from the intelligence API (rules split, signed registry only).",
+ "claims": [
+  {
+   "claim": "One ChatGPT question equals a bottle of water.",
+   "result": {
+    "claim": "One ChatGPT question equals a bottle of water.",
+    "checked_at": "2026-11-13T08:05:00.043Z",
+    "decomposition": "rules",
+    "evidence": "registry",
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "atomic_claims": [
+     {
+      "text": "One ChatGPT question equals a bottle of water",
+      "counts": "unclear",
+      "claimed": {
+       "low": 500,
+       "high": 500,
+       "unit": "mL per response"
+      },
+      "verdict": "overstated",
+      "explanation": "Claim: 500 mL per response. About 10x the highest published estimate, 10–50 mL per response (UC Riverside, Making AI Less Thirsty, on-site plus electricity water). Other published figures: 0.32 mL per query (OpenAI CEO statement, scope not stated).",
+      "freshness_score": 0.6,
+      "sources": [
+       "https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/",
+       "https://arxiv.org/abs/2304.03271"
+      ],
+      "registry_factors": [
+       "openai-chatgpt-average-query-water",
+       "ucr-gpt3-medium-response-water"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "claim": "AI doesn't use any water at all.",
+   "result": {
+    "claim": "AI doesn't use any water at all.",
+    "checked_at": "2026-11-13T08:05:00.048Z",
+    "decomposition": "rules",
+    "evidence": "registry",
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "atomic_claims": [
+     {
+      "text": "AI doesn't use any water at all",
+      "counts": "unclear",
+      "claimed": null,
+      "freshness_score": 0,
+      "sources": [],
+      "registry_factors": [],
+      "verdict": "unsupported",
+      "explanation": "The claim states no figure, so there is nothing to check against sources."
+     }
+    ]
+   }
+  },
+  {
+   "claim": "Google says a median Gemini prompt uses about 0.26 mL.",
+   "result": {
+    "claim": "Google says a median Gemini prompt uses about 0.26 mL.",
+    "checked_at": "2026-11-13T08:05:00.049Z",
+    "decomposition": "rules",
+    "evidence": "registry",
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "atomic_claims": [
+     {
+      "text": "Google says a median Gemini prompt uses about 0.26 mL",
+      "counts": "unclear",
+      "claimed": {
+       "low": 0.26,
+       "high": 0.26,
+       "unit": "mL per response"
+      },
+      "verdict": "supported",
+      "explanation": "Claim: 0.26 mL per response. Consistent with 0.26 mL per prompt (Google, on-site water only).",
+      "freshness_score": 0.65,
+      "sources": [
+       "https://arxiv.org/abs/2508.15734"
+      ],
+      "registry_factors": [
+       "google-gemini-median-prompt-water"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "claim": "Every AI company measures water the same way.",
+   "result": {
+    "claim": "Every AI company measures water the same way.",
+    "checked_at": "2026-11-13T08:05:00.050Z",
+    "decomposition": "rules",
+    "evidence": "registry",
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "atomic_claims": [
+     {
+      "text": "Every AI company measures water the same way",
+      "counts": "unclear",
+      "claimed": null,
+      "freshness_score": 0,
+      "sources": [],
+      "registry_factors": [],
+      "verdict": "unsupported",
+      "explanation": "The claim states no figure, so there is nothing to check against sources."
+     }
+    ]
+   }
+  },
+  {
+   "claim": "ChatGPT uses 500 mL of water per answer, while a Gemini prompt uses 0.26 mL.",
+   "result": {
+    "claim": "ChatGPT uses 500 mL of water per answer, while a Gemini prompt uses 0.26 mL.",
+    "checked_at": "2026-11-13T08:05:00.051Z",
+    "decomposition": "rules",
+    "evidence": "registry",
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "atomic_claims": [
+     {
+      "text": "ChatGPT uses 500 mL of water per answer",
+      "counts": "unclear",
+      "claimed": {
+       "low": 500,
+       "high": 500,
+       "unit": "mL per response"
+      },
+      "verdict": "overstated",
+      "explanation": "Claim: 500 mL per response. About 10x the highest published estimate, 10–50 mL per response (UC Riverside, Making AI Less Thirsty, on-site plus electricity water). Other published figures: 0.26 mL per prompt (Google, on-site water only); 0.32 mL per query (OpenAI CEO statement, scope not stated).",
+      "freshness_score": 0.65,
+      "sources": [
+       "https://arxiv.org/abs/2508.15734",
+       "https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/",
+       "https://arxiv.org/abs/2304.03271"
+      ],
+      "registry_factors": [
+       "google-gemini-median-prompt-water",
+       "openai-chatgpt-average-query-water",
+       "ucr-gpt3-medium-response-water"
+      ]
+     },
+     {
+      "text": "a Gemini prompt uses 0.26 mL",
+      "counts": "unclear",
+      "claimed": {
+       "low": 0.26,
+       "high": 0.26,
+       "unit": "mL per response"
+      },
+      "verdict": "supported",
+      "explanation": "Claim: 0.26 mL per response. Consistent with 0.26 mL per prompt (Google, on-site water only) and 0.32 mL per query (OpenAI CEO statement, scope not stated). Other published figures: 10–50 mL per response (UC Riverside, Making AI Less Thirsty, on-site plus electricity water).",
+      "freshness_score": 0.65,
+      "sources": [
+       "https://arxiv.org/abs/2508.15734",
+       "https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/",
+       "https://arxiv.org/abs/2304.03271"
+      ],
+      "registry_factors": [
+       "google-gemini-median-prompt-water",
+       "openai-chatgpt-average-query-water",
+       "ucr-gpt3-medium-response-water"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "claim": "A typical ChatGPT query uses about 0.32 mL of water.",
+   "result": {
+    "claim": "A typical ChatGPT query uses about 0.32 mL of water.",
+    "checked_at": "2026-11-13T08:05:00.051Z",
+    "decomposition": "rules",
+    "evidence": "registry",
+    "registry_hash": "sha256:7ad523c8c127d340184b0fc6d386e3eca066a2847869d2947c8f84d91d662ac5",
+    "atomic_claims": [
+     {
+      "text": "A typical ChatGPT query uses about 0.32 mL of water",
+      "counts": "unclear",
+      "claimed": {
+       "low": 0.32,
+       "high": 0.32,
+       "unit": "mL per response"
+      },
+      "verdict": "supported",
+      "explanation": "Claim: 0.32 mL per response. Consistent with 0.32 mL per query (OpenAI CEO statement, scope not stated). Other published figures: 10–50 mL per response (UC Riverside, Making AI Less Thirsty, on-site plus electricity water).",
+      "freshness_score": 0.6,
+      "sources": [
+       "https://www.datacenterdynamics.com/en/news/sam-altman-chatgpt-queries-consume-034-watt-hours-of-electricity-and-0000085-gallons-of-water/",
+       "https://arxiv.org/abs/2304.03271"
+      ],
+      "registry_factors": [
+       "openai-chatgpt-average-query-water",
+       "ucr-gpt3-medium-response-water"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

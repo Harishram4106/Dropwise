@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dropwise/registry-entry",
+  "title": "Registry entry",
+  "description": "One sourced factor in the Evidence Registry. Produced by Member A, read by B (estimator) and C (citation badges).",
+  "type": "object",
+  "required": [
+    "factor_id",
+    "label",
+    "value",
+    "range",
+    "unit",
+    "counts",
+    "source_url",
+    "source_title",
+    "source_date",
+    "evidence",
+    "freshness_score",
+    "last_verified",
+    "verified_by",
+    "status",
+    "version_hash"
+  ],
+  "properties": {
+    "factor_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "label": { "type": "string" },
+    "value": {
+      "type": ["number", "null"],
+      "description": "The single figure the source states; null when the source only gives a range."
+    },
+    "range": {
+      "type": "object",
+      "description": "Always present. low == high when the source states a single figure.",
+      "required": ["low", "high"],
+      "properties": {
+        "low": { "type": "number" },
+        "high": { "type": "number" }
+      }
+    },
+    "unit": { "type": "string", "examples": ["mL per prompt", "Wh per prompt", "L per kWh"] },
+    "counts": {
+      "enum": ["direct_only", "indirect_only", "direct_plus_indirect", "unclear", "not_applicable"],
+      "description": "direct = on-site data-center cooling water; indirect = water behind the electricity. not_applicable for non-water factors such as energy."
+    },
+    "source_url": { "type": "string", "format": "uri" },
+    "source_title": { "type": "string" },
+    "source_date": {
+      "type": "string",
+      "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+      "description": "Publication date at the precision the source gives (YYYY, YYYY-MM or YYYY-MM-DD)."
+    },
+    "evidence": { "type": "string", "description": "What the source says, and what it does and does not count." },
+    "freshness_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "last_verified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "verified_by": { "enum": ["manual", "tavily"] },
+    "status": { "enum": ["verified", "draft", "stale"] },
+    "superseded_by": {
+      "type": "string",
+      "format": "uri",
+      "description": "Set when status is stale: the newer source that disagrees with this entry."
+    },
+    "version_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "description": "sha256 of the canonical JSON of the entry, excluding version_hash and freshness_score."
+    }
+  },
+  "additionalProperties": false
+}

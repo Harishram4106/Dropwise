@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+node_modules
+test
+data/receipts.jsonl
+data/usage.json
+.DS_Store
+data/jobs.json

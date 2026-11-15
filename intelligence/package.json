@@ -1,0 +1,23 @@
+{
+  "name": "@dropwise/intelligence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dropwise intelligence and trust layer: Evidence Registry, claim checker, right-sizing classifier",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "registry": "node --env-file-if-exists=.env src/cli.ts",
+    "claim": "node --env-file-if-exists=.env src/claims/cli.ts",
+    "route": "node --env-file-if-exists=.env src/routing/cli.ts",
+    "eval": "node --env-file-if-exists=.env src/routing/eval-cli.ts",
+    "serve": "node --env-file-if-exists=.env src/server.ts",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "^5.9.0"
+  }
+}
